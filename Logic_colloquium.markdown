@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The Gdasnk Logic Colloquium
+title: The Gdansk Logic Colloquium
 permalink: /Logic Colloquium/
 ---
 
