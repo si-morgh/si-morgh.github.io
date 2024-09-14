@@ -1,0 +1,5 @@
+.container {
+    max-width: 1200px;  /* Adjust this to make your site wider */
+    width: 100%;        /* Ensures it takes the full available width */
+    margin: 0 auto;     /* Centers the container */
+}
