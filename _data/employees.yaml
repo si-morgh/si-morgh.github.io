@@ -1,8 +1,19 @@
-- name: Grigor Sargsyan
-  photo: /assets/images/employees/grigor.jpeg
-  email: gsargsyan@impan.pl
+- name: Rafał Filipów
+  photo: /assets/images/employees/rafal.jpg
+  email: rahmanmohammadpour@gmail.com
 
 - name: Rahman Mohamamdpour
   photo: /assets/images/employees/rahman.jpg
   email: rahmanmohammadpour@gmail.com
-  
+
+- name: Grigor Sargsyan
+  photo: /assets/images/employees/grigor.jpeg
+  email: gsargsyan@impan.pl
+
+- name: Christopher Henney-Turner
+  photo: /assets/images/employees/chris.jpg
+  email: rahmanmohammadpour@gmail.com
+
+- name: Bartosz Wcisło
+  photo: /assets/images/employees/bartek.jpg
+  email: rahmanmohammadpour@gmail.com
