@@ -4,8 +4,8 @@
     <img src="{{ employee.photo }}" alt="{{ employee.name }}">
     <h3>{{ employee.name }}</h3>
     <p>{{ employee.title }}</p>
-    <p>affil: {{ employee.affil }}</p>
-    <p>Email: <a href="mailto:{{ employee.email }}">{{ employee.email }}</a></p>
+    <p> <a href="mailto:{{ employee.email }}">{{ employee.email }}</a></p>
+    <a href="{{ employee.website }}">{{ employee.website }}</a>
   </div>
   {% endfor %}
 </div>

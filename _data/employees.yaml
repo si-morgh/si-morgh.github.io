@@ -1,21 +1,20 @@
-- name: Rafał Filipów
-  affil : UG
+- name: Rafał Filipów (UG)
   photo: /assets/images/employees/rafal.jpg
-  email: rahmanmohammadpour@gmail.com
+  website: https://mat.ug.edu.pl/~rfilipow/
  
 
-- name: Rahman Mohamamdpour
+- name: Rahman Mohamamdpour (IMPAN)
   photo: /assets/images/employees/rahman.jpg
-  email: rahmanmohammadpour@gmail.com
+  website: https://sites.google.com/site/rahmanmohammadpour/
 
-- name: Grigor Sargsyan
+- name: Grigor Sargsyan (IMPAN)
   photo: /assets/images/employees/grigor.jpeg
-  email: gsargsyan@impan.pl
+  website: https://grigorsarg.github.io
 
-- name: Christopher Henney-Turner
+- name: Christopher Henney-Turner (IMPAN)
   photo: /assets/images/employees/chris.jpg
-  email: rahmanmohammadpour@gmail.com
+  website: https://sites.google.com/view/christopherhenneyturner/home
 
-- name: Bartosz Wcisło
+- name: Bartosz Wcisło (UG)
   photo: /assets/images/employees/bartek.jpg
-  email: bar.wcislo@gmail.com
+  website: https://old.ug.edu.pl/pracownik/107220/bartosz_wcislo
