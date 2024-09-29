@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The Baltic Set Theory Seminar
+title: Baltic Set Theory Seminar
 permalink: /bst/
 ---
 
