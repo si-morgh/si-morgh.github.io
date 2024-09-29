@@ -46,39 +46,36 @@ footer, .site-footer {
   color: #666; /* Change color if desired */
   margin-top: 10px; /* Space above the subheader */
 }
+
+
 .employee-list {
+  display: block;
+}
+
+.employee {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.employee {
-  margin: 15px;
-  text-align: center;
-}
-
-.employee {
-  margin: 15px;
-  text-align: center; /* Centers the text under the image */
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .employee img {
-  width: 150px;
-  height: 150px;
-  border-radius: 0; /* Remove the circular shape */
-  object-fit: cover; /* This will keep the image inside the box, cutting off any overflow */
-}
-.employee {
-  padding: 10px;
+  width: 150px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height */
+  object-fit: cover; /* Cover the container, maintaining aspect ratio */
+  object-position: center; /* Center the image within the box */
+  margin-right: 20px; /* Space between image and text */
+  border-radius: 50%; /* Optional: Make the image circular */
 }
 
-.employee img {
-  margin-bottom: 10px; /* Adds space between image and text */
+.employee-info {
+  display: block;
 }
 
 .employee h3 {
-  margin: 10px 0 5px;
+  margin: 0;
 }
 
-.employee p {
-  margin: 0;
+.employee a {
+  color: blue;
+  text-decoration: none;
 }
