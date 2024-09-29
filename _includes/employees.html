@@ -2,7 +2,7 @@
   {% for employee in site.data.employees %}
   <div class="employee">
     <h3>{{ employee.name }}</h3>
-    <a href="{{ employee.website }}">Homepage</a>
+    <a href="{{ employee.website }}" target="_blank" rel="noopener noreferrer">Website</a>
   </div>
   {% endfor %}
 </div>
