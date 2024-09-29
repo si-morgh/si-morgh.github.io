@@ -1,0 +1,84 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+body {
+  background-color: #817d0025; /* Change this to any color you want */
+}
+/* Make the header full width */
+header, .site-header {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the navigation menu (inside the header) full width */
+.site-nav {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Make the footer full width */
+footer, .site-footer {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Full width content area */
+.page-content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.wrapper, .site {
+  width: 90%;
+  max-width: none;
+  margin: 10px 20px 30px 40px; /* Top, right, bottom, left */
+  padding: 10px 20px 30px 40px; /* Top, right, bottom, left */
+}
+/* Add to your custom CSS file */
+.post-header .post-subheader {
+  font-size: 1.5em; /* Adjust size as needed */
+  color: #666; /* Change color if desired */
+  margin-top: 10px; /* Space above the subheader */
+}
+.employee-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.employee {
+  margin: 15px;
+  text-align: center;
+}
+
+.employee {
+  margin: 15px;
+  text-align: center; /* Centers the text under the image */
+}
+
+.employee img {
+  width: 150px;
+  height: 150px;
+  border-radius: 0; /* Remove the circular shape */
+  object-fit: cover; /* This will keep the image inside the box, cutting off any overflow */
+}
+.employee {
+  padding: 10px;
+}
+
+.employee img {
+  margin-bottom: 10px; /* Adds space between image and text */
+}
+
+.employee h3 {
+  margin: 10px 0 5px;
+}
+
+.employee p {
+  margin: 0;
+}
