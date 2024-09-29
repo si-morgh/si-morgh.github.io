@@ -1,6 +1,8 @@
 - name: Rafał Filipów
+  affil : UG
   photo: /assets/images/employees/rafal.jpg
   email: rahmanmohammadpour@gmail.com
+ 
 
 - name: Rahman Mohamamdpour
   photo: /assets/images/employees/rahman.jpg
@@ -16,4 +18,4 @@
 
 - name: Bartosz Wcisło
   photo: /assets/images/employees/bartek.jpg
-  email: rahmanmohammadpour@gmail.com
+  email: bar.wcislo@gmail.com
