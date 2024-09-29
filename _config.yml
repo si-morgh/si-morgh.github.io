@@ -6,9 +6,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-We are a group of researchers, gradudate and undergraduate studnets from
-IMPAN (Gdansk branch) or the University of Gdansk who are  interested 
-in mathematical logic.
+sgit 
 # Build settings
 
 # If you clone the Minima repo and build locally, use this setting.
