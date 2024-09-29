@@ -7,4 +7,3 @@ permalink: /bst/
 Here is an introduction.
 
 
-
