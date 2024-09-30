@@ -14,13 +14,13 @@ just experts.
 <li>Lecturer: Grigor Sargsyan <ul>
 <li>The topic of this semester's seminar is based on a joint NCN-FWF project by Monroe Eskew and Grigor Sargsyan. The aim is to study dense ideals, and Sargsyan's part of the project involves forcing over models of determinacy. The starting point of this construction is Woodin's theorem that, given \(V\) is a model of \(\Theta_{\rm reg}+V=L(\mathcal{P}(\mathbb{R}))\), the poset \({\rm Coll}(\omega_1, \mathbb{R})\ast\dot{\rm{A}}{\rm dd}(1, \omega_2)\) forces the existence of an \(\omega_1\)-dense ideal on \(\omega_1\). The aim of this lecture is to present the proof of this theorem. We will start slowly and cover the background material that leads to the proof. There are two documents that contain the proof.
 <ol>
-
+<ul> </ul>
 <li>
-<a href=" https://drive.google.com/file/d/1BxbHD30KxpME7xeNnBL6O1gF-vmgRJh_/view ">Forcing a dense ideal on ω1 over a model of determinacy</a>
+<a href=" https://drive.google.com/file/d/1BxbHD30KxpME7xeNnBL6O1gF-vmgRJh_/view ">Forcing a dense ideal on \(\omega_1\) over a model of determinacy</a> by Obrad Kasum
  </li>
 
 <li> 
-<a href="https://arxiv.org/abs/2111.06220 ">Ideals and Strong Axioms of Determinacy by Dominik Adolf, Grigor Sargsyan, Nam Trang, Trevor Wilson, Martin Zeman </a>
+<a href="https://arxiv.org/abs/2111.06220 ">Ideals and Strong Axioms of Determinacy</a>  by Dominik Adolf, Grigor Sargsyan, Nam Trang, Trevor Wilson, Martin Zeman 
  </li>
 </ol>
 
