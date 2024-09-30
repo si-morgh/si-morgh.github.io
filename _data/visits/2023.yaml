@@ -1,0 +1,34 @@
+- name: Daniel Hoffman
+  affiliation: University of Warsaw
+  start_date: "2023-06-05"
+  end_date: "2023-06-06"
+
+- name: Maxwell Levine
+  affiliation: University of Freiburg
+  start_date:  "2023-05-28"
+  end_date: "2023-06-01" 
+
+- name: Monroe Eskew 
+  affiliation: TU Wien 
+  start_date: "2023-05-23" 
+  end_date: "2023-05-27" 
+
+- name: Andreas Lietz 
+  affiliation: University of Münster 
+  start_date: "2023-05-23"
+  end_date: "2023-05-27" 
+
+- name: Douglass Blue
+  affiliation:  f
+  start_date: "2023-04-03" 
+  end_date: "2023-04-08" 
+
+- name: Obrad Kasum
+  affiliation:  Universite Paris Cite
+  start_date: "2023-05-01" 
+  end_date: "2023-06-30" 
+
+- name: Diana Montoya
+  affiliation: TU Wien
+  start_date: "2023-01-06" 
+  end_date: "2023-01-11" 
