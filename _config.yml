@@ -34,7 +34,6 @@ header_pages:
   - bst.md
   - ug-seminar.md
   - visitors.md
-  - gallery.md
   - info.md
 # Set to `true` to show excerpts on the homepage.
 #show_excerpts: false
