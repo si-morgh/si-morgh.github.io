@@ -2,7 +2,6 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-
     <div class="footer-col-wrapper">
       <div class="footer-col">
       {%- if site.author %}
@@ -19,12 +18,16 @@
       <div class="footer-col">
         <p>{{ site.description | escape }}</p>
       </div>
+      <div class="footer-col footer-col-right">
+        <ul class="useful-websites">
+          <li><a href="https://www.impan.pl" target="_blank">IMPAN</a></li>
+          <li><a href="https://en.mfi.ug.edu.pl" target="_blank">UG Math</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="social-links">
       {%- include social.html -%}
     </div>
-
   </div>
-
 </footer>
