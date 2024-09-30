@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<h1>Lecture Announcements</h1>
+
+{% for post in site.posts %}
+  <div class="announcement" onclick="toggleDetails(this)">
+      <strong>Title:</strong> {{ post.title }} <br>
+      <strong>Speaker:</strong> {{ post.speaker }}
+      <div class="details">
+          <strong>Venue:</strong> {{ post.venue }} <br>
+          <strong>Day and Time:</strong> {{ post.day_time }} <br>
+          <strong>Abstract:</strong> {{ post.abstract }} <br>
+          <strong>Notes:</strong> {{ post.notes }}
+      </div>
+  </div>
+{% endfor %}
+
+<style>
+  .announcement {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10px 0;
+      padding: 10px;
+      cursor: pointer;
+  }
+  .details {
+      display: none; /* Hide details by default */
+      margin-top: 10px;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+  }
+</style>
+
+<script>
+  function toggleDetails(element) {
+      const details = element.querySelector('.details');
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+  }
+</script>

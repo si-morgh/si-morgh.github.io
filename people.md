@@ -4,6 +4,7 @@ title: People
 permalink: /People/
 ---
 
-{% include employees.html %}
+{% include former_employees.html %}
+
 
 

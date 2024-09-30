@@ -1,20 +1,25 @@
 - name: Rafał Filipów (UG)
-  photo: /assets/images/employees/rafal.jpg
+  photo: /assets/images/employees/exists.jpeg
+  pos: University professor
   website: https://mat.ug.edu.pl/~rfilipow/
  
 
 - name: Rahman Mohamamdpour (IMPAN)
   photo: /assets/images/employees/rahman.jpg
+  pos: Principal Investigator
   website: https://sites.google.com/site/rahmanmohammadpour/
 
 - name: Grigor Sargsyan (IMPAN)
   photo: /assets/images/employees/grigor.jpeg
+  pos:  Professor
   website: https://grigorsarg.github.io
 
 - name: Christopher Henney-Turner (IMPAN)
-  photo: /assets/images/employees/chris.jpg
+  photo: /assets/images/employees/exists.jpeg
+  pos: Post-doctoral researcher
   website: https://sites.google.com/view/christopherhenneyturner/home
 
 - name: Bartosz Wcisło (UG)
   photo: /assets/images/employees/bartek.jpg
+  pos: University professor
   website: https://old.ug.edu.pl/pracownik/107220/bartosz_wcislo
