@@ -1,10 +1,11 @@
 ---
-layout: page
+layout: page-sans-title
 title: Logic Colloquium
 permalink: /lc/
 ---
-
-
+<div style="flex: 0.5; padding-right: 20px;">
+    <h1>Upcoming and past colloquiums</h1>
+</div>
 ---
 
 ###  On the mathematical sublime
