@@ -2,11 +2,25 @@
   photo: /assets/images/employees/exists.jpeg
   pos: University professor
   website: https://mat.ug.edu.pl/~rfilipow/
- 
 
+- name: Christopher Henney-Turner (IMPAN)
+  photo: /assets/images/employees/exists.jpeg
+  pos: Post-doctoral researcher
+  website: https://sites.google.com/view/christopherhenneyturner/home
+
+- name: Krzysztof Kowitz (UG)
+  photo: /assets/images/employees/exists.jpeg
+  pos: University professor
+  website: https://old.ug.edu.pl/pracownik/115557/krzysztof_kowitz
+ 
+- name: Adam Kwela (UG)
+  photo: /assets/images/employees/Kwela.jpeg
+  pos: University professor
+  website: https://mat.ug.edu.pl/~akwela/
+ 
 - name: Rahman Mohamamdpour (IMPAN)
   photo: /assets/images/employees/rahman.jpg
-  pos: Principal Investigator
+  pos: Principal investigator
   website: https://sites.google.com/site/rahmanmohammadpour/
 
 - name: Grigor Sargsyan (IMPAN)
@@ -14,10 +28,10 @@
   pos:  Professor
   website: https://grigorsarg.github.io
 
-- name: Christopher Henney-Turner (IMPAN)
+- name: Jacek Tryba (UG)
   photo: /assets/images/employees/exists.jpeg
-  pos: Post-doctoral researcher
-  website: https://sites.google.com/view/christopherhenneyturner/home
+  pos: University professor
+  website: https://old.ug.edu.pl/pracownik/79570/jacek_tryba
 
 - name: Bartosz Wcisło (UG)
   photo: /assets/images/employees/bartek.jpg
