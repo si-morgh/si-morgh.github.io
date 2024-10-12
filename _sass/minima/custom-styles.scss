@@ -138,3 +138,10 @@ footer, .site-footer {
 .useful-websites a:hover {
   text-decoration: underline; /* Underline on hover */
 }
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}

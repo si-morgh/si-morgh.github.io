@@ -39,6 +39,9 @@ permalink: /bst/
     </ul>
   </li>
 </ul>
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hW4WJU_6CxUl-0Ww&amp;list=PLIUUWdRg9PTXMR8R7q8RQsywj8hnToiDl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <h2 style="margin-top: 40px;">Previous BST seminars</h2>
 
