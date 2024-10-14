@@ -145,3 +145,18 @@ footer, .site-footer {
   align-items: center;
   margin: 20px 0;
 }
+
+.image-container {
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  margin-top: -120px;
+  margin-bottom: -120px;
+}
+
+.centered-image {
+  max-width: 60%; /* Limit image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
