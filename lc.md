@@ -10,19 +10,15 @@ permalink: /lc/
 ### Wednesday, 2024-10-30
 **Boban Veličković (IMJ-PRG)**  
 <details>
-<summary>Title and abstract</summary>
-    
-- Nice Infinitary Logics
-    
-- We define a new class of infinitary logics \(L^1_{\kappa,\alpha}\) generalizing Shelah's logic \(L^1_\kappa\). If \(\kappa=\beth_{\kappa}\) and \(\alpha<\kappa\) is infinite then our logic coincides with \(L^1_\kappa\). We study the relation between these logics for different parameters \(\kappa\) and \(\alpha\). We give many examples of classes of structures that can or cannot be defined in these logics. Finally, we give a different version of Lindström's Theorem for \(L^1_\kappa\) in terms of the \(\phi\)-submodel relation. This is Joint work with J. Väänänen. 
-</details>
-<details>
-<summary>View Details</summary>
+<summary>view details</summary>
 <ul>
-    <li><strong>Location: </strong>IMPAN (GDANSK branch), Antoniego Abrahama 18, 81-825 Sopot</li>
-    <li><strong>Time: </strong>16:30</li>
+<li><strong>Title:</strong> Nice Infinitary Logics </li>
+<li><strong>Abstract:</strong> We define a new class of infinitary logics \(L^1_{\kappa,\alpha}\) generalizing Shelah's logic \(L^1_\kappa\). If \(\kappa=\beth_{\kappa}\) and \(\\alpha<\kappa) is infinite then our logic coincides with \(L^1_\kappa\). We study the relation between these logics for different parameters \(\kappa\) and \(\alpha\). We give many examples of classes of structures that can or cannot be defined in these logics. Finally, we give a different version of Lindström's Theorem for \(L:^1_\kappa\) in terms of the \(\phi\)-submodel relation. This is Joint work with J. Väänänen. </li>
+<li><strong>Location: </strong>IMPAN (GDANSK branch), Antoniego Abrahama 18, 81-825 Sopot</li>
+<li><strong>Time:</strong>16:30</li>
 </ul>
-</details>  
+</details>
+   
 
 
 ---
