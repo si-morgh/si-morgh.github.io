@@ -14,7 +14,7 @@ permalink: /lc/
     
 - Nice Infinitary Logics
     
-- We define a new class of infinitary logics \(L^1_{\kappa,\alpha}\) generalizing Shelah's logic \(L^1_\kappa\). If \(\kappa=\beth_{\kappa}\) and \(\\alpha<\kappa) is infinite then our logic coincides with \(L^1_\kappa\). We study the relation between these logics for different parameters \(\kappa\) and \(\alpha\). We give many examples of classes of structures that can or cannot be defined in these logics. Finally, we give a different version of Lindström's Theorem for \(L:^1_\kappa\) in terms of the \(\phi\)-submodel relation. This is Joint work with J. Väänänen. 
+- We define a new class of infinitary logics \(L^1_{\kappa,\alpha}\) generalizing Shelah's logic \(L^1_\kappa\). If \(\kappa=\beth_{\kappa}\) and \(\alpha<\kappa\) is infinite then our logic coincides with \(L^1_\kappa\). We study the relation between these logics for different parameters \(\kappa\) and \(\alpha\). We give many examples of classes of structures that can or cannot be defined in these logics. Finally, we give a different version of Lindström's Theorem for \(L^1_\kappa\) in terms of the \(\phi\)-submodel relation. This is Joint work with J. Väänänen. 
 </details>
 <details>
 <summary>View Details</summary>
