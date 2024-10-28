@@ -20,6 +20,7 @@ permalink: /lc/
 <summary>View Details</summary>
 <ul>
     <li><strong>Location: </strong>IMPAN (GDANSK branch), Antoniego Abrahama 18, 81-825 Sopot</li>
+    <li><strong>Time: </strong>16:30</li>
 </ul>
 </details>  
 
