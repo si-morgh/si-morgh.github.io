@@ -4,9 +4,30 @@ title: Logic Colloquium
 permalink: /lc/
 ---
 <div style="flex: 0.5; padding-right: 20px;">
-    <h1>Upcoming and past colloquiums</h1>
+    <h1>Upcoming colloquiums</h1>
 </div>
+
+### Wednesday, 2024-10-30
+**Boban Veličković (IMJ-PRG)**  
+<details>
+<summary>Title and abstract</summary>
+    
+- Nice Infinitary Logics
+    
+- We define a new class of infinitary logics \(L^1_{\kappa,\alpha}\) generalizing Shelah's logic \(L^1_\kappa\). If \(\kappa=\beth_{\kappa}\) and \(\\alpha<\kappa) is infinite then our logic coincides with \(L^1_\kappa\). We study the relation between these logics for different parameters \(\kappa\) and \(\alpha\). We give many examples of classes of structures that can or cannot be defined in these logics. Finally, we give a different version of Lindström's Theorem for \(L:^1_\kappa\) in terms of the \(\phi\)-submodel relation. This is Joint work with J. Väänänen. 
+</details>
+<details>
+<summary>View Details</summary>
+<ul>
+    <li><strong>Location: </strong>IMPAN (GDANSK branch), Antoniego Abrahama 18, 81-825 Sopot</li>
+</ul>
+</details>  
+
+
 ---
+<div style="flex: 0.5; padding-right: 20px;">
+    <h1>Past colloquiums</h1>
+</div>
 
 ###  On the mathematical sublime
 **Juliette Kenedy (University of Helsinki)**    
@@ -53,6 +74,7 @@ permalink: /lc/
 A topological approach to forcing axioms considers them as strong forms of the Baire category theorem; an algebraic approach describes certain properties of "algebraic closure" for the universe of sets that can be derived from them. The goal of the talk is to outline the link betwen the geometric and algebraic points of view.
 The talk is meant for a general mathematical audience. In particular familiarity with logic or set theory is not assumed.
 </details>
+
 ---
 
 ### The *-version of Martin's Maximum
@@ -80,6 +102,7 @@ The talk is meant for a general mathematical audience. In particular familiarity
     <li><strong>Notes: </strong>Part of Simon’s Semester Program</li>
 </ul>
 </details>
+
 ---
 
 ### Mouse Pairs and Soulsin Cardinals 
