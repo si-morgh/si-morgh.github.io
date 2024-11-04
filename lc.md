@@ -16,6 +16,7 @@ permalink: /lc/
 <li><strong>Location: </strong>IMPAN (Gdansk branch), Antoniego Abrahama 18, 81-825 Sopot</li>
 <li><strong>Time:</strong> 16:30</li>
 </ul>
+
 --
 
 ### Wednesday, 2024-11-27
@@ -39,6 +40,7 @@ permalink: /lc/
 </ul>
     
  --   
+ 
 ### Wednesday, 2024-10-30
 **Boban Veličković (IMJ-PRG)**  
 
@@ -53,6 +55,7 @@ permalink: /lc/
 
 
 ---
+
 <div style="flex: 0.5; padding-right: 20px;">
     <h1>Past colloquiums</h1>
 </div>
