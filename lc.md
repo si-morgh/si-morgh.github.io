@@ -7,6 +7,38 @@ permalink: /lc/
     <h1>Upcoming colloquiums</h1>
 </div>
 
+### Wednesday, 2024-12-11
+**Chris Lambie-Hanson (Institute of Mathematics Czech Academy of Sciences)**  
+
+<ul>
+<li><strong>Title:</strong> TBA </li>
+<li><strong>Abstract:</strong>TBA </li>
+<li><strong>Location: </strong>IMPAN (Gdansk branch), Antoniego Abrahama 18, 81-825 Sopot</li>
+<li><strong>Time:</strong> 16:30</li>
+</ul>
+--
+
+### Wednesday, 2024-11-27
+**Piotr Borodulin-Nadziejać (University of Wroclaw)**  
+
+<ul>
+<li><strong>Title:</strong> TBA </li>
+<li><strong>Abstract:</strong>TBA </li>
+<li><strong>Location: </strong>IMPAN (Gdansk branch), Antoniego Abrahama 18, 81-825 Sopot</li>
+<li><strong>Time:</strong> 16:30</li>
+</ul>
+
+### Wednesday, 2024-11-13
+**Rafał Filipów (UG)**  
+
+<ul>
+<li><strong>Title:</strong> TBA </li>
+<li><strong>Abstract:</strong>TBA </li>
+<li><strong>Location: </strong>IMPAN (Gdansk branch), Antoniego Abrahama 18, 81-825 Sopot</li>
+<li><strong>Time:</strong> 16:30</li>
+</ul>
+    
+ --   
 ### Wednesday, 2024-10-30
 **Boban Veličković (IMJ-PRG)**  
 
