@@ -14,7 +14,7 @@ permalink: /lc/
 <li><strong>Title:</strong> TBA </li>
 <li><strong>Abstract:</strong>TBA </li>
 <li><strong>Location: </strong>IMPAN (Gdansk branch), Antoniego Abrahama 18, 81-825 Sopot</li>
-<li><strong>Time:</strong> 16:30</li>
+<li><strong>Time:</strong> 16:45</li>
 </ul>
 
 
@@ -26,17 +26,17 @@ permalink: /lc/
 <li><strong>Title:</strong> TBA </li>
 <li><strong>Abstract:</strong>TBA </li>
 <li><strong>Location: </strong>IMPAN (Gdansk branch), Antoniego Abrahama 18, 81-825 Sopot</li>
-<li><strong>Time:</strong> 16:30</li>
+<li><strong>Time:</strong> 16:45</li>
 </ul>
 
 ### Wednesday, 2024-11-13
 **Rafał Filipów (UG)**  
 
 <ul>
-<li><strong>Title:</strong> TBA </li>
-<li><strong>Abstract:</strong>TBA </li>
+<li><strong>Title:</strong> Distinguishing between sequentially compact spaces via Katetov order on ideals </li>
+<li><strong>Abstract:</strong>The talk is based on the paper "A unified approach to Hindman, Ramsey and van der Waerden spaces" ( <a href="https://doi.org/10.1017/jsl.2024.8">href="https://doi.org/10.1017/jsl.2024.8</a>) written by Krzysztof Kowitz, Adam Kwela and myself. First, I'm going to survey known results that motivated us for looking for a unified approach to this subject. Next, I will show how to encompass in one manner distinct kinds of convergence in topological spaces considered so far. Finally, I'll show that various results from many papers can be obtained from one theorem.  </li>
 <li><strong>Location: </strong>IMPAN (Gdansk branch), Antoniego Abrahama 18, 81-825 Sopot</li>
-<li><strong>Time:</strong> 16:30</li>
+<li><strong>Time:</strong> 16:45 </li>
 </ul>
     
  
