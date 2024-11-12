@@ -23,8 +23,9 @@ permalink: /lc/
 **Piotr Borodulin-Nadziejać (University of Wroclaw)**  
 
 <ul>
-<li><strong>Title:</strong> TBA </li>
-<li><strong>Abstract:</strong>TBA </li>
+<li><strong>Title:</strong> Combinatorial Banach spaces </li>
+<li><strong>Abstract:</strong>I will present a way of generating Banach spaces from infinite graphs
+with several examples and a structural theorem. </li>
 <li><strong>Location: </strong>IMPAN (Gdansk branch), Antoniego Abrahama 18, 81-825 Sopot</li>
 <li><strong>Time:</strong> 16:45</li>
 </ul>
