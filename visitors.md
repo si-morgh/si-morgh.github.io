@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Visitors
 permalink: /visitors/
 ---
