@@ -1,7 +1,6 @@
 ---
 layout: page-sans-title
 title: Baltic Set Theory Seminar
-permalink: /bst/
 ---
 
 <div style="display: flex; align-items: flex-start;">
