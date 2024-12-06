@@ -1,14 +1,12 @@
-title: Gdansk Mathematical Logic Community
+title: Rahman Mohammadpour
 author:
   name:  Rahman Mohammadpour
-  email: gdn-logic@gmail.com
+  email: rahmanmohammadpour@gmail.com
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
- This website is intended to share and update
-  information about the activities of mathematical logicians 
-  in Gdansk.
+ This is my personal homepage.
   
 # Build settings
 
