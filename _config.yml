@@ -30,7 +30,6 @@ header_pages:
   - about.md
   - publication.md
   - slides.md
-  - ug-seminar.md
   - visitors.md
   - info.md
 # Set to `true` to show excerpts on the homepage.
