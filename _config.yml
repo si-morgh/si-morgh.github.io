@@ -28,8 +28,8 @@ plugins:
 # in order as they should show up.
 header_pages:
   - about.md
-  - lc.md
-  - bst.md
+  - publication.md
+  - slides.md
   - ug-seminar.md
   - visitors.md
   - info.md
