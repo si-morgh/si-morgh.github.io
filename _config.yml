@@ -1,7 +1,7 @@
 title: Rahman Mohammadpour
-author: Rahman Mohammadpour
-name: IMPAN (Gdansk branch): Antoniego Abrahama 18, 81-825 Sopot, Poland
-email: rahmanmohammadpour@gmail.com
+author:  
+ name: IMPAN (Gdansk branch): Antoniego Abrahama 18, 81-825 Sopot, Poland
+ email: rahmanmohammadpour@gmail.com
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
