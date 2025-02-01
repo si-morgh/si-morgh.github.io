@@ -6,6 +6,7 @@ author:
   - jekyll-scholar
  scholar:
   bibliography: "bibliography.bib"
+  style: apa 
 
 
 # The `>` after `description:` means to ignore line-breaks until next key.
