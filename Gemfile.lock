@@ -119,7 +119,10 @@ PLATFORMS
   arm64-darwin
 
 DEPENDENCIES
+  bibtex-ruby
   bundler
+  citeproc-ruby
+  csl-styles
   jekyll-scholar (~> 7.1)
   minima!
 
