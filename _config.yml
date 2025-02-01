@@ -2,8 +2,7 @@ title: Rahman Mohammadpour
 author:  
  name: IMPAN (Gdansk branch): Antoniego Abrahama 18, 81-825 Sopot, Poland
  email: rahmanmohammadpour@gmail.com
- plugins:
-  - jekyll-scholar
+ plugins: - jekyll-scholar
  scholar:
  bibliography: "bibliography.bib"
 
