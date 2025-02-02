@@ -1,32 +1,41 @@
 ---
-layout: page-sans-title
-title: Publications
+layout: page
+title: Research
 ---
-
+<hr>
+<strong>profiles</strong>  
+<div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
+    <a href="http://arxiv.org/a/mohammadpour_r_1" target="_blank">
+        <img src="https://public.boxcloud.com/api/2.0/files/774931772678/content?preview=true&version=832360847987&access_token=1!vCQU--lGWSfNN0DBwjbMlovb7k9SJPbPfaSmhTuIOLPZ1HvaUkEldCYQ8bb9B_CcR0Y9F-6z3EAmbUFHKtz8vT4vPgzU7LCPOHu6wfjzT3eEftGH1rShg9Q_Az9CyuTvOBzXo_Aqmq-QR_ZHQkfULNELtu5nykjkBjc0DhpUj6UgZxr6HK3yVwUEE6SvwPRJIbYTDA9nMfV9yEOKpD3bR0trHYsHPywoYzK4ryoLZamRycS_smRrc2ym_SEehlXEe99N14rhZhZvA9MyK2ueJ5hAARrzxJ1aRq4OyI1GtV8PI5YTB1Z3TwDxmkSFHUSgMKFOsXZc1dBxxIwEoRyRS5RR-rgb9Z59bndoXqxkZQXkY0SCn9qBYVHnpnfXO6u8ZKLEmIp77YuauP-GSMovtzZfaZQ4FXduBGZ0wXDunjWeHO8REKNk8oo66yBfoZViLJk4kscbKxPCWAldQrD3rMz-TK0Ye3GqGhg2-SY-FKsgiv0Eca6R3b5d-s8r5Ia3umbPnqC6r5TC3oNggLpo6RNEoV2H-GDL56LKELH-keBLmLelAVmY8iJO0MzG9iuYTvi1tGe7p5YIy_9NW97TXvimU9irSyqsA1bL-Q..&shared_link=https%3A%2F%2Fcornell.app.box.com%2Fv%2Farxiv-logo-svg&box_client_name=box-content-preview&box_client_version=3.0.0" alt="ArXiv" width="18" height="18"> ArXiv
+    </a>
+     <a href="https://zbmath.org/authors/?ml=3&ml-1-f=any&ml-1-v=&ml-1-op=and&ml-2-f=ln&ml-2-v=mohammadpour&ml-2-op=and&ml-3-f=fn&ml-3-v=rahman" target="_blank">
+        <img src="/_static/zbmath.svg" alt="zbMATH" width="18" height="18"> zbMATH
+    </a>
+    <a href="https://orcid.org/0000-0003-4562-4178" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" width="18" height="18"> ORCID: 0000-0003-4562-4178
+    </a>
+    <a href="https://mathscinet.ams.org/mathscinet/author?authorId=1240707" target="_blank">
+        <img src="https://mathscinet.ams.org/favicon.ico" alt="MathSciNet" width="18" height="18"> MathSciNet
+    </a>
+    <a href="https://mathoverflow.net/users/38866/rahman-m" target="_blank">
+        <img src="https://cdn.sstatic.net/Sites/mathoverflow/Img/favicon.ico" alt="MathOverflow" width="18" height="18"> MathOverflow
+    </a>
+</div>
+<br>
+<strong>interests</strong> 
+<br>
+Martin's Maximum (MM), Proper Forcing Axiom (PFA), forcing with models as side conditions iterated forcing, trees 
+<div style="height: 0.5cm;"></div>
+<strong>publications</strong>  
 <style>
 .publications {
   margin: 20px 0;
 }
-
 .publication {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
-
-.paper-link, .doi-link {
-  display: inline-block;
-  margin-right: 15px;
-  padding: 5px 10px;
-  background: #f5f5f5;
-  border-radius: 3px;
-  text-decoration: none;
-  color: #333;
-}
-
-.paper-link:hover, .doi-link:hover {
-  background: #e5e5e5;
-}
 </style>
 
-{% bibliography _bibliography/xxxxx.bib %}
+{% bibliography --nocite %}

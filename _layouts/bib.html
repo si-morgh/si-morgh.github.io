@@ -1,0 +1,14 @@
+---
+---
+<div class="publication">
+  <div class="text">
+    {{ reference }}
+    {% if entry.publisher_url or entry.arxiv_url %}
+      ({% if entry.publisher_url %}<a href="{{ entry.publisher_url | prepend: site.baseurl }}" target="_blank">publisher</a>
+        {% if entry.arxiv_url %}, {% endif %}
+      {% endif %}
+      {% if entry.arxiv_url %}
+        <a href="{{ entry.arxiv_url | prepend: site.baseurl }}" target="_blank" style="color: red;">arXiv</a>{% endif %})
+    {% endif %}
+  </div>
+</div>
