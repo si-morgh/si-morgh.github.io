@@ -19,7 +19,7 @@ plugins:
 scholar:
   style: apa  # Change this to another style if needed
   locale: en
-  bibliography: "_bibliography/bibliography.bib" # Make sure this file exists in your Jekyll root
+  bibliography: "bibliography.bib" # Make sure this file exists in your Jekyll root
   bibliography_list_tag: ul  # To use <ul> instead of default <ol>
   sort_by: year
   order: ascending
