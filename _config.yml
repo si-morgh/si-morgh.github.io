@@ -31,7 +31,7 @@ include:
 
 header_pages:
 #  - index.md
-  #- finsidsat.md
+  - finsidsat.md
   - publication.md
   - notes.md
  # - slides.md
