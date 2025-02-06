@@ -1,6 +1,6 @@
 ---
 layout: page
-title: FinSidSat
+title: FIN_SAT_SID
 ---
 <hr>
 <strong></strong>
