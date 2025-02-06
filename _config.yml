@@ -30,7 +30,7 @@ include:
 
 
 header_pages:
-  - index.md
+#  - index.md
   #- finsidsat.md
   - publication.md
   - notes.md
