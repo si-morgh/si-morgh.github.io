@@ -31,7 +31,7 @@ Martin's Maximum (MM), Proper Forcing Axiom (PFA), forcing with models as side c
 <br>
 Inner model theory, Axioms of Determinacy, iterated ultrapower constructions
 <div style="height: 0.5cm;"></div>
-<strong>publications</strong>  
+<br>
 <strong>publications</strong>  
 <style>
 .publications {
