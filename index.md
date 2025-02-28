@@ -22,9 +22,10 @@ My current project is
   <!-- Right: Image -->
   <div style="flex: 0.15;">
     <img src="/assets/images/portrait.png" alt="My Image" style="max-width: 100%; height: auto;" />
-    <figcaption style="text-align: center; font-size: 0.9em; color: #666">
-    credit: <a href="Fateme Samare" target=" https://fateme-samare.github.io"> 
-    </figcaption>
+   <figcaption style="text-align: center; font-size: 0.9em; color: #666">
+    Credit: <a href="https://fateme-samare.github.io" target="_blank">Fateme Samare</a>
+   </figcaption>
+
   </div>
 </div>
 <br>
