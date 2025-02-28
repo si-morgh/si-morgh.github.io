@@ -22,7 +22,7 @@ My current project is
   <!-- Right: Image -->
   <div style="flex: 0.15;">
     <img src="/assets/images/portrait.png" alt="My Image" style="max-width: 100%; height: auto;" />
-    <figcaption style="text-align: center; font-size: 0.9em; color: #666;">Credit: Fateme Samare</figcaption>
+    <figcaption style="text-align: center; font-size: 0.9em; color: #666;">credit: <a href="https://fateme-samare.github.io" target="Fateme Samare"> </figcaption>
   </div>
 </div>
 <br>
