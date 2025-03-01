@@ -12,7 +12,7 @@ title: FIN_SAT_SID
     </p>
   </div>
   <!-- Right: Image -->
-  <div style="flex: 0.15;">
+  <div style="flex: 0.45;">
     <img src="/assets/images/sopotimpan.jpg" alt="My Image" style="max-width: 100%; height: auto;" />
       <figcaption style="text-align: center; font-size: 0.9em; color: #666">
       </figcaption>
