@@ -25,7 +25,6 @@ My current project is
    <figcaption style="text-align: center; font-size: 0.9em; color: #666">
     Credit: <a href="https://fateme-samare.github.io" target="_blank">Fateme Samare</a>
    </figcaption>
-
   </div>
 </div>
 <br>
