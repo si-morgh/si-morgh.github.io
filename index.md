@@ -16,10 +16,10 @@ title: Bio
     <p> I am a mathematician working as a researcher (adiunkt) at the Institute of Mathematics of Polish Academy of Sciences (IMPAN). </p>
 
       
-My current project is
+<p>My current project is
   <a href="https://sites.google.com/view/finsidsat/info?authuser=0" target="_blank"> Side Conditions And The Saturation of The Non-stationary Ideal</a>, which is part of the project No. 2022/47/P/ST1/00705 co-funded by the National Science Centre and the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 945339.</p>
 
-  I maintain the website of <a href="https://gdn-logic.github.io" target="_blank"> Gdansk Mathematical Logic Community</a>.
+  <p>I maintain the website of <a href="https://gdn-logic.github.io" target="_blank"> Gdansk Mathematical Logic Community</a>.
 <div style="height: 0.5cm;"></div>
 </p>
   </div>
