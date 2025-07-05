@@ -2,19 +2,17 @@
 layout: page
 title: Notes
 ---
-<p style="margin-bottom: 3em;">
-  I publish these notes here for pedagogical purposes.
-</p>
+<hr>
+
+
 <ul>
+  {% assign sorted_notes = site.data.notes | sort: 'year' | reverse %}
+  {% for note in sorted_notes %}
     <li>
-        <a href="https://drive.google.com/file/d/17oI3gpx1lQLCE0svPoqTPEvBKIO8Aajx/view?usp=sharing" target="_blank">
-            A Proof Of The \(\Delta\)-System Lemma Using Elementary Submodels
-        </a>
-     <hr>
+      <a href="{{ note.link }}">{{ note.title }}, {{ note.year }}</a><br>
+      {% if note.notes %}
+        <small>{{ note.notes }}</small>
+      {% endif %}
     </li>
-    <li>
-        <a href="https://drive.google.com/file/d/1Z4f-1k6wfDZaz8r6hytlv0TM8h6njsdI/view?usp=sharing" target="_blank">
-           Finite Support Product of Strongly Proper Forcings
-        </a>
-    </li>
+  {% endfor %}
 </ul>
