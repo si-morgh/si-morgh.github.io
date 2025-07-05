@@ -2,8 +2,10 @@
 layout: page
 title: Notes
 ---
+<p style="margin-bottom: 3em;">
+  I publish these notes here for pedagogical purposes.
+</p>
 
-I publish these notes here for pedagogical purposes. They may or may not caontain new theorems.
 <ul>
     <li>
         <a href="https://drive.google.com/file/d/17oI3gpx1lQLCE0svPoqTPEvBKIO8Aajx/view?usp=sharing" target="_blank">
