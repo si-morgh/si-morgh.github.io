@@ -5,7 +5,6 @@ title: Notes
 <p style="margin-bottom: 3em;">
   I publish these notes here for pedagogical purposes.
 </p>
-
 <ul>
     <li>
         <a href="https://drive.google.com/file/d/17oI3gpx1lQLCE0svPoqTPEvBKIO8Aajx/view?usp=sharing" target="_blank">
