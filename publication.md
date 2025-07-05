@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research
+title: research
 ---
 <hr>
 <strong>profiles</strong>  
