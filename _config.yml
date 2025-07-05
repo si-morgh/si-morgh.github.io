@@ -34,7 +34,8 @@ header_pages:
   - finsidsat.md
   - publication.md
   - notes.md
- # - slides.md
+  - slides.md
+
 
 minima:
   skin: classic
