@@ -1,0 +1,530 @@
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+Configuration file: /Users/rahmanmohammadpour/github/si-morgh.github.io/_config.yml
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+             Theme: minima
+      Theme source: /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/minima-2.5.2
+         Requiring: jekyll-feed
+         Requiring: jekyll-seo-tag
+         Requiring: /Users/rahmanmohammadpour/github/si-morgh.github.io/_plugins/bibtex.rb
+         Requiring: jekyll-scholar
+            Source: /Users/rahmanmohammadpour/github/si-morgh.github.io
+       Destination: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+           Reading: /_layouts/base.html
+           Reading: /_layouts/bib.html
+           Reading: /_layouts/home.html
+           Reading: /_layouts/page-sans-title.html
+           Reading: /_layouts/page.html
+           Reading: /_layouts/post.html
+           Reading: /_layouts/default.html
+       EntryFilter: excluded /Gemfile.lock.backup
+       EntryFilter: excluded /Gemfile
+       EntryFilter: excluded /Gemfile.lock
+       EntryFilter: excluded /.jekyll-cache
+           Reading: assets/css/style.scss
+           Reading: publication.md
+           Reading: slides.md
+           Reading: finsidsat.md
+           Reading: bib.html
+           Reading: 404.html
+           Reading: info.md
+           Reading: index.md
+           Reading: notes.md
+           Reading: about.md
+           Reading: assets/main.scss
+           Reading: _data/notes.yml
+           Reading: _data/talks.yml
+        Generating: Jekyll::Scholar::DetailsGenerator finished in 2.4e-05 seconds.
+       Jekyll Feed: Generating feed for posts
+        Generating: JekyllFeed::Generator finished in 0.001568 seconds.
+         Rendering: 404.html
+  Pre-Render Hooks: 404.html
+  Rendering Markup: 404.html
+Post-Convert Hooks: 404.html
+  Rendering Layout: 404.html
+         Rendering: about.md
+  Pre-Render Hooks: about.md
+  Rendering Markup: about.md
+Post-Convert Hooks: about.md
+  Rendering Layout: about.md
+         Rendering: bib.html
+  Pre-Render Hooks: bib.html
+  Rendering Liquid: bib.html
+  Rendering Markup: bib.html
+Post-Convert Hooks: bib.html
+  Rendering Layout: bib.html
+         Rendering: finsidsat.md
+  Pre-Render Hooks: finsidsat.md
+  Rendering Markup: finsidsat.md
+Post-Convert Hooks: finsidsat.md
+  Rendering Layout: finsidsat.md
+         Rendering: index.md
+  Pre-Render Hooks: index.md
+  Rendering Markup: index.md
+Post-Convert Hooks: index.md
+  Rendering Layout: index.md
+         Rendering: info.md
+  Pre-Render Hooks: info.md
+  Rendering Markup: info.md
+Post-Convert Hooks: info.md
+  Rendering Layout: info.md
+         Rendering: notes.md
+  Pre-Render Hooks: notes.md
+  Rendering Liquid: notes.md
+  Rendering Markup: notes.md
+Post-Convert Hooks: notes.md
+  Rendering Layout: notes.md
+         Rendering: publication.md
+  Pre-Render Hooks: publication.md
+  Rendering Liquid: publication.md
+             Cache: Cannot dump object f5b1b8fd8102a4242c1f0ad1dc89df8b19cdcf99ece061086812f493bc266036
+  Rendering Markup: publication.md
+Post-Convert Hooks: publication.md
+  Rendering Layout: publication.md
+         Rendering: slides.md
+  Pre-Render Hooks: slides.md
+  Rendering Liquid: slides.md
+  Rendering Markup: slides.md
+Post-Convert Hooks: slides.md
+  Rendering Layout: slides.md
+         Rendering: assets/css/style.scss
+  Pre-Render Hooks: assets/css/style.scss
+  Rendering Liquid: assets/css/style.scss
+  Rendering Markup: assets/css/style.scss
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │   "minima/skins/classic",
+  │   ^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │   "minima/initialize";
+  │   ^^^^^^^^^^^^^^^^^^^
+  ╵
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 3:3  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+5 │ @import "minima/skins/auto";
+  │         ^^^^^^^^^^^^^^^^^^^
+  ╵
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+14 │ $lm-brand-color-light:     lighten($lm-brand-color, 40%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 14:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 81.6%)
+color.adjust($color, $lightness: 40%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+14 │ $lm-brand-color-light:     lighten($lm-brand-color, 40%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 14:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+15 │ $lm-brand-color-dark:      darken($lm-brand-color, 25%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 15:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -49.0384615385%)
+color.adjust($color, $lightness: -25%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+15 │ $lm-brand-color-dark:      darken($lm-brand-color, 25%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 15:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+24 │ $lm-link-visited-color:    darken($lm-link-base-color, 15%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 24:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -28.5447761194%)
+color.adjust($color, $lightness: -15%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+24 │ $lm-link-visited-color:    darken($lm-link-base-color, 15%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 24:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+28 │ $lm-border-color-02:       lighten($lm-brand-color, 35%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 28:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 71.4%)
+color.adjust($color, $lightness: 35%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+28 │ $lm-border-color-02:       lighten($lm-brand-color, 35%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 28:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+31 │ $lm-table-text-color:      lighten($lm-text-color, 18%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 31:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 19.2857142857%)
+color.adjust($color, $lightness: 18%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+31 │ $lm-table-text-color:      lighten($lm-text-color, 18%) !default;
+   │                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/skins/auto.scss 31:28                                                   @import
+    minima/skins/classic.scss 5:9                                                  @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 2:3  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+46 │   "minima/custom-variables", // Hook to override predefined variables.
+   │   ^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima/initialize.scss 46:3                                                    @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 3:3  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+47 │   "minima/base",             // Defines element resets.
+   │   ^^^^^^^^^^^^^
+   ╵
+    minima/initialize.scss 47:3                                                    @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/css/style.scss 3:3  root stylesheet
+WARNING: 18 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+Post-Convert Hooks: assets/css/style.scss
+         Rendering: assets/main.scss
+  Pre-Render Hooks: assets/main.scss
+  Rendering Markup: assets/main.scss
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "minima";
+  │         ^^^^^^^^
+  ╵
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+48 │   "minima/base",
+   │   ^^^^^^^^^^^^^
+   ╵
+    minima.scss 48:3                                                          @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+49 │   "minima/layout",
+   │   ^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 49:3                                                          @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+50 │   "minima/syntax-highlighting"
+   │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 50:3                                                          @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+18 │ $grey-color-light: lighten($grey-color, 40%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 18:20                                                         @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 81.6%)
+color.adjust($color, $lightness: 40%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+18 │ $grey-color-light: lighten($grey-color, 40%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 18:20                                                         @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+19 │ $grey-color-dark:  darken($grey-color, 25%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 19:20                                                         @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -49.0384615385%)
+color.adjust($color, $lightness: -25%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+19 │ $grey-color-dark:  darken($grey-color, 25%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 19:20                                                         @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+110 │     color: darken($brand-color, 15%);
+    │            ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ../../../../minima-2.5.2/_sass/minima/_base.scss 110:12                   @import
+    minima.scss 48:3                                                          @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -28.5447761194%)
+color.adjust($color, $lightness: -15%)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ╷
+110 │     color: darken($brand-color, 15%);
+    │            ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ../../../../minima-2.5.2/_sass/minima/_base.scss 110:12                   @import
+    minima.scss 48:3                                                          @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+235 │   color: lighten($text-color, 18%);
+    │          ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ../../../../minima-2.5.2/_sass/minima/_base.scss 235:10                   @import
+    minima.scss 48:3                                                          @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 19.2857142857%)
+color.adjust($color, $lightness: 18%)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ╷
+235 │   color: lighten($text-color, 18%);
+    │          ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ../../../../minima-2.5.2/_sass/minima/_base.scss 235:10                   @import
+    minima.scss 48:3                                                          @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+240 │       background-color: lighten($grey-color-light, 6%);
+    │                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ../../../../minima-2.5.2/_sass/minima/_base.scss 240:25                   @import
+    minima.scss 48:3                                                          @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 66.5217391304%)
+color.adjust($color, $lightness: 6%)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ╷
+240 │       background-color: lighten($grey-color-light, 6%);
+    │                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ../../../../minima-2.5.2/_sass/minima/_base.scss 240:25                   @import
+    minima.scss 48:3                                                          @import
+    /Users/rahmanmohammadpour/github/si-morgh.github.io/assets/main.scss 1:9  root stylesheet
+WARNING: 6 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+Post-Convert Hooks: assets/main.scss
+         Rendering: feed.xml
+  Pre-Render Hooks: feed.xml
+  Rendering Liquid: feed.xml
+  Rendering Markup: feed.xml
+Post-Convert Hooks: feed.xml
+  Rendering Layout: feed.xml
+         Rendering: assets/css/style.css.map
+  Pre-Render Hooks: assets/css/style.css.map
+  Rendering Markup: assets/css/style.css.map
+Post-Convert Hooks: assets/css/style.css.map
+         Rendering: assets/main.css.map
+  Pre-Render Hooks: assets/main.css.map
+  Rendering Markup: assets/main.css.map
+Post-Convert Hooks: assets/main.css.map
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/404.html
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/about/index.html
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/bib.html
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/finsidsat.html
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/index.html
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/info/index.html
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/notes.html
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/publication.html
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/slides.html
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/assets/css/style.css
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/assets/main.css
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/feed.xml
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/assets/css/style.css.map
+           Writing: /Users/rahmanmohammadpour/github/si-morgh.github.io/_site/assets/main.css.map
+                    done in 1.032 seconds.
+         Requiring: jekyll-watch
+           Watcher: Ignoring (?-mix:^_config\.yml)
+           Watcher: Ignoring (?-mix:^_site\/)
+           Watcher: Ignoring (?-mix:^\.jekyll\-cache\/)
+           Watcher: Ignoring (?-mix:^Gemfile)
+           Watcher: Ignoring (?-mix:^Gemfile\.lock)
+ Auto-regeneration: enabled for '/Users/rahmanmohammadpour/github/si-morgh.github.io'
+[2025-10-25 11:28:58] INFO  WEBrick 1.9.1
+[2025-10-25 11:28:58] INFO  ruby 3.3.5 (2024-09-03) [x86_64-darwin21]
+[31m                    ------------------------------------------------[0m
+[31m      Jekyll 4.3.4   Please append `--trace` to the `serve` command [0m
+[31m                     for any additional information or backtrace. [0m
+[31m                    ------------------------------------------------[0m
+/Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/3.3.0/socket.rb:205:in `bind': Address already in use - bind(2) for 127.0.0.1:4000 (Errno::EADDRINUSE)
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/3.3.0/socket.rb:205:in `listen'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/3.3.0/socket.rb:770:in `block in tcp_server_sockets'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/3.3.0/socket.rb:231:in `each'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/3.3.0/socket.rb:231:in `foreach'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/3.3.0/socket.rb:768:in `tcp_server_sockets'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/webrick-1.9.1/lib/webrick/utils.rb:60:in `create_listeners'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/webrick-1.9.1/lib/webrick/server.rb:130:in `listen'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/webrick-1.9.1/lib/webrick/server.rb:111:in `initialize'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:47:in `initialize'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/jekyll-4.3.4/lib/jekyll/commands/serve.rb:218:in `new'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/jekyll-4.3.4/lib/jekyll/commands/serve.rb:218:in `start_up_webrick'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/jekyll-4.3.4/lib/jekyll/commands/serve.rb:102:in `process'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `each'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/jekyll-4.3.4/lib/jekyll/commands/serve.rb:86:in `block (2 levels) in init_with_program'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/jekyll-4.3.4/exe/jekyll:15:in `<top (required)>'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/bin/jekyll:25:in `load'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/bin/jekyll:25:in `<top (required)>'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/cli/exec.rb:58:in `load'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/cli/exec.rb:58:in `kernel_load'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/cli/exec.rb:23:in `run'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/cli.rb:455:in `exec'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/vendor/thor/lib/thor/command.rb:28:in `run'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/cli.rb:35:in `dispatch'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/vendor/thor/lib/thor/base.rb:584:in `start'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/cli.rb:29:in `start'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/exe/bundle:28:in `block in <top (required)>'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/lib/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/bundler-2.5.18/exe/bundle:20:in `<top (required)>'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/bin/bundle:25:in `load'
+	from /Users/rahmanmohammadpour/.rbenv/versions/3.3.5/bin/bundle:25:in `<main>'
