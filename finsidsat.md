@@ -8,7 +8,7 @@ title: FIN_SAT_SID
   <!-- Left: Text -->
   <div style="flex: 0.85; padding-right: 20px;">
     <p> <strong></strong>
-    <a href="https://sites.google.com/view/finsidsat/info?authuser=0">A Mathematical Adventure In Gdańsk</a>
+    <a href="https://sites.google.com/view/finsidsat/info?authuser=0">A Mathematical Adventure</a>
     </p>
   </div>
   <!-- Right: Image -->
