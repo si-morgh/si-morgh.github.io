@@ -8,7 +8,7 @@
         {% if entry.arxiv_url %}, {% endif %}
       {% endif %}
       {% if entry.arxiv_url %}
-        <a href="{{ entry.arxiv_url | prepend: site.baseurl }}" target="_blank" style="color: red;">arXiv</a>{% endif %})
+        <a href="{{entry.arxiv_url | prepend: site.baseurl}}" target="_blank" style="color: red;">arXiv</a>{% endif %})
     {% endif %}
   </div>
 </div>
