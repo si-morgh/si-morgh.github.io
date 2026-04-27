@@ -161,3 +161,21 @@ footer, .site-footer {
 }
 
 
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.carousel-slide {
+  display: flex;
+  transition: transform 0.4s ease-out;
+}
+.art-piece {
+  min-width: 100%;
+}
+.art-piece img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
