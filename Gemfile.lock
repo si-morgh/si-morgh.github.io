@@ -213,6 +213,7 @@ DEPENDENCIES
   jekyll-seo-tag
   kramdown-parser-gfm
   minima (~> 2.5)
+  webrick (~> 1.9)
 
 BUNDLED WITH
    2.5.18

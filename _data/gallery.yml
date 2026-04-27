@@ -1,0 +1,10 @@
+collection1:
+  - image: /assets/images/art/collections/C1/1.tiff
+    title: "untitled"
+  - image: /assets/images/art/collections/C1/2.tiff
+    title: "untitled"
+
+
+collection2:
+  - image: /assets/images/art/collections/C2/2.tiff
+    title: "untitled"

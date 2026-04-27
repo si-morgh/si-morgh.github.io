@@ -24,3 +24,5 @@ end
 # tzinfo-data is only needed on Windows or JRuby
 # gem "tzinfo-data"  # leave commented on macOS
 
+
+gem "webrick", "~> 1.9"
