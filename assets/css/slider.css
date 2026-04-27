@@ -1,5 +1,7 @@
 :root {
-    --split: 50%; /* This is controlled by the JS */
+    --split: 50%;
+    --split-num: 50;
+    --dynamic-opacity: 0.5;
 }
 
 body, html {
@@ -15,6 +17,7 @@ body, html {
     position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 .section {
@@ -28,29 +31,61 @@ body, html {
     text-align: center;
 }
 
-/* ART SIDE (Revealed by clip-path) */
+/* --- SHARED PHOTO SETTINGS --- */
+.side-a, .side-m {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100vw;
+    height: 100vh;
+    filter: grayscale(100%); 
+    opacity: var(--dynamic-opacity);
+    transition: opacity 0.1s linear;
+    will-change: clip-path, opacity;
+}
+
 .side-a {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('/assets/images/art-bg.jpg') center/cover;
     z-index: 2;
-    /* This clips the image based on the slider value */
     clip-path: inset(0 calc(100% - var(--split)) 0 0);
 }
 
-/* MATH SIDE (Sits in the background) */
 .side-m {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('/assets/images/math-bg.jpg') center/cover;
     z-index: 1;
 }
 
+/* --- LABELS --- */
 .label {
     color: white;
-    font-family: sans-serif;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 2px 2px 15px rgba(0,0,0,1);
+    z-index: 5;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
 }
 
-/* THE SLIDER CONTROL */
+.label h2 { font-size: 3rem; margin: 0; font-weight: 200; }
+.label p { font-size: 0.8rem; opacity: 0.7; }
+
+/* Fading labels based on slider position */
+.side-a .label { opacity: calc(1 - (var(--split-num) / 45)); }
+.side-m .label { opacity: calc((var(--split-num) - 55) / 45); }
+
+/* --- SLIDER CONTROL --- */
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background: rgba(0,0,0,0.01); 
+}
+
 .gate-slider {
     position: absolute;
     top: 0;
@@ -59,16 +94,89 @@ body, html {
     height: 100%;
     appearance: none;
     background: transparent;
-    cursor: ew-resize;
+    cursor: grab;
     z-index: 10;
     margin: 0;
+    outline: none;
 }
 
-/* The vertical white line */
+/* Chrome, Safari, Edge Thumb */
 .gate-slider::-webkit-slider-thumb {
     appearance: none;
-    width: 4px;
-    height: 100vh;
-    background: #fff;
+    width: 3px;
+    height: 100vh; /* Your original full-screen height */
+    background: rgba(250, 114, 248, 0.9);
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    
+    /* THE FIX: Transition must be here so it knows how to "go back" to 100vh */
+    transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                background 0.3s ease, 
+                transform 0.2s ease;
 }
+
+/* Hover: Shrink to your 180px design */
+.gate-slider:hover::-webkit-slider-thumb {
+    height: 180px; 
+    background: hsl(302, 100%, 50%);
+}
+
+/* Click/Active: Keep it at 180px and widen it */
+.gate-slider:active::-webkit-slider-thumb {
+    height: 180px;
+    transform: scaleX(1.5);
+}
+
+/* Firefox Equivalent */
+.gate-slider::-moz-range-thumb {
+    width: 2px;
+    height: 100vh;
+    background: rgba(255, 91, 252, 0.9);
+    border: none;
+    transition: height 0.3s ease;
+}
+
+.gate-slider:hover::-moz-range-thumb {
+    height: 180px;
+    background: hsl(302, 100%, 50%);
+}
+@media (max-width: 768px) {
+    .floating-text {
+        font-size: 1.5rem; /* Shrink text on mobile */
+        left: 15%;        /* Pull it back left slightly so it fits */
+    }
+}
+
+/* Shared Styles */
+.floating-text {
+    position: absolute;
+    transform: translateY(-50%);
+    font-family: "Futura", "Arial Narrow", sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: rgb(222, 118, 214);
+    pointer-events: none;
+    z-index: 4;
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+    pointer-events: none;
+}
+
+/* Position Art on the Right side of the screen */
+.art-hint {
+    font-size: 18rem;
+    top: 30%;
+    right: 35%; /* Adjust this to move it left/right */
+    transition: opacity 0.1s ease, transform 0.1s ease;
+    opacity: var(--art-hint-opacity, 50);
+}
+
+/* Position Math on the Left side of the screen */
+.math-hint {
+    transform: translate(-50%, -50%);
+    font-size: 14rem;
+    top: 60%;
+    left: 50%; /* Adjust this to move it left/right */
+    transition: opacity 0.1s ease, transform 0.1s ease;
+    opacity: var(--math-hint-opacity, 50);
+}
+

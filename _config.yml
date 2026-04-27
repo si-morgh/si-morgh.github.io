@@ -12,8 +12,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-plugins:
   - jekyll-scholar
 
 scholar:
@@ -31,10 +29,10 @@ include:
 
 header_pages:
 #  - index.md
-  - finsidsat.md
-  - publication.md
-  - notes.md
-  - slides.md
+  - Math/finsidsat.md
+  - Math/publication.md
+  - Math/notes.md
+  - Math/slides.md
 
 
 minima:
