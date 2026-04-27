@@ -1,5 +1,5 @@
 ---
 layout: default
-title: collections
+title: posters
 section: art
 ---

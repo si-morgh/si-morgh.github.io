@@ -11,21 +11,16 @@
           </svg>
         </span>
       </label>
-
-    <div class="trigger">
+ <div class="trigger">
   {% if page.section == "art" %}
-    <a class="page-link" href="{{ "/" | relative_url }}">← Home</a>
-    {% for item in site.art_pages %}
-      <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    {% for item in site.data.navigation.art_menu %}
+      <a class="page-link" href="{{ item.link | relative_url }}">{{ item.name }}</a>
     {% endfor %}
   {% else %}
-    <a class="page-link" href="{{ "/Math/finsidsat" | relative_url }}">Research</a>
-    <a class="page-link" href="{{ "/Math/publication" | relative_url }}">Publications</a>
-    <a class="page-link" href="{{ "/Math/notes" | relative_url }}">Notes</a>
-    <a class="page-link" href="{{ "/Math/slides" | relative_url }}">Slides</a>
-    <a class="page-link" href="{{ "/Art/" | relative_url }}">Art Portfolio</a>
+    {% for item in site.data.navigation.main_menu %}
+      <a class="page-link" href="{{ item.link | relative_url }}">{{ item.name }}</a>
+    {% endfor %}
   {% endif %}
 </div>
-    </nav>
   </div>
 </header>

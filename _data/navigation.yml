@@ -1,17 +1,17 @@
-# This is for your main site and math work
+# _data/navigation.yml
+
 main_menu:
   - name: "Home"
     link: "/"
   - name: "Math Work"
-    link: "/Math/"
+    link: "/Math/finsidsat"
   - name: "Art Gallery"
     link: "/Art/"
 
-# This is for when people are looking at your art
 art_menu:
-  - name: "← Back to Main Site"
-    link: "/"
-  - name: "Art Home"
-    link: "/Art/"
-  - name: "Digital Art"
-    link: "/Art/digital/"
+  - name: "Collections"
+    link: "/Art/collections"
+  - name: "Posters"
+    link: "/Art/posters"
+  - name: "Conference Doodling"
+    link: "/Art/doodling"
