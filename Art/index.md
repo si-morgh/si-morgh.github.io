@@ -11,21 +11,26 @@ section: art
 ---
 
 <script>
-function moveSlide(collectionId, direction) {
-  const container = document.querySelector(`#carousel-${collectionId} .carousel-slide`);
-  const items = container.querySelectorAll('.art-piece');
-  
-  // Get current transform value or default to 0
-  let currentTransform = parseFloat(container.style.getPropertyValue('--offset') || 0);
-  
-  // Calculate new position
-  let newIndex = Math.round(Math.abs(currentTransform / 100)) + direction;
-  
-  // Boundary check
-  if (newIndex >= 0 && newIndex < items.length) {
-    let offset = newIndex * -100;
-    container.style.setProperty('--offset', offset);
-    container.style.transform = `translateX(${offset}%)`;
-  }
-}
+  const slide = document.getElementById('carouselSlide');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const items = document.querySelectorAll('.art-item');
+
+  let counter = 0;
+
+  nextBtn.addEventListener('click', () => {
+    if (counter >= items.length - 1) {
+      counter = -1; // Loops back to the first image
+    }
+    counter++;
+    slide.style.transform = `translateX(${-100 * counter}%)`;
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (counter <= 0) {
+      counter = items.length; // Loops to the last image
+    }
+    counter--;
+    slide.style.transform = `translateX(${-100 * counter}%)`;
+  });
 </script>

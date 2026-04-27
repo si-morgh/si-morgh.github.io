@@ -161,21 +161,53 @@ footer, .site-footer {
 }
 
 
+
+/* Container for the whole gallery */
 .carousel-container {
   position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 50px;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden; /* This hides the images that aren't active */
+  background-color: #f9f9f9;
+  border-radius: 4px;
 }
+
+/* The long 'ribbon' that holds all images side-by-side */
 .carousel-slide {
   display: flex;
-  transition: transform 0.4s ease-out;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
 }
-.art-piece {
+
+/* Individual image container */
+.art-item {
   min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.art-piece img {
-  width: 100%;
-  height: auto;
+
+.art-item img {
+  max-height: 70vh; /* Keeps images from being too tall */
+  width: auto;
   display: block;
+}
+
+/* Navigation Buttons */
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+}
+
+.carousel-next { right: 10px; }
+.carousel-prev { left: 10px; }
+
+.carousel-prev:hover, .carousel-next:hover {
+  background: #fff;
 }

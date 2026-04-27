@@ -9,9 +9,9 @@ main_menu:
     link: "/Art/"
 
 art_menu:
-  - name: "Collections"
+  - name: "collections"
     link: "/Art/collections"
-  - name: "Posters"
+  - name: "posters"
     link: "/Art/posters"
-  - name: "Conference Doodling"
+  - name: "doodling"
     link: "/Art/doodling"
