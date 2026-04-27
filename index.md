@@ -1,36 +1,56 @@
 ---
-#
-# By default, content added below the "---" mark will appear in the home page
-# between the top bar and the list of recent posts.
-# To change the home page layout, edit the _layouts/home.html file.
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
-layout: page
-title: Bio
+layout: null
 ---
-<hr>
-<div style="display: flex; align-items: flex-start;">
-  <!-- Left: Text -->
-  <div style="flex: 0.85; padding-right: 20px;">
-    <h1>Rahman Mohammadpour</h1>
-    <p> I am a mathematician working as a researcher (adiunkt) at the Institute of Mathematics of Polish Academy of Sciences (IMPAN). </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | My Page</title>
+    <link rel="stylesheet" href="{{ '/assets/css/slider.css' | relative_url }}">
+</head>
+<body>
 
-      
-<p>My current project is
-  <a href="https://sites.google.com/view/finsidsat/info?authuser=0" target="_blank"> Side Conditions And The Saturation of The Non-stationary Ideal</a>, which is part of the project No. 2022/47/P/ST1/00705 co-funded by the National Science Centre and the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 945339.</p>
+<div class="split-wrapper">
+    <div class="section side-a">
+        <div class="label">
+            <h2>Art</h2>
+            <p>← Slide Left</p>
+        </div>
+    </div>
 
-  <p>I maintain the community website of <a href="https://impanset.github.io" target="_blank"> IMPAN Pure Set Theory</a>.
-<div style="height: 0.5cm;"></div>
-</p>
-  </div>
-  
-  <!-- Right: Image -->
-  <div style="flex: 0.15;">
-    <img src="/assets/images/portrait.png" alt="My Image" style="max-width: 100%; height: auto;" />
-   <figcaption style="text-align: center; font-size: 0.9em; color: #666">
-    Credit: <a href="https://fateme-samare.github.io" target="_blank">Fateme Samare</a>
-   </figcaption>
-  </div>
+    <div class="section side-m">
+        <div class="label">
+            <h2>Mathematics</h2>
+            <p>Slide Right →</p>
+        </div>
+    </div>
+
+    <input type="range" min="0" max="100" value="50" class="gate-slider" id="gateSlider">
 </div>
-<br>
 
+<script>
+    const slider = document.getElementById('gateSlider');
+    const root = document.documentElement;
+
+    slider.addEventListener('input', (e) => {
+        const value = e.target.value;
+        // This updates the CSS variable --split
+        root.style.setProperty('--split', value + '%');
+
+        // Logic for redirection
+        if (value <= 2) {
+            // Sends user to Art/index.md
+            window.location.href = "{{ '/Art/' | relative_url }}";
+        } else if (value >= 98) {
+            // Sends user to Math/index.md
+            window.location.href = "{{ '/Math/' | relative_url }}";
+        }
+    });
+
+    // Reset slider to middle on page load (prevents browser caching the position)
+    window.onload = () => slider.value = 50;
+</script>
+
+</body>
+</html>
