@@ -27,12 +27,21 @@ include:
   - _static
 
 
+# This is your default menu (Math)
 header_pages:
-#  - index.md
   - Math/finsidsat.md
   - Math/publication.md
   - Math/notes.md
   - Math/slides.md
+
+# This is your Art menu
+art_pages:
+  - title: "Collections"
+    url: "/Art/collections"
+  - title: "Posters"
+    url: "/Art/posters"
+  - title: "Conference Doodling"
+    url: "/Art/doodling"
 
 
 minima:
