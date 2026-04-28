@@ -4,9 +4,12 @@
     {% for item in site.data.galleries[collection] %}
       <div class="art-piece">
         <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+        {% if item.title %}
+          <div class="art-caption">{{ item.title }}</div>
+        {% endif %}
       </div>
     {% endfor %}
   </div>
-  <button class="prev" onclick="moveSlide('{{ collection }}', -1)">❮</button>
-  <button class="next" onclick="moveSlide('{{ collection }}', 1)">❯</button>
+  <button class="prev" onclick="moveSlide('{{ collection }}', -1)" aria-label="Previous">❮</button>
+  <button class="next" onclick="moveSlide('{{ collection }}', 1)" aria-label="Next">❯</button>
 </div>
