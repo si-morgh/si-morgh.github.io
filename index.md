@@ -55,11 +55,12 @@ layout: null
         root.style.setProperty('--art-hint-opacity', Math.min(artOpacity, 1));
         // REDIRECT LOGIC: Only triggers if you reach the very edges
         // REDIRECT LOGIC: Standardize the paths
-if (value <= 5) { 
-    window.location.href = "{{ '/art/' | relative_url }}"; 
-} else if (value >= 95) {
-    window.location.href = "{{ '/math/' | relative_url }}";
-}
+            // Change these lines in your root index.md script:
+           if (value <= 5) { 
+            window.location.href = "{{ '/art/' | relative_url }}";
+           } else if (value >= 95) {
+            window.location.href = "{{ '/math/' | relative_url }}";
+           }
     }
     // 2. WHILE DRAGGING: Update visuals in real-time
     slider.addEventListener('input', (e) => {
