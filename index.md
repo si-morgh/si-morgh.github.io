@@ -54,11 +54,12 @@ layout: null
         root.style.setProperty('--math-hint-opacity', Math.min(mathOpacity, 1));
         root.style.setProperty('--art-hint-opacity', Math.min(artOpacity, 1));
         // REDIRECT LOGIC: Only triggers if you reach the very edges
-        if (value <= 5) { 
-            window.location.href = "{{ '/art/index/' | relative_url }}";
-        } else if (value >= 95) {
-            window.location.href = "{{ '/math/index/' | relative_url }}";
-        }
+        // REDIRECT LOGIC: Standardize the paths
+if (value <= 5) { 
+    window.location.href = "{{ '/art/' | relative_url }}"; 
+} else if (value >= 95) {
+    window.location.href = "{{ '/math/' | relative_url }}";
+}
     }
     // 2. WHILE DRAGGING: Update visuals in real-time
     slider.addEventListener('input', (e) => {
