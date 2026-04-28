@@ -3,6 +3,22 @@
 body {
   background-color: #BEBEBE; /* Change this to any color you want */
 }
+/* --- SCOPED BACKGROUND COLORS --- */
+
+/* This will apply only to pages where the Front Matter has 'section: art' */
+[data-section="art"] {
+  background-color: #F5F5F5; /* Set your desired Art page color here */
+  
+  /* If you want the main body to follow suit */
+  body {
+    background-color: #F5F5F5;
+  }
+}
+
+/* Optional: Specifically setting a different color for Math if you ever want to */
+[data-section="math"] {
+  background-color: #FFFFFF; 
+}
 /* Make the header full width */
 header, .site-header {
   width: 100%;
@@ -179,24 +195,44 @@ footer, .site-footer {
 }
 
 .art-item {
-  /* This ensures each slide takes exactly the full width of the container */
-  flex: 0 0 100%; 
-  min-width: 100%; 
-  max-width: 100%;
-  
-  /* Keep your existing layout properties */
+  flex: 0 0 100%; /* DO NOT SHRINK, DO NOT GROW, STAY 100% WIDTH */
+  min-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 40px; 
 }
 
-/* Ensure the statement slide behaves the same way */
-.statement-slide {
-  flex: 0 0 100%;
-  min-width: 100%;
+/* --- UPDATED: TOP-LEFT ALIGNED FIXED CARD --- */
+.statement-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  
+  /* Fixed Dimensions */
+  width: 550px;         
+  height: 700px;        
+  
+  /* ALIGNMENT FIX */
+  display: block;        /* Changed from flex to block to naturally start at top */
+  text-align: left;      /* Ensures text starts from the left */
+  
+  /* MARGINS / PADDING */
+  padding: 60px 50px;    /* 60px from top, 50px from sides */
+  
+  /* Scrolling and style */
+  overflow-y: auto;     
+  box-sizing: border-box;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  border-radius: 2px;
+}
+
+.statement-card p {
+  line-height: 1.8;
+  font-size: 1.15rem;
+  margin: 0;
+  white-space: pre-line; /* Keeps your paragraph breaks from the file */
 }
 
 .art-item img {
@@ -411,8 +447,8 @@ footer, .site-footer {
 .collection-info {
   padding: 20px;
   text-align: center;
-  background: #000;
-  color: #fff;
+  background: rgba(228, 228, 228, 0.5);
+  color: rgb(255, 255, 255);
 }
 
 .collection-title {
@@ -426,7 +462,7 @@ footer, .site-footer {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #888;
+  color: #aeaeae;
 }
 
 /* --- HUB THUMBNAIL OVERLAY --- */
