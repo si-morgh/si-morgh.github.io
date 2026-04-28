@@ -2,7 +2,7 @@ main_menu:
   - name: "FINSIDSAT"
     link: "/math/finsidsat/"
   - name: "Research"
-    link: "/math/publications/"
+    link: "/math/publication/"
   - name: "Notes"
     link: "/math/notes/"
   - name: "Slides"
