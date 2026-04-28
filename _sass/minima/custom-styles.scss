@@ -159,55 +159,267 @@ footer, .site-footer {
   max-width: 60%; /* Limit image width */
   height: auto; /* Maintain aspect ratio */
 }
-
-
-
-/* Container for the whole gallery */
+/* --- GALLERY CONTAINER --- */
 .carousel-container {
-  position: relative;
-  max-width: 100%;
-  margin: 20px auto;
-  overflow: hidden; /* This hides the images that aren't active */
-  background-color: #f9f9f9;
-  border-radius: 4px;
+  position: relative !important;
+  width: 100%;
+  max-width: 1100px; /* Wider container */
+  margin: 40px auto;
+  overflow: hidden;
+  background-color: #000000 !important; /* Pure black for maximum contrast */
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
-/* The long 'ribbon' that holds all images side-by-side */
+/* --- THE SLIDING RIBBON --- */
 .carousel-slide {
-  display: flex;
-  transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Individual image container */
+/* --- THE ART ITEM --- */
 .art-item {
-  min-width: 100%;
+  flex: 0 0 100%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  /* INCREASED PADDING: This creates the "Black Area" you want */
+  /* Top/Bottom: 80px, Left/Right: 120px */
+  padding: 80px 120px !important; 
+  box-sizing: border-box;
 }
 
 .art-item img {
-  max-height: 70vh; /* Keeps images from being too tall */
+  max-height: 60vh; /* Shrunk slightly to allow more black space around it */
   width: auto;
+  max-width: 100%; 
+  border: 8px solid #ffffff; /* Thick white frame */
+  box-shadow: 0 0 30px rgba(0,0,0,0.9);
   display: block;
 }
 
-/* Navigation Buttons */
-.carousel-prev, .carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 20px;
-  z-index: 10;
+.art-caption {
+  color: #cccccc; /* Subtle grey for the caption */
+  margin-top: 30px;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 1.1rem;
 }
 
-.carousel-next { right: 10px; }
-.carousel-prev { left: 10px; }
+/* --- NAVIGATION BUTTONS --- */
+.carousel-prev, .carousel-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 999 !important;
+  
+  background: rgba(255, 255, 255, 0.15) !important; /* Semi-transparent */
+  backdrop-filter: blur(5px);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 25px 15px !important;
+  font-size: 32px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Positioned well within the black padding zone */
+.carousel-prev { 
+  left: 30px !important; 
+  border-radius: 5px; 
+  cursor: w-resize; 
+}
+
+.carousel-next { 
+  right: 30px !important; 
+  border-radius: 5px; 
+  cursor: e-resize; 
+}
 
 .carousel-prev:hover, .carousel-next:hover {
-  background: #fff;
+  background: #ffffff !important;
+  color: #000000 !important;
+  opacity: 1;
+}
+
+/* --- COUNTER --- */
+#image-counter {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background: rgba(40, 40, 40, 0.8);
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* --- THE FULL-PAGE BLURRY BACKDROP --- */
+.carousel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* Deep dark blur */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* --- THE ADAPTIVE CONTAINER --- */
+.carousel-container {
+  position: relative !important;
+  /* This makes the black box shrink/grow to fit the image inside */
+  display: inline-flex; 
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow: hidden;
+  background-color: #000000 !important;
+  border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.9);
+}
+
+/* --- THE SLIDING RIBBON --- */
+.carousel-slide {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* --- THE ART ITEM (The "Matte") --- */
+.art-item {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Adjust padding to control the "Black Frame" thickness */
+  padding: 60px 100px !important; 
+  box-sizing: border-box;
+}
+
+/* --- THE IMAGE (The White Frame) --- */
+.art-item img {
+  /* These settings prevent squeezing/stretching */
+  max-height: 60vh; 
+  width: auto;      /* Keeps original proportions */
+  max-width: 100%;
+  object-fit: contain; 
+  
+  border: 8px solid #ffffff; /* The White Frame */
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  display: block;
+}
+
+.art-caption {
+  color: #fff;
+  margin-top: 20px;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* --- BUTTONS (Stay fixed to the overlay edges) --- */
+.carousel-prev, .carousel-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10000;
+  background: white !important;
+  color: black !important;
+  border: none !important;
+  padding: 20px 10px !important;
+  font-size: 35px !important;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.carousel-prev { left: 40px !important; border-radius: 5px; cursor: w-resize; }
+.carousel-next { right: 40px !important; border-radius: 5px; cursor: e-resize; }
+
+.carousel-prev:hover, .carousel-next:hover { opacity: 1; }
+
+/* --- CLOSE BUTTON --- */
+.close-gallery {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px; /* Large and clear */
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10001; /* Must be higher than the overlay */
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.close-gallery:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* --- THE HUB GRID --- */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.collection-box {
+  display: block;
+  background: #000;
+  border-radius: 12px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.collection-thumb {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.collection-box:hover .collection-thumb {
+  transform: scale(1.05);
+}
+
+.collection-info {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+.collection-title {
+  margin: 0;
+  font-family: serif;
+  font-size: 1.4rem;
+}
+
+.collection-info p {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888;
 }

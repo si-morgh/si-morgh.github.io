@@ -1,38 +1,39 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <data class="u-url" href="{{ '/' | relative_url }}"></data>
 
   <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <hr><strong>Contact</strong>
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li @copy class="p-name">IMPAN, Jana i Jędrzeja Śniadeckich 8, 00-656 Warszawa, Poland</li>
-          {% endif -%}
-          {% if site.author.email -%}
+    {% if page.section == "art" %}
+      <div class="art-footer-content">
+        <p>
+           <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        </p>
+      </div>
+    {% else %}
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+          <hr><strong>Contact</strong>
+          <ul class="contact-list">
+            <li class="p-name">IMPAN, Jana i Jędrzeja Śniadeckich 8, 00-656 Warszawa, Poland</li>
             <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p>{{ site.description | escape }}</p>
+        </div>
+        <div class="footer-col footer-col-right">
+          <ul class="useful-websites">
+            <p> </p>
+          </ul>
+        </div>
       </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
-      <div class="footer-col footer-col-right">
-        <ul class="useful-websites">
-          <p> </p>
-        </ul>
-      </div>
-    </div>
+    {% endif %}
 
     <div class="social-links">
       {%- include social.html -%}
     </div>
   </div>
-  <div>
-   <div  style="text-align: center; margin-top: 50px; padding: 5px; font-size: 0.8em;">
-    </p>
-    <p>&copy; 2024 Rahman Mohammadpour. Powered by Jekyll with minima theme.</p>
+
+  <div style="text-align: center; margin-top: 50px; padding: 5px; font-size: 0.8em;">
+    <p>&copy; {{ "now" | date: "%Y" }} Rahman Mohammadpour. Powered by Jekyll with minima theme.</p>
   </div>
 </footer>

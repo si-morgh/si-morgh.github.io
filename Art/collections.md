@@ -1,25 +1,25 @@
 ---
 layout: default
-title: collections
+title: Collections
 section: art
-images:
-  - 1.png
-  - 2.png
 ---
 
-<div class="carousel-container">
-  <div class="carousel-slide" id="carouselSlide">
-    
-    <div class="art-item">
-      <img src="{{ '/assets/images/art/collections/C1/1.tiff' | relative_url }}" alt="Artwork 1">
-    </div>
-    
-    <div class="art-item">
-      <img src="{{ '/assets/images/art/collections/C1/2.tiff' | relative_url }}" alt="Artwork 2">
-    </div>
+<div class="collection-grid">
 
+  <a href="{{ '/Art/c1/' | relative_url }}" class="collection-box">
+    <img src="{{ '/assets/images/art/collections/C1/1.png' | relative_url }}" class="collection-thumb">
+    <div class="collection-info">
+      <h3 class="collection-title">Collection One</h3>
+      <p>View Series ❯</p>
     </div>
+  </a>
 
-  <button class="carousel-prev" id="prevBtn">❮</button>
-  <button class="carousel-next" id="nextBtn">❯</button>
+  <a href="{{ '/Art/c2/' | relative_url }}" class="collection-box">
+    <img src="{{ '/assets/images/art/collections/C2/1.png' | relative_url }}" class="collection-thumb">
+    <div class="collection-info">
+      <h3 class="collection-title">Collection Two</h3>
+      <p>View Series ❯</p>
+    </div>
+  </a>
+
 </div>
