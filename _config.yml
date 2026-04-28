@@ -1,19 +1,31 @@
+# Site Settings
 title: Simorq-Home
-description: ""
-
+description: "Personal website of Rahman Mohammadpour"
 author:
   name: Rahman Mohammadpour
   email: cimurq@pm.me
+affiliation: "Institute of Mathematics of Polish Academy of Sciences"
 
-affiliation: Institute of Mathematics of Polish Academy of Sciences
+# URL Settings
+url: "https://si-morgh.github.io"
+baseurl: "" 
+permalink: /:categories/:title/
 
-# Build settings
+# Build Settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  # NOTE: jekyll-scholar will only work on GitHub if using GitHub Actions
   - jekyll-scholar
 
+# Collections (Optional: If you want to use art/collections as a formal Jekyll collection)
+# collections:
+#   art_collections:
+#     output: true
+#     directory: art/collections
+
+# Scholar Configuration
 scholar:
   style: apa
   locale: en
@@ -23,32 +35,27 @@ scholar:
   order: ascending
   bibliography_template: bib
 
+# Files to include in the build
 include:
   - _static
 
-# Update this section in your _config.yml
+# Navigation (Minima theme uses this for the header)[cite: 1]
 header_pages:
-  - math/index.md          # Added this
-  - math/finsidsat.md
+  - math/index.md
   - math/publication.md
   - math/notes.md
   - math/slides.md
-  - art/index.md           # Added this
-  - art/work.md     # Added this
+  - art/index.md
+  - art/work.md
 
-# Art Menu Data
+# Custom Data for your Layouts[cite: 1]
 art_pages:
   - title: "Collections"
-    url: "/art/work"
+    url: "/art/work/"      # Added trailing slashes for better compatibility
   - title: "Posters"
-    url: "/art/posters"
+    url: "/art/posters/"
   - title: "Conference Doodling"
-    url: "/art/doodling"
-
-# URL Settings
-permalink: /:categories/:title/
-url: "https://si-morgh.github.io"
-baseurl: ""  # Leave empty if your site is at si-morgh.github.io
+    url: "/art/doodling/"
 
 minima:
   skin: classic

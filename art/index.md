@@ -4,7 +4,6 @@ title: Bio
 permalink: /art/index/
 section: art
 ---
-
 <script>
   const slide = document.getElementById('carouselSlide');
   const nextBtn = document.getElementById('nextBtn');

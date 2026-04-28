@@ -8,7 +8,7 @@ main_menu:
   - name: "notes"
     link: "/math/notes"
   - name: "slides"
-    link: "/math/slides"
+    link: "/math/slides
 art_menu:
   - name: "collections"
     link: "/art/work"

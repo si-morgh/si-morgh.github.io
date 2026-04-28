@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Collections
-permalink: /art/collections
+permalink: /art/work
 section: art
 ---
-
 <div class="collection-grid">
   <a href="{{ '/art/collections/c1' | relative_url }}" class="collection-box">
     <div class="thumb-container">
