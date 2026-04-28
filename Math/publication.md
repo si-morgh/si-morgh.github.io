@@ -1,6 +1,7 @@
 ---
 layout: page
 title: research
+permalink: math/publications/
 section: math
 ---
 
@@ -25,8 +26,8 @@ section: math
     opacity: 0.7;
   }
   .research-profiles img {
-    width: 18px;
-    height: 18px;
+    width: 120px;
+    height: 30px;
     object-fit: contain;
   }
   .research-section {
@@ -48,20 +49,21 @@ section: math
 
 <div class="research-profiles">
   <a href="http://arxiv.org/a/mohammadpour_r_1" target="_blank">
-    <img src="{{ '/assets/images/icons/arxiv.png' | relative_url }}" alt="ArXiv"> ArXiv
+    <img src="{{ '/assets/images/favicon-arxiv.png' | relative_url }}" alt="ArXiv"> 
   </a>
   <a href="https://zbmath.org/authors/?ml=3&ml-1-f=any&ml-1-v=&ml-1-op=and&ml-2-f=ln&ml-2-v=mohammadpour&ml-2-op=and&ml-3-f=fn&ml-3-v=rahman" target="_blank">
-    <img src="{{ '/assets/images/icons/zbmath.svg' | relative_url }}" alt="zbMATH"> zbMATH
+    <img src="{{ '/assets/images/zbmath.svg' | relative_url }}" alt="zbMATH"> 
   </a>
   <a href="https://orcid.org/0000-0003-4562-4178" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID"> ORCID
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID"> 
   </a>
   <a href="https://mathscinet.ams.org/mathscinet/author?authorId=1240707" target="_blank">
-    <img src="https://mathscinet.ams.org/favicon.ico" alt="MathSciNet"> MathSciNet
+    <img src="https://mathscinet.ams.org/favicon.ico" alt="MathSciNet"> 
   </a>
-  <a href="https://mathoverflow.net/users/38866/rahman-m" target="_blank">
-    <img src="https://cdn.sstatic.net/Sites/mathoverflow/Img/favicon.ico" alt="MathOverflow"> MathOverflow
+ <!-- <a href="https://mathoverflow.net/users/38866/rahman-m" target="_blank">
+    <img src="https://cdn.sstatic.net/Sites/mathoverflow/Img/favicon.ico" alt="MathOverflow"> 
   </a>
+  -->
 </div>
 
 <div class="research-section">

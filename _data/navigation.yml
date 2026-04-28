@@ -3,12 +3,12 @@
 main_menu: 
   - name: "FINSIDSAT"
     link: "/math/finsidsat"
-  - name: "publications"
-  - link: "/math/publications"
+  - name: "resaerch"
+    link: "/math/publications"
   - name: "notes"
-  - link: "/math/notes"
+    link: "/math/notes"
   - name: "slides"
-  - link: "/math/slides"
+    link: "/math/slides"
 
 art_menu:
   - name: "collections"
