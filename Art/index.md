@@ -7,7 +7,7 @@
 #
 layout: page
 title: Bio
-permalink: art/index/
+permalink: /art/index/
 section: art
 ---
 
