@@ -29,10 +29,10 @@ include:
 
 # This is your default menu (Math)
 header_pages:
-  - Math/finsidsat.md
-  - Math/publication.md
-  - Math/notes.md
-  - Math/slides.md
+  - math/finsidsat.md
+  - math/publication.md
+  - math/notes.md
+  - math/slides.md
 
 # This is your art menu
 art_pages:

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-permalink: /info/
+permalink: math/info/
 section: math
 ---
 

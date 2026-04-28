@@ -1,12 +1,16 @@
 # _data/navigation.yml
 
 main_menu: 
-  - name: "Math Work"
+  - name: "FINSIDSAT"
     link: "/math/finsidsat"
   - name: "publications"
-   -link: "publications"
+  - link: "/math/publications"
+  - name: "notes"
+  - link: "/math/notes"
+  - name: "slides"
+  - link: "/math/slides"
 
 art_menu:
   - name: "collections"
-    link: "/Art/collections"
+    link: "/art/collections"
   
