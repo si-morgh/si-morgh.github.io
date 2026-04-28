@@ -7,6 +7,7 @@
 #
 layout: page
 title: Bio
+section: math
 ---
 <hr>
 <div style="display: flex; align-items: flex-start;">

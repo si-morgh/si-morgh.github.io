@@ -1,6 +1,7 @@
 ---
 layout: page
 title: slides
+section: math
 ---
 <hr>
 <ul>

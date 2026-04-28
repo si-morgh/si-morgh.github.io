@@ -1,12 +1,10 @@
 # _data/navigation.yml
 
-main_menu:
-  - name: "Home"
-    link: "/"
+main_menu: 
   - name: "Math Work"
-    link: "/Math/finsidsat"
-  - name: "Art Gallery"
-    link: "/Art/"
+    link: "/math/finsidsat"
+  - name: "publications"
+   -link: "publications"
 
 art_menu:
   - name: "collections"
