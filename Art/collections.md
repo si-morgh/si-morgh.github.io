@@ -6,19 +6,33 @@ section: art
 
 <div class="collection-grid">
 
-  <a href="{{ '/Art/c1/' | relative_url }}" class="collection-box">
-    <img src="{{ '/assets/images/art/collections/C1/1.png' | relative_url }}" class="collection-thumb">
+  <a href="{{ '/Art/collections/c1/' | relative_url }}" class="collection-box">
+    <div class="thumb-container">
+      <img src="{{ '/assets/images/art/collections/C1/1.png' | relative_url }}" class="collection-thumb">
+      <div class="thumb-overlay">
+        <div class="overlay-text">
+          <strong>{{ site.data.statements.c1.title }}</strong>
+          <p>{{ site.data.statements.c1.text | truncate: 100 }}</p>
+        </div>
+      </div>
+    </div>
     <div class="collection-info">
       <h3 class="collection-title">Collection One</h3>
-      <p>View Series ❯</p>
     </div>
   </a>
 
-  <a href="{{ '/Art/c2/' | relative_url }}" class="collection-box">
-    <img src="{{ '/assets/images/art/collections/C2/1.png' | relative_url }}" class="collection-thumb">
+  <a href="{{ '/Art/collections/c2/' | relative_url }}" class="collection-box">
+    <div class="thumb-container">
+      <img src="{{ '/assets/images/art/collections/C2/1.png' | relative_url }}" class="collection-thumb">
+      <div class="thumb-overlay">
+        <div class="overlay-text">
+          <strong>{{ site.data.statements.c2.title }}</strong>
+          <p>{{ site.data.statements.c2.text | truncate: 100 }}</p>
+        </div>
+      </div>
+    </div>
     <div class="collection-info">
       <h3 class="collection-title">Collection Two</h3>
-      <p>View Series ❯</p>
     </div>
   </a>
 
