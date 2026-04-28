@@ -44,6 +44,8 @@ art_pages:
     url: "/Art/doodling"
 
 permalink: /:categories/:title/
+url: "https://username.github.io"
+baseurl: "/repository-name" # If your repo is 'art-site', this must be "/art-site"
 
 minima:
   skin: classic
