@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Collections
+permalink: /art/collections
 section: art
 ---
 
