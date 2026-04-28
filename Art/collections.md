@@ -17,10 +17,10 @@ section: art
       </div>
     </div>
     <div class="collection-info">
-      <h3 class="collection-title">Collection One</h3>
+      <h3 class="collection-title">untiteled</h3>
     </div>
   </a>
-
+<!-- 
   <a href="{{ '/Art/collections/c2/' | relative_url }}" class="collection-box">
     <div class="thumb-container">
       <img src="{{ '/assets/images/art/collections/C2/1.png' | relative_url }}" class="collection-thumb">
@@ -35,5 +35,5 @@ section: art
       <h3 class="collection-title">Collection Two</h3>
     </div>
   </a>
-
+-->
 </div>

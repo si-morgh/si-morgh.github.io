@@ -171,27 +171,32 @@ footer, .site-footer {
   box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
-/* --- THE SLIDING RIBBON --- */
+/* --- THE FIX FOR ALIGNMENT --- */
 .carousel-slide {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* The container of the film strip */
 }
 
-/* --- THE ART ITEM --- */
 .art-item {
-  flex: 0 0 100%;
-  width: 100%;
+  /* This ensures each slide takes exactly the full width of the container */
+  flex: 0 0 100%; 
+  min-width: 100%; 
+  max-width: 100%;
+  
+  /* Keep your existing layout properties */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  /* INCREASED PADDING: This creates the "Black Area" you want */
-  /* Top/Bottom: 80px, Left/Right: 120px */
-  padding: 80px 120px !important; 
   box-sizing: border-box;
+  padding: 40px; 
+}
+
+/* Ensure the statement slide behaves the same way */
+.statement-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
 }
 
 .art-item img {
