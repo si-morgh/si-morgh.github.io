@@ -43,6 +43,7 @@ art_pages:
   - title: "Conference Doodling"
     url: "/Art/doodling"
 
+permalink: /:categories/:title/
 
 minima:
   skin: classic
