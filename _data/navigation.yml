@@ -1,15 +1,13 @@
-# _data/navigation.yml
-
 main_menu: 
   - name: "FINSIDSAT"
-    link: "/math/finsidsat"
-  - name: "resaerch"
-    link: "/math/publications"
-  - name: "notes"
-    link: "/math/notes"
-  - name: "slides"
-    link: "/math/slides
+    link: "/math/finsidsat/"
+  - name: "Research"
+    link: "/math/publications/"
+  - name: "Notes"
+    link: "/math/notes/"
+  - name: "Slides"
+    link: "/math/slides/" # Added missing quote and slash
+
 art_menu:
-  - name: "collections"
-    link: "/art/work"
-  
+  - name: "Collections"
+    link: "/art/work/"     # Added trailing slash
