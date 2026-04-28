@@ -34,14 +34,14 @@ header_pages:
   - Math/notes.md
   - Math/slides.md
 
-# This is your Art menu
+# This is your art menu
 art_pages:
   - title: "Collections"
-    url: "/Art/collections"
+    url: "/art/collections"
   - title: "Posters"
-    url: "/Art/posters"
+    url: "/art/posters"
   - title: "Conference Doodling"
-    url: "/Art/doodling"
+    url: "/art/doodling"
 
 permalink: /:categories/:title/
 url: "https://username.github.io"

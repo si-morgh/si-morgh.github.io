@@ -5,7 +5,7 @@ section: art
 ---
 
 <div class="collection-grid">
-  <a href="{{ '/Art/collections/c1' | relative_url }}" class="collection-box">
+  <a href="{{ '/art/collections/c1' | relative_url }}" class="collection-box">
     <div class="thumb-container">
       <img src="{{ '/assets/images/art/image-collections/image-c1/1.png' | relative_url }}" class="collection-thumb">
       <div class="thumb-overlay">
@@ -19,7 +19,7 @@ section: art
     </div>
   </a>
 <!-- 
-  <a href="{{ '/Art/collections/c2/' | relative_url }}" class="collection-box">
+  <a href="{{ '/art/collections/c2/' | relative_url }}" class="collection-box">
     <div class="thumb-container">
       <img src="{{ '/assets/images/art/collections/C2/1.png' | relative_url }}" class="collection-thumb">
       <div class="thumb-overlay">
