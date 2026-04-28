@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Bio
+permalink: math/index/
 section: math
 ---
 <hr>
