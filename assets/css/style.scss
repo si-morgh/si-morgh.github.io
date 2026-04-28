@@ -1,7 +1,8 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Front matter is required
 ---
 
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
+  "minima/initialize",
+  "custom-styles"; // Add this line to include your split-screen and carousel CSS
