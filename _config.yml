@@ -7,6 +7,7 @@ author:
 affiliation: "Institute of Mathematics of Polish Academy of Sciences"
 
 # URL Settings
+# Use the full URL for production; ensure baseurl is empty for your setup
 url: "https://si-morgh.github.io"
 baseurl: "" 
 permalink: /:categories/:title/
@@ -16,14 +17,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  # NOTE: jekyll-scholar will only work on GitHub if using GitHub Actions
   - jekyll-scholar
-
-# Collections (Optional: If you want to use art/collections as a formal Jekyll collection)
-# collections:
-#   art_collections:
-#     output: true
-#     directory: art/collections
 
 # Scholar Configuration
 scholar:
@@ -35,11 +29,12 @@ scholar:
   order: ascending
   bibliography_template: bib
 
-# Files to include in the build
+# Ensure the _static folder and other necessary assets are included
 include:
   - _static
+  - assets
 
-# Navigation (Minima theme uses this for the header)[cite: 1]
+# Navigation: This controls the automatic menu in the Minima header
 header_pages:
   - math/index.md
   - math/publication.md
@@ -48,10 +43,11 @@ header_pages:
   - art/index.md
   - art/work.md
 
-# Custom Data for your Layouts[cite: 1]
+# Art Menu Data: Used for custom sidebars or footers[cite: 1]
+# Added trailing slashes to prevent 404s on strict servers
 art_pages:
   - title: "Collections"
-    url: "/art/work/"      # Added trailing slashes for better compatibility
+    url: "/art/work/"      
   - title: "Posters"
     url: "/art/posters/"
   - title: "Conference Doodling"
