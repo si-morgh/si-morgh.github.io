@@ -7,9 +7,7 @@ section: art
 
 My name is Rahman!
 
-<!-- Carousel controls and script -->
 <script>
-  // Wait for DOM to load to ensure elements exist
   document.addEventListener('DOMContentLoaded', () => {
     const slide = document.getElementById('carouselSlide');
     const nextBtn = document.getElementById('nextBtn');

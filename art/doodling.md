@@ -1,5 +1,6 @@
 ---
-layout: default
-title: doodling
+layout: page
+title: Doodling
+permalink: /art/doodling/
 section: art
 ---

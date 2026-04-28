@@ -1,5 +1,6 @@
 ---
-layout: default
-title: posters
+layout: page
+title: Posters
+permalink: /art/posters/
 section: art
 ---
