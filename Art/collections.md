@@ -5,9 +5,9 @@ section: art
 ---
 
 <div class="collection-grid">
-  <a href="{{ '/Art/collections/c1.md' | relative_url }}" class="collection-box">
+  <a href="{{ '/Art/collections/c1' | relative_url }}" class="collection-box">
     <div class="thumb-container">
-      <img src="{{ '/assets/images/art/collections/C1/1.png' | relative_url }}" class="collection-thumb">
+      <img src="{{ '/assets/images/art/collections/c1/1.png' | relative_url }}" class="collection-thumb">
       <div class="thumb-overlay">
         <div class="overlay-text">
           <p>{{ site.data.statements.c1.text | truncate: 100 }}</p>
