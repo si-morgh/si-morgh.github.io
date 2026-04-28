@@ -1,6 +1,7 @@
 ---
 layout: page
 title: research
+section: math
 ---
 <hr>
 <strong>profiles</strong>  

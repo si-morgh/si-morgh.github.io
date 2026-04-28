@@ -1,6 +1,7 @@
 ---
 layout: page
 title: notes
+section: math
 ---
 <hr>
 
