@@ -1,24 +1,24 @@
 title: Simorq-Home
-author: 
- name: Rahman Mohammadpour
- email:  cimurq@pm.me
+description: "Research and Art of Rahman Mohammadpour"
+
+author:
+  name: Rahman Mohammadpour
+  email: cimurq@pm.me
 
 affiliation: Institute of Mathematics of Polish Academy of Sciences
 
-description: >
 # Build settings
 theme: minima
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-scholar
 
 scholar:
-  style: apa  # Change this to another style if needed
+  style: apa
   locale: en
-  bibliography: "bibliography.bib" # Make sure this file exists in your Jekyll root
-  bibliography_list_tag: ul  # To use <ul> instead of default <ol>
+  bibliography: "bibliography.bib"
+  bibliography_list_tag: ul
   sort_by: year
   order: ascending
   bibliography_template: bib
@@ -26,15 +26,14 @@ scholar:
 include:
   - _static
 
-
-# This is your default menu (Math)
+# Navigation
 header_pages:
   - math/finsidsat.md
   - math/publication.md
   - math/notes.md
   - math/slides.md
 
-# This is your art menu
+# Art Menu Data
 art_pages:
   - title: "Collections"
     url: "/art/collections"
@@ -43,11 +42,10 @@ art_pages:
   - title: "Conference Doodling"
     url: "/art/doodling"
 
+# URL Settings
 permalink: /:categories/:title/
-url: "https://username.github.io"
-baseurl: "/repository-name" # If your repo is 'art-site', this must be "/art-site"
+url: "https://si-morgh.github.io"
+baseurl: ""  # Leave empty if your site is at si-morgh.github.io
 
 minima:
   skin: classic
-url: "https://si-morgh.github.io"
-
