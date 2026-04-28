@@ -1,19 +1,25 @@
+# Site Settings
 title: Simorq-Home
-description: "Research and Art of Rahman Mohammadpour"
-
+description: "Personal website of Rahman Mohammadpour"
 author:
   name: Rahman Mohammadpour
   email: cimurq@pm.me
+affiliation: "Institute of Mathematics of Polish Academy of Sciences"
 
-affiliation: Institute of Mathematics of Polish Academy of Sciences
+# URL Settings
+# Use the full URL for production; ensure baseurl is empty for your setup
+url: "https://si-morgh.github.io"
+baseurl: "" 
+permalink: /:categories/:title/
 
-# Build settings
+# Build Settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-scholar
 
+# Scholar Configuration
 scholar:
   style: apa
   locale: en
@@ -23,29 +29,29 @@ scholar:
   order: ascending
   bibliography_template: bib
 
+# Ensure the _static folder and other necessary assets are included
 include:
   - _static
+  - assets
 
-# Navigation
+# Navigation: This controls the automatic menu in the Minima header
 header_pages:
-  - math/finsidsat.md
+  - math/index.md
   - math/publication.md
   - math/notes.md
   - math/slides.md
+  - art/index.md
+  - art/work.md
 
-# Art Menu Data
+# Art Menu Data: Used for custom sidebars or footers[cite: 1]
+# Added trailing slashes to prevent 404s on strict servers
 art_pages:
   - title: "Collections"
-    url: "/art/collections"
+    url: "/art/work/"      
   - title: "Posters"
-    url: "/art/posters"
+    url: "/art/posters/"
   - title: "Conference Doodling"
-    url: "/art/doodling"
-
-# URL Settings
-permalink: /:categories/:title/
-url: "https://si-morgh.github.io"
-baseurl: ""  # Leave empty if your site is at si-morgh.github.io
+    url: "/art/doodling/"
 
 minima:
   skin: classic

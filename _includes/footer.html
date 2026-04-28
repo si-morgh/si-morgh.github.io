@@ -37,3 +37,27 @@
     <p>&copy; {{ "now" | date: "%Y" }} Rahman Mohammadpour. Powered by Jekyll with minima theme.</p>
   </div>
 </footer>
+
+<footer class="site-footer h-card">
+  <!-- ... existing footer content ... -->
+</footer>
+
+<script>
+function moveSlide(collectionId, direction) {
+  const container = document.getElementById(`carousel-${collectionId}`);
+  if (!container) return;
+  
+  const slide = container.querySelector('.carousel-slide');
+  const items = slide.querySelectorAll('.art-piece');
+  
+  // Track current index using a data attribute
+  let index = parseInt(slide.getAttribute('data-index') || 0);
+  
+  // Calculate new index (with wrap-around)
+  index = (index + direction + items.length) % items.length;
+  
+  // Move the slide
+  slide.style.transform = `translateX(-${index * 100}%)`;
+  slide.setAttribute('data-index', index);
+}
+</script>

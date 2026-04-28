@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Bio
+permalink: /math/
 section: math
 ---
+
 <hr>
 <div style="display: flex; align-items: flex-start;">
   <div style="flex: 0.85; padding-right: 20px;">
