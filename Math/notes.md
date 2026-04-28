@@ -1,6 +1,7 @@
 ---
 layout: page
 title: notes
+permalink: math/notes/
 section: math
 ---
 

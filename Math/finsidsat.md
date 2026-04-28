@@ -1,6 +1,7 @@
 ---
 layout: page
 title: FIN_SAT_SID
+permalink: math/finsidsat/
 section: math
 ---
 
