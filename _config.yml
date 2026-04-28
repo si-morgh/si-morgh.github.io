@@ -26,17 +26,20 @@ scholar:
 include:
   - _static
 
-# Navigation
+# Update this section in your _config.yml
 header_pages:
+  - math/index.md          # Added this
   - math/finsidsat.md
   - math/publication.md
   - math/notes.md
   - math/slides.md
+  - art/index.md           # Added this
+  - art/work.md     # Added this
 
 # Art Menu Data
 art_pages:
   - title: "Collections"
-    url: "/art/collections"
+    url: "/art/work"
   - title: "Posters"
     url: "/art/posters"
   - title: "Conference Doodling"
