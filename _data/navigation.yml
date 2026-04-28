@@ -11,7 +11,4 @@ main_menu:
 art_menu:
   - name: "collections"
     link: "/Art/collections"
-    - name: "posters"
-      link: "/Art/posters"
-   - name: "doodling"
-     link: "/Art/doodling"
+  
