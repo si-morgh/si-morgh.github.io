@@ -9,28 +9,55 @@ layout: null
     <title>Welcome | My Page</title>
     <link rel="stylesheet" href="{{ '/assets/css/slider.css' | relative_url }}">
     <style>
+        /* 1. FIX: Ensure the container and sections fill the screen so "me.png" shows up */
+        .split-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full screen height */
+            overflow: hidden;
+        }
+
+        .section {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%; /* Full height of wrapper */
+            background-size: cover;
+            background-position: center;
+        }
+
         .side-a, .side-m {
             background-image: url("{{ '/assets/images/me.png' | relative_url }}");
         }
 
-        /* --- MOBILE SLIDER OPTIMIZATIONS --- */
-        .slider-container {
-            position: absolute;
-            bottom: 10%; 
-            width: 100%;
-            z-index: 100; 
-            display: flex;
-            justify-content: center;
-            touch-action: none; /* Prevents page scrolling while sliding */
-        }
+        /* 2. MOBILE SLIDER OPTIMIZATIONS */
+        
+        /* --- CENTERED SLIDER OPTIMIZATION --- */
+.slider-container {
+    position: absolute;
+    /* This centers it vertically */
+    top: 50%; 
+    left: 50%;
+    /* This shifts it back so the center of the slider is the center of the screen */
+    transform: translate(-50%, 0%); 
+    
+    width: 100%;
+    z-index: 100; 
+    display: flex;
+    justify-content: center;
+    touch-action: none;
+}
 
-        .gate-slider {
-            -webkit-appearance: none;
-            width: 80%;
-            height: 60px; 
-            background: transparent;
-            cursor: pointer;
-        }
+.gate-slider {
+    -webkit-appearance: none;
+    width: 80%; /* Takes up 80% of screen width */
+    height: 80px; /* Slightly taller hit area for better touch */
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+        
 
         /* Larger thumb for easier grabbing on mobile */
         .gate-slider::-webkit-slider-thumb {
@@ -63,7 +90,6 @@ layout: null
     const root = document.documentElement;
     let ticking = false;
 
-    // 1. THE BRAIN: Updates visuals and handles redirects
     function updateStyles(value) {
         const distanceFromCenter = Math.abs(50 - value);
         const newOpacity = 0.5 + (distanceFromCenter / 100);
@@ -79,15 +105,12 @@ layout: null
         root.style.setProperty('--math-hint-opacity', Math.min(mathOpacity, 1));
         root.style.setProperty('--art-hint-opacity', Math.min(artOpacity, 1));
 
-        // Redirects when reaching edges
         if (value <= 5) { 
             window.location.href = "{{ '/art/' | relative_url }}";
         } else if (value >= 95) {
             window.location.href = "{{ '/math/' | relative_url }}";
         }
     }
-
-    // 2. INPUT LISTENER: Real-time updates
     slider.addEventListener('input', (e) => {
         const value = e.target.value;
         if (!ticking) {
@@ -99,7 +122,6 @@ layout: null
         }
     });
 
-    // 3. RELEASE LISTENERS: Handles snapping back
     const endEvents = ['pointerup', 'touchend', 'mouseup'];
     endEvents.forEach(event => {
         slider.addEventListener(event, () => {
@@ -110,7 +132,6 @@ layout: null
         });
     });
 
-    // 4. THE SNAP ANIMATION
     function snapToMiddle() {
         const startValue = parseFloat(slider.value);
         const endValue = 50;
@@ -129,7 +150,6 @@ layout: null
         requestAnimationFrame(animateSnap);
     }
 
-    // 5. STARTUP
     window.onload = () => {
         slider.value = 50;
         updateStyles(50);
