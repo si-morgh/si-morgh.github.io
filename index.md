@@ -57,7 +57,7 @@ layout: null
         // REDIRECT LOGIC: Standardize the paths
             // Change these lines in your root index.md script:
            if (value <= 5) { 
-            window.location.href = "{{ '/Art/' | relative_url }}";
+            window.location.href = "{{ '/art/' | relative_url }}";
            } else if (value >= 95) {
             window.location.href = "{{ '/math/' | relative_url }}";
            }
