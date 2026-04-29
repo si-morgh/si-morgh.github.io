@@ -7,13 +7,24 @@ $on-palm: 100%;
 $on-laptop: 100%;
 
 .wrapper {
-  max-width: 100% !important; // Kept to break Minima's strict 800px limit
-  margin: 0 !important;
+  max-width: 85% !important; // Kept to break Minima's strict 800px limit
+  margin: 15 !important;
   padding: 0 30px !important;
   box-sizing: border-box;
 }
 
-.site-header, 
+.site-header {
+  width: 85%;
+  border-color: $border-color-03;
+  
+  /* --- THE FIX: Adding breathing room back to the top and bottom --- */
+  padding-top: 65px; 
+  padding-bottom: 15px; 
+  
+  .wrapper {
+    max-width: 100% !important;
+  }
+}
 .site-footer {
   width: 100%;
   border-color: $border-color-03;
