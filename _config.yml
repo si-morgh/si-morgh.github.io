@@ -7,7 +7,6 @@ author:
 affiliation: "Institute of Mathematics of Polish Academy of Sciences"
 
 # URL Settings
-# Use the full URL for production; ensure baseurl is empty for your setup
 url: "https://si-morgh.github.io"
 baseurl: "" 
 permalink: /:categories/:title/
@@ -29,22 +28,18 @@ scholar:
   order: ascending
   bibliography_template: bib
 
-# Ensure the _static folder and other necessary assets are included
 include:
   - _static
   - assets
 
-# Navigation: This controls the automatic menu in the Minima header
+# Navigation
 header_pages:
-  - math/index.md
+  - math/math-index.md
   - math/publication.md
   - math/notes.md
   - math/slides.md
-  - art/index.md
-  - art/work.md
 
-# Art Menu Data: Used for custom sidebars or footers[cite: 1]
-# Added trailing slashes to prevent 404s on strict servers
+# Art Menu Data
 art_pages:
   - title: "Collections"
     url: "/art/work/"      
@@ -52,6 +47,3 @@ art_pages:
     url: "/art/posters/"
   - title: "Conference Doodling"
     url: "/art/doodling/"
-
-minima:
-  skin: classic
