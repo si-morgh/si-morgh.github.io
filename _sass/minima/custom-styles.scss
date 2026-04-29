@@ -137,20 +137,174 @@ body { background-color: #BEBEBE; } // Default Global Grey
   letter-spacing: 2px;
 }
 
-/* ==========================================================================
-   5. HOME PAGE "GATE" OVERRIDES
-   ========================================================================== */
+/* --- CLEANED ART GALLERY OVERLAY --- */
+.carousel-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
-[data-section="home"] {
-  body, html {
-    margin: 0; padding: 0;
-    height: 100%; width: 100%;
-    overflow: hidden; // Full screen splash effect[cite: 5]
-    background-color: #000;
-  }
+.carousel-container {
+  position: relative !important;
+  display: inline-flex; 
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow: hidden;
+  background-color: #000000 !important;
+  border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.9);
+}
 
-  .page-content, .wrapper {
-    max-width: none !important;
-    padding: 0 !important;
-  }
+.art-item {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 100px !important; 
+  box-sizing: border-box;
+}
+
+.art-item img {
+  max-height: 60vh; 
+  width: auto;
+  border: 8px solid #ffffff; /* The Adaptive White Frame */
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* --- ART SECTION FOOTER STYLING --- */
+.art-footer-content {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
+
+.art-footer-content p {
+  font-size: 1.1em;
+  color: #333; /* Dark gray to look professional on the light page */
+}
+
+.art-footer-content a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* --- UPDATED GALLERY STATEMENT SLIDE --- */
+.statement-slide {
+  background-color: #000; 
+}
+
+.statement-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px; /* Increased padding for a cleaner look */
+  max-width: 800px; /* Wider for left-aligned text */
+  border-radius: 4px;
+  text-align: left; /* CHANGED FROM CENTER TO LEFT */
+  color: #000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.statement-card p {
+  line-height: 1.8;
+  font-size: 1.2rem;
+  margin: 0;
+  white-space: pre-line; /* Respects line breaks in your text */
+}
+
+/* --- IMPROVED NAV INDICATORS --- */
+.carousel-prev, .carousel-next {
+  font-family: sans-serif !important; /* Cleaner look for arrows */
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1) !important; /* Subtle background */
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  width: 60px;
+  height: 60px;
+  border-radius: 50% !important; /* Round buttons look more like controls */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease !important;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #000 !important;
+  transform: translateY(-50%) scale(1.1) !important;
+}
+
+/* Specific pulse for the 'Forward' button to show where to start */
+@keyframes pulse-forward {
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+.start-hint {
+  animation: pulse-forward 2s infinite;
+  border-color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* --- THE FIX FOR ALIGNMENT --- */
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* The container of the film strip */
+}
+
+.art-item {
+  /* This ensures each slide takes exactly the full width of the container */
+  flex: 0 0 100%; 
+  min-width: 100%; 
+  max-width: 100%;
+  
+  /* Keep your existing layout properties */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 40px; 
+}
+
+/* Ensure the statement slide behaves the same way */
+.statement-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute; /* This keeps them on top of the photos */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.art-item {
+  flex: 0 0 100%; /* DO NOT SHRINK, DO NOT GROW, STAY 100% WIDTH */
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.statement-card {
+  text-align: left; /* Text starts from the left as requested */
+  padding: 40px;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
 }
