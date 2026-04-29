@@ -59,7 +59,7 @@ layout: null
            if (value <= 5) { 
             window.location.href = "{{ '/art/' | relative_url }}";
            } else if (value >= 95) {
-            window.location.href = "{{ '/math/' | relative_url }}";
+            window.location.href = "{{ '/Math/' | relative_url }}";
            }
     }
     // 2. WHILE DRAGGING: Update visuals in real-time

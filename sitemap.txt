@@ -44,7 +44,7 @@ slides.md
 bibliography.bib
 
 ./_data:
-galleries.md
+galleries.yml
 navigation.yml
 notes.yml
 statements.yml
@@ -134,6 +134,7 @@ math
 minima.gemspec
 screenshot.png
 script
+sitemap.txt
 test.txt
 
 ./_site/404:
@@ -144,18 +145,10 @@ favicon-arxiv.png
 zbmath.svg
 
 ./_site/art:
-collections
 doodling
 index.html
 posters
 work
-
-./_site/art/collections:
-c1
-c2.html
-
-./_site/art/collections/c1:
-index.html
 
 ./_site/art/doodling:
 index.html
@@ -257,14 +250,9 @@ zbmath.svg
 
 ./art:
 art-index.md
-collections
 doodling.md
 posters.md
 work.md
-
-./art/collections:
-c1.md
-c2.md
 
 ./assets:
 css

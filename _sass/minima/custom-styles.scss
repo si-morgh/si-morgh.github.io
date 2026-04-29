@@ -1,77 +1,82 @@
-// 1. Global Background
-body {
-  background-color: #BEBEBE; // Your preferred grey background
-}
+/* ==========================================================================
+   1. GLOBAL VARIABLES & MINIMA OVERRIDES
+   ========================================================================== */
 
-// 2. Section-Specific Backgrounds
-[data-section="art"] body {
-  background-color: #F5F5F5; // Lighter for Art
-}
+// Set these first so they can be used by Minima's internal logic
+$content-width: 100%; 
+$on-palm: 100%;
+$on-laptop: 100%;
 
-[data-section="math"] body {
-  background-color: #FFFFFF; // White for Math
-}
-
-// 3. The Wrapper Fix
 .wrapper {
-  max-width: $content-width; // Standard width from Minima[cite: 27]
-  margin: 0 auto;           // Centers the site properly
-  padding: 0 20px;
+  max-width: 100% !important; // Breaks Minima's 800px limit
+  margin: 0 !important;
+  padding: 0 30px !important;
+  box-sizing: border-box;
 }
 
-// 4. Art Section "Full Width" Override
-[data-section="art"] .wrapper {
-  max-width: 95%; // Allows Art galleries to expand
+.site-header .wrapper, 
+.site-footer .wrapper {
+  max-width: 100% !important;
 }
 
-// 5. Navigation & Header Fix
 .site-header, .site-footer {
   width: 100%;
   border-color: $border-color-03;
 }
 
 .site-nav {
-  // Removing width: 100% so it doesn't break the float[cite: 28, 29]
   background-color: transparent; 
 }
 
-// 6. Gallery Specific Styles
-.art-item img {
-  border: 8px solid #ffffff; 
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  max-height: 70vh;
-  object-fit: contain;
+/* ==========================================================================
+   2. SECTION-SPECIFIC THEMES (Body Backgrounds)
+   ========================================================================== */
+
+body { background-color: #BEBEBE; } // Default Global Grey
+
+[data-section="art"] {
+  body { background-color: #F5F5F5; } // Lighter for Art
+  .wrapper { max-width: 95% !important; margin: 0 auto !important; } 
 }
-/* Carousel Container */
+
+[data-section="math"] {
+  body { background-color: #FFFFFF; } // White for Math[cite: 5]
+}
+
+/* ==========================================================================
+   3. THE CAROUSEL ENGINE (Standardized for carousel.html)
+   ========================================================================== */
+
 .carousel-container {
   position: relative;
   width: 100%;
-  overflow: hidden; /* Hides images outside the frame */
-  margin: 2em 0;
+  height: auto;
+  overflow: hidden; // Hides images outside the active frame[cite: 5]
   background: #000;
+  margin: 2em 0;
 }
 
-/* The horizontal ribbon of images */
 .carousel-slide {
-  display: flex; /* Critical: keeps images side-by-side */
+  display: flex !important; // Critical: keeps images side-by-side[cite: 5]
   transition: transform 0.5s ease-in-out;
   will-change: transform;
 }
 
 /* Individual slide items */
-.art-piece {
-  min-width: 100%; /* Each item takes full width */
-  flex-shrink: 0;   /* Prevents images from squishing */
+.art-piece, .art-item {
+  flex: 0 0 100%; // Do not shrink, take 100% width[cite: 5]
+  min-width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 40px;
   box-sizing: border-box;
 
   img {
-    max-height: 70vh;
+    max-height: 75vh;
     width: auto;
+    object-fit: contain;
     border: 10px solid #fff;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
@@ -80,160 +85,72 @@ body {
 .art-caption {
   color: #fff;
   margin-top: 15px;
-  font-style: italic;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.3);
-  color: white;
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  z-index: 10;
-  &:hover { background: rgba(255,255,255,0.8); color: #000; }
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-
-
-
-/* Only apply these 'gate' styles when on the home page */
-[data-section="home"] {
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        overflow: hidden; /* Only hides overflow on the landing gate */
-        background-color: #000;
-    }
-
-    .page-content, .wrapper {
-        max-width: none;
-        padding: 0;
-    }
-    
-    /* Insert the rest of your Source 31 code here */
-}
-
-/* ========================================= */
-/* BEAUTIFUL ART GALLERY STYLES        */
-/* ========================================= */
-
-/* The Dark Full-Screen Overlay */
-.carousel-overlay {
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: #000000;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-}
-
-/* The Close Button */
-.close-gallery {
-  position: absolute;
-  top: 20px; right: 30px;
-  background: none; border: none;
-  color: white; font-size: 40px;
-  cursor: pointer; z-index: 10001;
-}
-.close-gallery:hover { color: #ccc; }
-
-/* The Sliding Track */
-.carousel-container {
-  position: relative;
-  width: 100%; height: 100%;
-  overflow: hidden;
-}
-
-.carousel-slide {
-  display: flex;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-/* Each Item (Statement or Image) */
-.art-item {
-  flex: 0 0 100%; /* Do not shrink, take 100% width */
-  min-width: 100%; width: 100%; height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-/* The Fixed Gallery Plaque (Statement Card) */
-.statement-card {
-  background: rgba(255, 255, 255, 0.95);
-  color: #000;
-  width: 550px;         
-  height: 700px;        
-  display: block;       
-  text-align: left;     
-  padding: 60px 50px;   
-  overflow-y: auto;     
-  box-sizing: border-box;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-  border-radius: 2px;
-}
-
-.statement-card p {
-  line-height: 1.8;
-  font-size: 1.15rem;
-  margin: 0;
-  white-space: pre-line;
-}
-
-/* Image Formatting inside Gallery */
-.art-item img {
-  max-height: 80vh;
-  max-width: 90vw;
-  object-fit: contain;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  border: 10px solid #fff;
-}
-
-.art-caption {
-  color: #fff;
-  margin-top: 20px;
   font-family: serif;
   font-style: italic;
   font-size: 1.1rem;
 }
 
 /* Navigation Buttons */
-.carousel-prev, .carousel-next {
+.prev, .next, .carousel-prev, .carousel-next {
   position: absolute;
-  top: 50%; transform: translateY(-50%);
-  background: rgba(0,0,0,0.5); border: 1px solid #555;
-  color: white; font-size: 24px;
-  padding: 15px 20px; cursor: pointer; z-index: 10000;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: 1px solid #555;
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 24px;
+  transition: background 0.3s;
+
+  &:hover { background: rgba(255,255,255,0.2); }
 }
-.carousel-prev { left: 20px; }
-.carousel-next { right: 20px; }
-.carousel-prev:hover, .carousel-next:hover { background: rgba(255,255,255,0.2); }
+
+.prev, .carousel-prev { left: 20px; }
+.next, .carousel-next { right: 20px; }
+
+/* ==========================================================================
+   4. SPECIAL COMPONENTS (Statement Cards & Gallery Extras)
+   ========================================================================== */
+
+.statement-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  width: 550px;         
+  height: 700px;        
+  padding: 60px 50px;   
+  overflow-y: auto;     
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  border-radius: 2px;
+  text-align: left;
+  
+  p { line-height: 1.8; font-size: 1.15rem; white-space: pre-line; }
+}
 
 #image-counter {
   position: absolute;
-  bottom: 20px; left: 50%; transform: translateX(-50%);
-  color: white; font-family: sans-serif; letter-spacing: 2px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  letter-spacing: 2px;
 }
 
-/* The Pulsing Hint for the first slide */
-.start-hint {
-  animation: pulse 2s infinite;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid #fff;
-}
-@keyframes pulse {
-  0% { transform: translateY(-50%) scale(1); box-shadow: 0 0 0 rgba(255,255,255,0.4); }
-  50% { transform: translateY(-50%) scale(1.05); box-shadow: 0 0 15px rgba(255,255,255,0.6); }
-  100% { transform: translateY(-50%) scale(1); box-shadow: 0 0 0 rgba(255,255,255,0); }
+/* ==========================================================================
+   5. HOME PAGE "GATE" OVERRIDES
+   ========================================================================== */
+
+[data-section="home"] {
+  body, html {
+    margin: 0; padding: 0;
+    height: 100%; width: 100%;
+    overflow: hidden; // Full screen splash effect[cite: 5]
+    background-color: #000;
+  }
+
+  .page-content, .wrapper {
+    max-width: none !important;
+    padding: 0 !important;
+  }
 }

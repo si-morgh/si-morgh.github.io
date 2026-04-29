@@ -10,27 +10,23 @@
       </div>
     {% endfor %}
   </div>
-  <button class="prev" onclick="moveCarousel('{{ collection }}', -1)" aria-label="Previous">❮</button>
-  <button class="next" onclick="moveCarousel('{{ collection }}', 1)" aria-label="Next">❯</button>
+  <button class="prev" onclick="moveCarousel('{{ collection }}', -1)">❮</button>
+  <button class="next" onclick="moveCarousel('{{ collection }}', 1)">❯</button>
 </div>
 
 <script>
-  if (typeof carouselStates === 'undefined') {
-    window.carouselStates = {};
-  }
-  window.carouselStates['{{ collection }}'] = 0;
+  if (typeof carouselIndices === 'undefined') { window.carouselIndices = {}; }
+  window.carouselIndices['{{ collection }}'] = 0;
 
   function moveCarousel(id, step) {
     const slide = document.getElementById('slide-' + id);
     const items = slide.getElementsByClassName('art-piece');
-    const total = items.length;
-    
-    let current = window.carouselStates[id] + step;
-    
-    if (current >= total) current = 0;
-    if (current < 0) current = total - 1;
-    
-    window.carouselStates[id] = current;
+    let current = window.carouselIndices[id] + step;
+
+    if (current >= items.length) current = 0;
+    if (current < 0) current = items.length - 1;
+
+    window.carouselIndices[id] = current;
     slide.style.transform = `translateX(${-100 * current}%)`;
   }
 </script>
