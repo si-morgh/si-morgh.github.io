@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Untiteled
+title: Untitled
 permalink: /art/work/
 section: art
 ---
