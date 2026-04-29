@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% assign gallery_images = site.data.galleries[page.gallery_id] %}
+<div class="carousel-overlay" id="galleryOverlay">
+  <button class="close-gallery" id="closeBtn" aria-label="Close Gallery">&times;</button>
+  
+  <div class="carousel-container">
+    <div class="carousel-slide" id="carouselSlide"> 
+      
+      <div class="art-item statement-slide">
+        <div class="statement-card">
+          <p>{{ site.data.statements[page.gallery_id].text }}</p> 
+        </div>
+      </div>
+      
+      {% for img in gallery_images %}
+        <div class="art-item">
+          <img src="{{ img.image | relative_url }}" alt="{{ img.title }}">
+          <div class="art-caption">{{ img.title }}</div>
+        </div>
+      {% endfor %}
+      
+    </div>
+    
+    <div id="image-counter">1 / {{ gallery_images.size | plus: 1 }}</div>
+    
+    <button class="carousel-prev" id="prevBtn" aria-label="Backward">←</button>
+    <button class="carousel-next start-hint" id="nextBtn" aria-label="Forward">→</button>
+    
+  </div> 
+</div> 
+
+<script>
+  // ... (keep all your JS here) ...
+</script>
