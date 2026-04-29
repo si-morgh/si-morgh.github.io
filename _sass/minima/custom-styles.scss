@@ -42,26 +42,26 @@ body {
   max-height: 70vh;
   object-fit: contain;
 }
-
 /* Carousel Container */
 .carousel-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; /* Hides images outside the frame */
   margin: 2em 0;
   background: #000;
 }
 
 /* The horizontal ribbon of images */
 .carousel-slide {
-  display: flex;
+  display: flex; /* Critical: keeps images side-by-side */
   transition: transform 0.5s ease-in-out;
   will-change: transform;
 }
 
 /* Individual slide items */
 .art-piece {
-  min-width: 100%;
+  min-width: 100%; /* Each item takes full width */
+  flex-shrink: 0;   /* Prevents images from squishing */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,7 +83,6 @@ body {
   font-style: italic;
 }
 
-/* Navigation Buttons */
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -99,6 +98,8 @@ body {
 
 .prev { left: 10px; }
 .next { right: 10px; }
+
+
 
 
 /* Only apply these 'gate' styles when on the home page */

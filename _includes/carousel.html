@@ -1,6 +1,6 @@
 {% assign collection = include.collection_name %}
 <div class="carousel-container" id="carousel-{{ collection }}">
-  <div class="carousel-slide">
+  <div class="carousel-slide" id="slide-{{ collection }}">
     {% for item in site.data.galleries[collection] %}
       <div class="art-piece">
         <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
@@ -10,6 +10,27 @@
       </div>
     {% endfor %}
   </div>
-  <button class="prev" onclick="moveSlide('{{ collection }}', -1)" aria-label="Previous">❮</button>
-  <button class="next" onclick="moveSlide('{{ collection }}', 1)" aria-label="Next">❯</button>
+  <button class="prev" onclick="moveCarousel('{{ collection }}', -1)" aria-label="Previous">❮</button>
+  <button class="next" onclick="moveCarousel('{{ collection }}', 1)" aria-label="Next">❯</button>
 </div>
+
+<script>
+  if (typeof carouselStates === 'undefined') {
+    window.carouselStates = {};
+  }
+  window.carouselStates['{{ collection }}'] = 0;
+
+  function moveCarousel(id, step) {
+    const slide = document.getElementById('slide-' + id);
+    const items = slide.getElementsByClassName('art-piece');
+    const total = items.length;
+    
+    let current = window.carouselStates[id] + step;
+    
+    if (current >= total) current = 0;
+    if (current < 0) current = total - 1;
+    
+    window.carouselStates[id] = current;
+    slide.style.transform = `translateX(${-100 * current}%)`;
+  }
+</script>

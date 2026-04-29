@@ -1,6 +1,6 @@
 ---
 layout: page            # Changed from default to page
-title: Collection One
+title: Collections
 permalink: /art/work/  # Added for consistent routing
 section: art
 ---
