@@ -1,25 +1,9 @@
 ---
 layout: page            # Changed from default to page
 title: Collection One
-section: art
 permalink: /art/work/  # Added for consistent routing
-images:
-  - file: 1.png
-    title: "untitled, 2024; A6"
-  - file: 2.png
-    title: "untitled, 2024; A6"
-  - file: 3.png
-    title: "untitled, 2024; A6"
-  - file: 4.png
-    title: "untitled, 2024; A6"
-  - file: 5.png
-    title: "untitled, 2024; A6"
-  - file: 6.png
-    title: "untitled, 2024; A6"
-  - file: 7.png
-    title: "untitled, 2024; A6"
+section: art
 ---
-
 <div class="carousel-overlay" id="galleryOverlay">
   <button class="close-gallery" id="closeBtn" aria-label="Close Gallery">&times;</button>
 
