@@ -24,8 +24,9 @@ layout: default
     <button class="carousel-next start-hint" id="nextBtn" aria-label="Forward">→</button>
   </div> 
 </div> 
+
 <script>
-const slide = document.getElementById('carouselSlide');
+  const slide = document.getElementById('carouselSlide');
   const nextBtn = document.getElementById('nextBtn');
   const prevBtn = document.getElementById('prevBtn');
   const counterDisplay = document.getElementById('image-counter');
@@ -35,12 +36,15 @@ const slide = document.getElementById('carouselSlide');
   let counter = 0;
   const total = items.length;
 
+  // --- SWIPE LOGIC VARIABLES ---
+  let touchStartX = 0;
+  let touchEndX = 0;
+
   function updateSlide() {
     slide.style.transform = `translateX(${-100 * counter}%)`;
     if (counterDisplay) {
       counterDisplay.innerText = `${counter + 1} / ${total}`;
     }
-    // Remove pulse hint after first move
     if (counter > 0) {
       nextBtn.classList.remove('start-hint');
     } else {
@@ -48,23 +52,44 @@ const slide = document.getElementById('carouselSlide');
     }
   }
 
-  nextBtn.addEventListener('click', () => {
+  // Navigation Logic
+  const handleNext = () => {
     counter = (counter >= total - 1) ? 0 : counter + 1;
     updateSlide();
-  });
+  };
 
-  prevBtn.addEventListener('click', () => {
+  const handlePrev = () => {
     counter = (counter <= 0) ? total - 1 : counter - 1;
     updateSlide();
-  });
+  };
 
+  nextBtn.addEventListener('click', handleNext);
+  prevBtn.addEventListener('click', handlePrev);
+
+  // --- TOUCH EVENTS FOR SWIPING ---
+  slide.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive: true});
+
+  slide.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+  }, {passive: true});
+
+  function handleGesture() {
+    if (touchStartX - touchEndX > 50) handleNext(); // Swiped Left
+    if (touchEndX - touchStartX > 50) handlePrev(); // Swiped Right
+  }
+
+  // Close Logic
   closeBtn.addEventListener('click', () => {
     window.location.href = "{{ '/art/' | relative_url }}"; 
   });
 
+  // Keyboards
   document.addEventListener('keydown', (e) => {
-    if (e.key === "ArrowLeft") prevBtn.click();
-    if (e.key === "ArrowRight") nextBtn.click();
+    if (e.key === "ArrowLeft") handlePrev();
+    if (e.key === "ArrowRight") handleNext();
     if (e.key === "Escape") closeBtn.click();
   });
 </script>

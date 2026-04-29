@@ -269,3 +269,49 @@ body {
     text-decoration: underline;
   }
 }
+
+
+
+
+
+/* ==========================================================================
+   6. MOBILE OPTIMIZATIONS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 15px !important; /* Tighter margins on mobile */
+  }
+
+  .carousel-container {
+    max-width: 95vw;
+    max-height: 80vh;
+    margin: 1em 0;
+  }
+
+  .art-item {
+    padding: 20px; /* Less "frame" space so the image is bigger */
+    
+    img {
+      max-height: 50vh; /* Prevents vertical images from being cut off */
+      border-width: 4px; /* Thinner artist frame for smaller screens */
+    }
+  }
+
+  .statement-card {
+    padding: 30px 20px;
+    
+    p {
+      font-size: 1rem; /* Slightly smaller text */
+      line-height: 1.6;
+    }
+  }
+
+  /* Make nav buttons smaller so they don't block the art */
+  .carousel-prev, .carousel-next {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.5); /* Higher contrast on mobile */
+  }
+}
