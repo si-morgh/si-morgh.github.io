@@ -9,7 +9,7 @@ layout: null
     <title>Welcome | My Page</title>
     <link rel="stylesheet" href="{{ '/assets/css/slider.css' | relative_url }}">
     <style>
-        /* 1. FIX: Ensure the container and sections fill the screen so "me.png" shows up */
+        /* 1. BACKGROUND SECTIONS */
         .split-wrapper {
             position: relative;
             width: 100%;
@@ -30,44 +30,44 @@ layout: null
             background-image: url("{{ '/assets/images/me.png' | relative_url }}");
         }
 
-        /* 2. MOBILE SLIDER OPTIMIZATIONS */
-        
-        /* --- CENTERED SLIDER OPTIMIZATION --- */
-.slider-container {
-    position: absolute;
-    /* This centers it vertically */
-    top: 50%; 
-    left: 50%;
-    /* This shifts it back so the center of the slider is the center of the screen */
-    transform: translate(-50%, 0%); 
-    
-    width: 100%;
-    z-index: 100; 
-    display: flex;
-    justify-content: center;
-    touch-action: none;
-}
+        /* 2. THE CENTERED SLIDER */
+        .slider-container {
+            position: absolute;
+            top: 50%; 
+            left: 50%;
+            /* Shifts the container back perfectly into the dead center */
+            transform: translate(-50%, -50%); 
+            
+            width: 100%;
+            z-index: 100; 
+            display: flex;
+            justify-content: center;
+            touch-action: none; /* Prevents page scrolling while sliding on mobile */
+        }
 
-.gate-slider {
-    -webkit-appearance: none;
-    width: 80%; /* Takes up 80% of screen width */
-    height: 80px; /* Slightly taller hit area for better touch */
-    background: transparent;
-    cursor: pointer;
-    outline: none;
-}
+        .gate-slider {
+            -webkit-appearance: none;
+            width: 85%; /* Matches the 85% max-width of your portfolio wrapper */
+            height: 80px; /* Taller hit area for better touch recognition */
+            background: transparent;
+            cursor: pointer;
+            outline: none;
+        }
 
-        
-
-        /* Larger thumb for easier grabbing on mobile */
+        /* 3. SLIDER THUMB (The handle) */
         .gate-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            height: 45px;
-            width: 45px;
+            height: 50px;
+            width: 50px;
             border-radius: 50%;
             background: #fff;
+            border: 2px solid rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             cursor: grab;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .gate-slider:active::-webkit-slider-thumb {
+            cursor: grabbing; /* Gives feedback that the user is holding it */
         }
     </style>
 </head>
@@ -90,6 +90,7 @@ layout: null
     const root = document.documentElement;
     let ticking = false;
 
+    // THE BRAIN: Updates visual variables and handles redirects
     function updateStyles(value) {
         const distanceFromCenter = Math.abs(50 - value);
         const newOpacity = 0.5 + (distanceFromCenter / 100);
@@ -105,12 +106,15 @@ layout: null
         root.style.setProperty('--math-hint-opacity', Math.min(mathOpacity, 1));
         root.style.setProperty('--art-hint-opacity', Math.min(artOpacity, 1));
 
+        // Redirects when reaching the edges
         if (value <= 5) { 
             window.location.href = "{{ '/art/' | relative_url }}";
         } else if (value >= 95) {
             window.location.href = "{{ '/math/' | relative_url }}";
         }
     }
+
+    // INPUT LISTENER: Real-time updates while sliding
     slider.addEventListener('input', (e) => {
         const value = e.target.value;
         if (!ticking) {
@@ -122,6 +126,7 @@ layout: null
         }
     });
 
+    // RELEASE LISTENERS: Handles snapping back
     const endEvents = ['pointerup', 'touchend', 'mouseup'];
     endEvents.forEach(event => {
         slider.addEventListener(event, () => {
@@ -132,6 +137,7 @@ layout: null
         });
     });
 
+    // THE SNAP ANIMATION: Springs back to 50%
     function snapToMiddle() {
         const startValue = parseFloat(slider.value);
         const endValue = 50;
@@ -141,15 +147,20 @@ layout: null
         function animateSnap(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
+            
+            // Ease-out cubic calculation for a smooth "spring" stop
             const easeOut = 1 - Math.pow(1 - progress, 3);
             const currentValue = startValue + (endValue - startValue) * easeOut;
+            
             slider.value = currentValue;
             updateStyles(currentValue);
+            
             if (progress < 1) requestAnimationFrame(animateSnap);
         }
         requestAnimationFrame(animateSnap);
     }
 
+    // STARTUP: Ensure slider is perfectly centered on page load
     window.onload = () => {
         slider.value = 50;
         updateStyles(50);
