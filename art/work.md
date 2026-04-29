@@ -2,7 +2,7 @@
 layout: page            # Changed from default to page
 title: Collection One
 section: art
-permalink: /art/collections/c1/  # Added for consistent routing
+permalink: /art/work/  # Added for consistent routing
 images:
   - file: 1.png
     title: "untitled, 2024; A6"

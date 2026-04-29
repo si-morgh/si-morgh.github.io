@@ -5,4 +5,4 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize",
-  "custom-styles"; // Add this line to include your split-screen and carousel CSS
+  "minima/custom-styles"; // Add this line to include your split-screen and carousel CSS
