@@ -5,7 +5,7 @@ permalink: /art/
 section: art
 ---
 
-My name is Rahman!
+My name is Rahman.
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
