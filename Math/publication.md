@@ -1,7 +1,7 @@
 ---
 layout: page
 title: research
-permalink: math/publications/
+permalink: math/publication/
 section: math
 ---
 
