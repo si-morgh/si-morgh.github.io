@@ -36,7 +36,7 @@ layout: null
             top: 50%; 
             left: 50%;
             /* Shifts the container back perfectly into the dead center */
-            transform: translate(-50%, -50%); 
+            transform: translate(-50%, 0%); 
             
             width: 100%;
             z-index: 100; 
