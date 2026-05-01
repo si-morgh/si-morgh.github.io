@@ -42,17 +42,21 @@ $on-laptop: 100%;
    2. SECTION-SPECIFIC THEMES (Body Backgrounds)
    ========================================================================== */
 
+/* Default Global Background */
 body { 
-  background-color: lab(48.61% 73.42 22.47 / 0.413);
- // Default Global Grey
+  background-color: #a9a9a9; 
+} 
 
-[data-section="art"] {
-  body { background-color: #d18d54;  !important} // Lighter for Art
+/* Art Section Background */
+body[data-section="art"], 
+[data-section="art"] body {
+  background-color: #d18d54 !important;
 }
 
+/* Math Section Background */
 body[data-section="math"], 
 [data-section="math"] body {
-  background-color: #DCE3EB; !important} 
+  background-color: #DCE3EB !important; 
 }
 /* ==========================================================================
    3. THE CAROUSEL ENGINE & OVERLAY
