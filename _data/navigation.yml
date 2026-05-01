@@ -11,7 +11,8 @@ main_menu:
 art_menu:
   - name: "Gallery"
     link: "/art/gallery/" 
-  
+  - name: "Bio"
+    link: "/art/" 
 # - name: "Driver 1"
  #   link: "/art/gdnspt1/"
   #- name: "Driver 2"
