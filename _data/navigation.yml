@@ -9,5 +9,10 @@ main_menu:
     link: "/math/slides/" # Added missing quote and slash
 
 art_menu:
-  - name: "Collections"
-    link: "/art/work/"     # Added trailing slash
+  - name: "Ink"
+    link: "/art/work/" 
+  
+# - name: "Driver 1"
+ #   link: "/art/gdnspt1/"
+  #- name: "Driver 2"
+ #   link: "/art/gdnsptlines/"          # Added trailing slash
