@@ -43,21 +43,17 @@ $on-laptop: 100%;
    ========================================================================== */
 
 body { 
-  background-color: #BEBEBE; 
-} // Default Global Grey
+  background-color: lab(48.61% 73.42 22.47 / 0.413);
+ // Default Global Grey
 
 [data-section="art"] {
-  body { background-color: #F5F5F5; } // Lighter for Art
-  .wrapper { 
-    max-width: 95% !important; 
-    margin: 0 auto !important; 
-  } 
+  body { background-color: #d18d54;  !important} // Lighter for Art
 }
 
-[data-section="math"] {
-  body { background-color: #FFFFFF; } // White for Math
+body[data-section="math"], 
+[data-section="math"] body {
+  background-color: #DCE3EB; !important} 
 }
-
 /* ==========================================================================
    3. THE CAROUSEL ENGINE & OVERLAY
    ========================================================================== */
@@ -192,35 +188,36 @@ body {
 /* --- CLOSE BUTTON --- */
 .close-gallery {
   position: absolute;
-  top: 30px;
-  right: 40px;
+  z-index: 10001;
+  
+  /* 1. Styling it exactly like the left/right arrows (circle) */
   background: none;
   border: none;
   color: white;
-  font-size: 50px; /* Large and clear */
-  line-height: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  /* Flexbox centers the "X" perfectly inside the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: sans-serif;
+  font-size: 50px; /* Size of the X */
   cursor: pointer;
-  z-index: 10001; /* Must be higher than the overlay */
-  opacity: 0.7;
-  transition: opacity 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
+  
+  /* 2. Positioning it at the top middle of the black frame */
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .close-gallery:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* Specific pulse for the 'Forward' button to show where to start */
-@keyframes pulse-forward {
-  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
-  70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
-}
-
-.start-hint {
-  animation: pulse-forward 2s infinite;
-  border-color: #fff;
-  opacity: 1;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  transform: translateX(-50%) scale(1.1);
 }
 
 /* ==========================================================================
@@ -314,4 +311,95 @@ body {
     font-size: 18px;
     background: rgba(0, 0, 0, 0.5); /* Higher contrast on mobile */
   }
+}
+
+/* ==========================================================================
+   7. GALLERY GROUP (PARENT PAGE) OVERLAYS
+   ========================================================================== */
+
+.gallery-group-grid {
+  display: grid;
+  /* This specifically forces exactly TWO columns of equal size per row */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 90px; /* The distance between them */
+  padding: 40px 0;
+}
+
+.gallery-group-card {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  /* This forces every single box to be landscape with a 7:6 width-to-height ratio */
+  aspect-ratio: 7 / 6; 
+  
+  background-color: #fff;
+  border: 8px solid #ffffff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.base-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the 7:6 box without squishing */
+  z-index: 1; 
+}
+
+/* Replaces the old .overlay-statement to top-left align the text */
+.overlay-statement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; 
+  z-index: 2; 
+  opacity: 0.75; 
+  transition: opacity 0.3s ease;
+  
+  /* Flexbox settings */
+  display: flex;
+  align-items: flex-start; /* CHANGED: This pushes the text to the very top */
+  justify-content: flex-start; /* Keeps the text on the left */
+  padding: 30px; 
+  box-sizing: border-box;
+  
+  p {
+    width: 100%; 
+    color: #000;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left; 
+    margin: 0;
+    
+    /* This prevents text from spilling out of the box if the statement is long */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; 
+    -webkit-box-orient: vertical;
+  }
+  
+  .gallery-group-card:hover & {
+    opacity: 0.65; 
+  }
+}
+.card-title {
+  text-align: center;
+  color: #000;
+  margin-top: 15px;
+  font-family: serif;
+  font-style: italic;
+  font-size: 1.2rem;
 }

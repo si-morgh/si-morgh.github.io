@@ -4,8 +4,10 @@ layout: default
 {% assign gallery_images = site.data.galleries[page.gallery_id] %}
 
 <div class="carousel-overlay" id="galleryOverlay">
-  <button class="close-gallery" id="closeBtn" aria-label="Close Gallery">&times;</button>
   <div class="carousel-container">
+    
+   <button class="close-gallery" id="closeBtn" aria-label="Close Gallery">&otimes;</button>
+    
     <div class="carousel-slide" id="carouselSlide">
       <div class="art-item statement-slide">
         <div class="statement-card">
@@ -83,7 +85,8 @@ layout: default
 
   // Close Logic
   closeBtn.addEventListener('click', () => {
-    window.location.href = "{{ '/art/' | relative_url }}"; 
+    // This tells the browser to go back exactly one step to whatever page the user was just looking at
+    window.history.back();
   });
 
   // Keyboards

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="wrapper">
+  <h1 class="page-heading">{{ page.title }}</h1>
+  
+  <div class="gallery-group-grid">
+    {% for gallery_id in page.collections %}
+      <a href="{{ '/art/' | append: gallery_id | append: '/' | relative_url }}" class="gallery-group-card">
+        <div class="card-image-wrapper">
+          
+          <img src="{{ site.data.galleries[gallery_id][0].image | relative_url }}" class="base-image" alt="Base image for {{ gallery_id }}">
+          
+          <div class="overlay-statement">
+            <p>{{ site.data.statements[gallery_id].text }}</p>
+          </div>
+
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
