@@ -138,13 +138,25 @@ body[data-section="math"],
   font-size: 1.1rem;
 }
 
+/* --- IMAGE COUNTER --- */
 #image-counter {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  
+  /* Pushes it to the bottom right corner of the black frame */
+  bottom: 20px; 
+  right: 20px;  
+  
+  z-index: 1000;
   color: white;
-  letter-spacing: 2px;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  
+  /* Added a tiny semi-transparent background so it is always readable, 
+     even if a tall image slides under it */
+  background: rgba(0, 0, 0, 0.6); 
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 /* ==========================================================================
