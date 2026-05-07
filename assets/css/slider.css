@@ -88,8 +88,6 @@ body, html {
 
 .gate-slider {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     appearance: none;
@@ -103,40 +101,41 @@ body, html {
 /* Chrome, Safari, Edge Thumb */
 .gate-slider::-webkit-slider-thumb {
     appearance: none;
-    width: 3px;
-    height: 100vh; /* Your original full-screen height */
-    background: rgba(250, 114, 248, 0.9);
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    width: 20px;          /* Width of the point */
+    height: 20px;         /* Height of the point */
+    background: rgba(255, 179, 254, 0.9);
+    border-radius: 0%;   /* Makes it a circle */
+    box-shadow: 0 0 16px rgba(255, 168, 254, 0.6);
     
-    /* THE FIX: Transition must be here so it knows how to "go back" to 100vh */
-    transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                background 0.3s ease, 
-                transform 0.2s ease;
+    /* Smooth transition for hover effects */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                background 0.3s ease;
 }
 
-/* Hover: Shrink to your 180px design */
+/* Hover: Make the point glow and grow slightly */
 .gate-slider:hover::-webkit-slider-thumb {
-    height: 180px; 
-    background: hsl(302, 100%, 50%);
+    transform: scale(1.5); 
+    background: hsl(300, 100%, 72%);
+    box-shadow: 0 0 10px rgba(250, 114, 248, 1);
 }
 
-/* Click/Active: Keep it at 180px and widen it */
+/* Click/Active: Keep it scaled */
 .gate-slider:active::-webkit-slider-thumb {
-    height: 180px;
-    transform: scaleX(1.5);
+    transform: scale(1.4);
 }
 
 /* Firefox Equivalent */
 .gate-slider::-moz-range-thumb {
-    width: 2px;
-    height: 100vh;
+    width: 20px;
+    height: 20px;
     background: rgba(255, 91, 252, 0.9);
     border: none;
-    transition: height 0.3s ease;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
 }
 
 .gate-slider:hover::-moz-range-thumb {
-    height: 180px;
+    transform: scale(1.5);
     background: hsl(302, 100%, 50%);
 }
 @media (max-width: 768px) {
@@ -163,20 +162,34 @@ body, html {
 
 /* Position Art on the Right side of the screen */
 .art-hint {
-    font-size: 18rem;
+    font-size: 4rem;
     top: 30%;
-    right: 35%; /* Adjust this to move it left/right */
+    right: 25%; /* Adjust this to move it left/right */
     transition: opacity 0.1s ease, transform 0.1s ease;
-    opacity: var(--art-hint-opacity, 50);
+   opacity: var(--art-hint-opacity, 40);
 }
 
+.line-hint {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 100vh;
+    background: rgba(250, 114, 248, 1);
+    transform: translateX(-50%);
+    pointer-events: none; /* Let clicks pass through to the slider */
+    z-index: 3; /* Behind the pink grip point */
+    transition: opacity 0.2s ease;
+    opacity: var(--line-hint-opacity, 0);
+    box-shadow: 0 0 15px rgba(250, 114, 248, 0.5);
+}
 /* Position Math on the Left side of the screen */
 .math-hint {
     transform: translate(-50%, -50%);
-    font-size: 14rem;
-    top: 60%;
-    left: 50%; /* Adjust this to move it left/right */
+    font-size: 4rem;
+    top: 70%;
+    left: 25%; /* Adjust this to move it left/right */
     transition: opacity 0.1s ease, transform 0.1s ease;
-    opacity: var(--math-hint-opacity, 50);
+    opacity: var(--math-hint-opacity, 40);
 }
 
