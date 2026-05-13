@@ -15,7 +15,7 @@ art_menu:
     link: "/art/designs/"
   - name: "conf. doodles"
     link: "/art/doodlegallery/"       
-  - name: "Bio"
+  - name: "bio"
     link: "/art/" 
 # - name: "Driver 1"
  #   link: "/art/gdnspt1/"
