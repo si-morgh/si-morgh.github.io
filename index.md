@@ -64,9 +64,11 @@ layout: null
             cursor: grabbing; /* Gives feedback that the user is holding it */
         }
     </style>
+    <meta name="google-site-verification" content="rlCtbokrufpUGXl8ntYhhu1Haf8oUHj22ppf3shksHQ" />
 </head>
+
 <body>
-<meta name="google-site-verification" content="rlCtbokrufpUGXl8ntYhhu1Haf8oUHj22ppf3shksHQ" />
+
 <div class="split-wrapper">
     <div class="section side-a"></div>
     <div class="section side-m"></div>
