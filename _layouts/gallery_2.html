@@ -9,11 +9,6 @@ layout: default
    <button class="close-gallery" id="closeBtn" aria-label="Close Gallery">&otimes;</button>
     
     <div class="carousel-slide" id="carouselSlide">
-      <div class="art-item statement-slide">
-        <div class="statement-card">
-          <p>{{ site.data.statements[page.gallery_id].text }}</p> 
-        </div>
-      </div>
       {% for img in gallery_images %}
         <div class="art-item">
           <img src="{{ img.image | relative_url }}" alt="{{ img.title }}">

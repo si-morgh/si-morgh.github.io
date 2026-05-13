@@ -53,3 +53,25 @@ gdnsptlines:
  - image: "/assets/images/art/image-collections/image-gdnsptlines/16.png"
    title: From "Drivers' Contributions, 2024; A7" 
  
+
+posters:
+ - image: "/assets/images/art/image-collections/image-poster/godelsprogram.png"
+   title: Simons Semester in Poland, Gödel's Program, 2026; 65.1 cm X 93.25 cm " 
+ - image: "/assets/images/art/image-collections/image-poster/Martin.png"
+   title: Martin Goldstern, 2023; 70 cm X 100 cm; 1/1"    
+
+logos:
+ - image: "/assets/images/art/image-collections/image-logos/impanset.png"
+   title:  IMPAN Set Theory Group, 2026" 
+
+confddle:
+ - image: "/assets/images/art/image-collections/image-confddle/ddl1.png"
+   title: "On The Infinite,Paris, 2020"
+ - image: "/assets/images/art/image-collections/image-confddle/ddl2.png"
+   title: "On The Infinite,Paris, 2020"
+ - image: "/assets/images/art/image-collections/image-confddle/ddl3.png"
+   title: "On The Infinite,Paris, 2020"
+ - image: "/assets/images/art/image-collections/image-confddle/ddl4.png"
+   title: "On The Infinite,Paris, 2020"
+ - image: "/assets/images/art/image-collections/image-confddle/ddl5.png"
+   title: "On The Infinite,Paris, 2020"
