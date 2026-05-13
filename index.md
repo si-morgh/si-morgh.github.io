@@ -7,7 +7,7 @@ layout: null
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mathematics and Art by Rahman Mohammadpour">
-    <title>Mathematics | Art</title>
+    <title>Mathematics & Art</title>
     <link rel="stylesheet" href="{{ '/assets/css/slider.css' | relative_url }}">
     <style>
         /* 1. BACKGROUND SECTIONS */
