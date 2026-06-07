@@ -1,6 +1,6 @@
 ---
 layout: gallery_2
-title: posters
+title: logos
 section: art
-gallery_id: posters
+gallery_id: logos
 ---

@@ -6,7 +6,8 @@ layout: null
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome | My Page</title>
+    <meta name="description" content="Mathematics and Art by Rahman Mohammadpour">
+    <title>Mathematics & Art</title>
     <link rel="stylesheet" href="{{ '/assets/css/slider.css' | relative_url }}">
     <style>
         /* 1. BACKGROUND SECTIONS */
@@ -63,7 +64,9 @@ layout: null
             cursor: grabbing; /* Gives feedback that the user is holding it */
         }
     </style>
+    <meta name="google-site-verification" content="rlCtbokrufpUGXl8ntYhhu1Haf8oUHj22ppf3shksHQ" />
 </head>
+
 <body>
 
 <div class="split-wrapper">
