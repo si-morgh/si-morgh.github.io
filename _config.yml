@@ -1,4 +1,4 @@
-# Site Settings
+# Site settings
 title: Simorq-Home
 description: ""
 author:
@@ -6,19 +6,20 @@ author:
   email: frng-mpr@proton.me
 affiliation: "Institute of Mathematics of Polish Academy of Sciences"
 
-# URL Settings
+# URLs
 url: "https://si-morgh.github.io"
-baseurl: "" 
+baseurl: ""
 permalink: /:categories/:title/
 
-# Build Settings
+# Build
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-scholar
 
-# Scholar Configuration
+# jekyll-scholar. Reads _bibliography/bibliography.bib and renders each entry
+# through _layouts/bib.html.
 scholar:
   style: apa
   locale: en
@@ -32,18 +33,5 @@ include:
   - _static
   - assets
 
-# Navigation
-header_pages:
-  - math/math-index.md
-  - math/publication.md
-  - math/notes.md
-  - math/slides.md
-
-# Art Menu Data
-art_pages:
-  - title: "Collections"
-    url: "/art/work/"      
-  - title: "Posters"
-    url: "/art/posters/"
-  - title: "Conference Doodling"
-    url: "/art/doodling/"
+# Both menus are defined in _data/navigation.yml and rendered by
+# _includes/header.html, which picks the menu from each page's `section:`.
