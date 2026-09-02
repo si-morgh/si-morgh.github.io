@@ -4,9 +4,11 @@ _site/
 .jekyll-metadata
 .sass-cache/
 
-# Bundler (.bundle/config is tracked on purpose; installed gems are not)
+# Bundler (.bundle/config and Gemfile.lock are tracked on purpose; installed
+# gems are not). The lockfile is committed because this is a site, not a gem:
+# without it every CI build re-resolves dependencies, so a new release of any
+# transitive gem can break the deploy with no change on our side.
 vendor/
-Gemfile.lock
 
 # macOS
 .DS_Store

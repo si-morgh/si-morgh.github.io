@@ -22,12 +22,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # v1 always pulls the latest Ruby setup
+      # Read the Ruby version from .ruby-version rather than pinning it here, so
+      # this workflow cannot drift from the version used locally. It was pinned
+      # to 3.1, which reached end-of-life on 2025-03-26 and has had no security
+      # fixes since.
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' 
-          bundler-cache: true 
+          ruby-version: .ruby-version
+          bundler-cache: true
 
       - name: Setup Pages
         id: pages
