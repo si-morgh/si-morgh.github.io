@@ -1,7 +1,16 @@
-_site
-.sass-cache
-.jekyll-cache
+# Jekyll build output and caches
+_site/
+.jekyll-cache/
 .jekyll-metadata
-vendor
+.sass-cache/
+
+# Bundler (.bundle/config is tracked on purpose; installed gems are not)
+vendor/
 Gemfile.lock
+
+# macOS
 .DS_Store
+
+# Editors
+.idea/
+*.swp
