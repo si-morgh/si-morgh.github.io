@@ -19,7 +19,7 @@ section: math
   </div>
 
   <figure class="bio__portrait">
-    <img src="{{ '/assets/images/portrait.png' | relative_url }}"
+    <img src="{{ '/assets/images/portrait.webp' | relative_url }}"
          alt="Portrait of {{ site.author.name }}"
          loading="lazy"
          decoding="async">

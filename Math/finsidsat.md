@@ -17,7 +17,7 @@ section: math
   </div>
 
   <figure class="project-image-container">
-    <img src="{{ '/assets/images/sopotimpan.jpg' | relative_url }}"
+    <img src="{{ '/assets/images/sopotimpan.webp' | relative_url }}"
          alt="The IMPAN conference centre in Sopot, Poland"
          loading="lazy"
          decoding="async">

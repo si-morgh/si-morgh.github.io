@@ -12,7 +12,7 @@ layout: null
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
   <link rel="canonical" href="{{ '/' | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/slider.css' | relative_url }}">
-  <link rel="preload" as="image" href="{{ '/assets/images/me.png' | relative_url }}">
+  <link rel="preload" as="image" href="{{ '/assets/images/me.webp' | relative_url }}">
 </head>
 
 <body>

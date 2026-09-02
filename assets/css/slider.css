@@ -20,8 +20,8 @@
   --line-hint-opacity: 0;
 
   /* Set both sides to different files to make the split reveal two images. */
-  --img-math: url("../images/me.png");
-  --img-art: url("../images/me.png");
+  --img-math: url("../images/me.webp");
+  --img-art: url("../images/me.webp");
 }
 
 html,

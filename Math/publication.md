@@ -9,7 +9,7 @@ section: math
 
 <div class="research-profiles">
   <a href="http://arxiv.org/a/mohammadpour_r_1" target="_blank" rel="noopener">
-    <img src="{{ '/assets/images/favicon-arxiv.png' | relative_url }}" alt="arXiv" loading="lazy" decoding="async">
+    <img src="{{ '/assets/images/favicon-arxiv.webp' | relative_url }}" alt="arXiv" loading="lazy" decoding="async">
   </a>
   <a href="https://zbmath.org/authors/?ml=3&amp;ml-1-f=any&amp;ml-1-v=&amp;ml-1-op=and&amp;ml-2-f=ln&amp;ml-2-v=mohammadpour&amp;ml-2-op=and&amp;ml-3-f=fn&amp;ml-3-v=rahman" target="_blank" rel="noopener">
     <img src="{{ '/assets/images/zbmath.svg' | relative_url }}" alt="zbMATH" loading="lazy" decoding="async">

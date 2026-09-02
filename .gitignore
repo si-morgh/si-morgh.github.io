@@ -14,3 +14,6 @@ Gemfile.lock
 # Editors
 .idea/
 *.swp
+
+# Untouched image masters, kept locally and never published
+_originals/

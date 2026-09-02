@@ -19,6 +19,7 @@ layout: base
             <img src="{{ images[0].image | relative_url }}"
                  class="base-image"
                  alt=""
+                 {%- if images[0].width %} width="{{ images[0].width }}" height="{{ images[0].height }}"{% endif %}
                  loading="lazy"
                  decoding="async">
           {%- endif -%}

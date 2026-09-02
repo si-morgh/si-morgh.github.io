@@ -38,6 +38,7 @@ layout: bare
         <div class="art-item">
           <img src="{{ img.image | relative_url }}"
                alt="{{ img.title | default: 'Artwork' | escape }}"
+               {%- if img.width %} width="{{ img.width }}" height="{{ img.height }}"{% endif %}
                loading="{% if forloop.index <= 2 %}eager{% else %}lazy{% endif %}"
                decoding="async">
           {%- if img.title -%}<div class="art-caption">{{ img.title }}</div>{%- endif -%}
