@@ -1,20 +1,25 @@
 // Overrides for minima's SCSS variables.
 //
-// This file is imported *before* minima's _base and _layout partials, which is
-// the only point at which changing these values has any effect. Anything that
-// needs to override a rule rather than a variable belongs in custom-styles.
+// NOTE: no !default here, deliberately. minima/initialize.scss assigns each of
+// these with !default *before* it imports this file, so a !default here would
+// find the variable already set and do nothing. These are plain assignments so
+// they actually win.
 
-// Content measure. Minima defaults to 800px; the galleries and the two-column
-// bio need more room, but an unbounded width makes body text unreadable on a
-// wide display.
-$content-width: 1080px !default;
+// Width of the page shell. Minima's 800px is sized for a text blog; this site
+// is mostly galleries and a two-column bio, which want the screen. Prose is
+// held to a readable measure separately, in custom/_pages.scss, rather than by
+// starving the whole layout of width.
+$content-width: 1180px;
 
-// Breakpoints. Minima derives $on-medium from $on-palm and $on-large from
-// $on-laptop, so setting these two sets all four.
-$on-palm:   600px !default;
-$on-laptop: 900px !default;
+// Breakpoints. minima derives $on-medium from $on-palm and $on-large from
+// $on-laptop, and it does so with !default too, so both must be set here
+// before those derived lines run.
+$on-palm:   600px;
+$on-laptop: 900px;
+$on-medium: $on-palm;
+$on-large:  $on-laptop;
 
-$base-font-size:   17px !default;
-$base-line-height: 1.6 !default;
+$base-font-size:   17px;
+$base-line-height: 1.6;
 
-$spacing-unit: 32px !default;
+$spacing-unit: 32px;

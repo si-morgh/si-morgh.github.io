@@ -17,6 +17,20 @@
   line-height: 1.15;
 }
 
+/* The shell is wide so galleries, lists and the two-column bio can use the
+   screen. Only running paragraphs are held to a measure: past roughly 75
+   characters the eye starts losing its place on the return sweep. Capping the
+   paragraphs rather than the whole content block means structural elements get
+   the full width without needing to opt back out of a cap. */
+%measure { max-width: 68ch; }
+
+.post-content > p,
+.bio__text > p,
+.research-section > p,
+.error-page > p {
+  @extend %measure;
+}
+
 .post-content {
   h2 { font-size: clamp(1.3rem, 1.1rem + 1vw, 1.75rem); }
   h3 { font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem); }
@@ -64,7 +78,8 @@
   align-items: start;
 
   @media screen and (min-width: $on-medium) {
-    grid-template-columns: minmax(0, 3fr) minmax(160px, 1fr);
+    grid-template-columns: minmax(0, 68ch) minmax(160px, 240px);
+    justify-content: start;
   }
 }
 
@@ -96,7 +111,8 @@
   margin-top: 1.25rem;
 
   @media screen and (min-width: $on-medium) {
-    grid-template-columns: minmax(0, 2fr) minmax(200px, 1fr);
+    grid-template-columns: minmax(0, 68ch) minmax(200px, 300px);
+    justify-content: start;
   }
 }
 

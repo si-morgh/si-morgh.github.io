@@ -32,6 +32,15 @@
     align-items: center;
     justify-content: space-between;
     gap: 0.75rem 1.5rem;
+
+    /* minima's .wrapper @extends %clearfix, which generates a ::after with
+       content: "". In a flex container that pseudo-element becomes a third,
+       zero-width flex item, and space-between then distributes the free space
+       around it -- which parked the nav in the middle of the header instead of
+       flush right. The clearfix exists for the float layout we replaced. */
+    &::after {
+      content: none;
+    }
     /* Respects the notch in landscape on a phone. */
     padding-left: max(var(--gutter), env(safe-area-inset-left));
     padding-right: max(var(--gutter), env(safe-area-inset-right));
@@ -61,6 +70,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* This selector is more specific than minima's, so it has to repeat the
+       hide from $on-medium up or the burger stays visible beside the links. */
+    @media screen and (min-width: $on-medium) {
+      display: none;
+    }
   }
 
   .menu-icon {
