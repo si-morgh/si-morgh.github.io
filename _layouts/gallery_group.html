@@ -15,9 +15,15 @@ layout: base
     <li>
       <a href="{{ '/art/' | append: gallery_id | append: '/' | relative_url }}" class="gallery-group-card">
         <span class="card-image-wrapper">
-          {%- if images and images.size > 0 -%}
+          {%- comment -%}
+            Jekyll's include tag only accepts [\w.-]+ for an unquoted parameter
+            value, so an index like images[0] must be assigned to a variable
+            first rather than passed inline.
+          {%- endcomment -%}
+          {%- assign cover = images | first -%}
+          {%- if cover -%}
             {%- include gallery-image.html
-                 img=images[0]
+                 img=cover
                  class="base-image"
                  alt=""
                  sizes="(min-width: 1180px) 340px, (min-width: 600px) 45vw, 90vw" -%}
