@@ -205,3 +205,14 @@
   font-style: italic;
   margin-top: 0.15rem;
 }
+
+/* Download weight, shown beside a PDF link. Some slide decks are tens of
+   megabytes; on a phone that is worth knowing before tapping. */
+.link-list__size {
+  margin-left: 0.6em;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-fg);
+  white-space: nowrap;
+}

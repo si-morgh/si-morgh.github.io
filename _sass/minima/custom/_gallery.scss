@@ -56,9 +56,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* Leaves room for the arrow buttons at every width instead of letting them
-     sit on top of the artwork. */
-  padding: clamp(1.25rem, 2vw + 2.5rem, 3.75rem) clamp(3.5rem, 8vw, 6.25rem);
+  /* On a phone the arrows overlay the edges of the artwork, because reserving
+     a gutter for them costs ~30% of the screen width; from tablet up there is
+     room to keep them clear of it. */
+  padding: 3.75rem 1rem clamp(1.25rem, 4vw, 2.5rem);
+
+  @media screen and (min-width: $on-medium) {
+    padding: 3.75rem 6.25rem;
+  }
 
   img {
     max-height: 55svh;
@@ -145,9 +150,15 @@
   height: 50px;
   border: none;
   border-radius: 50%;
-  background: none;
+  /* A bare white glyph disappears over pale artwork, which most of these
+     scans are; the arrows carry the same backdrop for the same reason. */
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
-  font-size: 44px;
+  font-size: 40px;
+
+  @media screen and (min-width: $on-medium) {
+    background: none;
+  }
   line-height: 1;
   display: flex;
   align-items: center;
