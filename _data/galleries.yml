@@ -1,75 +1,93 @@
 inkcap:
   - image: "/assets/images/art/image-collections/image-c1/1.webp"
+    srcset_widths: [480, 960, 1440]
     width: 2000
     height: 1423
     title: "untitled, 2024; A6"
   - image: "/assets/images/art/image-collections/image-c1/2.webp"
+    srcset_widths: [480, 960, 1440]
     width: 2000
     height: 1423
     title: "untitled, 2024; A6"
   - image: "/assets/images/art/image-collections/image-c1/3.webp"
+    srcset_widths: [480, 960, 1440]
     width: 2000
     height: 1423
     title: "untitled, 2024; A6"
   - image: "/assets/images/art/image-collections/image-c1/4.webp"
+    srcset_widths: [480, 960, 1440]
     width: 2000
     height: 1423
     title: "untitled, 2024; A6"
   - image: "/assets/images/art/image-collections/image-c1/5.webp"
+    srcset_widths: [480, 960, 1440]
     width: 2000
     height: 1423
     title: "untitled, 2024; A6"
   - image: "/assets/images/art/image-collections/image-c1/6.webp"
+    srcset_widths: [480, 960, 1440]
     width: 2000
     height: 1423
     title: "untitled, 2024; A6"
   - image: "/assets/images/art/image-collections/image-c1/7.webp"
+    srcset_widths: [480, 960, 1440]
     width: 2000
     height: 1423
     title: "untitled, 2024; A6" 
 
 gdnspt1:  
  - image: "/assets/images/art/image-collections/image-gdnspt1/1.webp"
+   srcset_widths: [480, 960, 1440]
    width: 2000
    height: 1325
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/2.webp"
+   srcset_widths: [480, 960, 1440]
    width: 2000
    height: 1315
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/3.webp"
+   srcset_widths: [480, 960, 1440]
    width: 2000
    height: 1318
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/4.webp"
+   srcset_widths: [480, 960]
    width: 989
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/5.webp"
+   srcset_widths: [480, 960]
    width: 998
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/6.webp"
+   srcset_widths: [480, 960, 1440]
    width: 2000
    height: 1331
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/7.webp"
+   srcset_widths: [480, 960, 1440]
    width: 2000
    height: 1323
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/8.webp"
+   srcset_widths: [480, 960, 1440]
    width: 2000
    height: 1323
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/9.webp"
+   srcset_widths: [480, 960]
    width: 962
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/10.webp"
+   srcset_widths: [480, 960]
    width: 962
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnspt1/11.webp"
+   srcset_widths: [480]
    width: 955
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
@@ -77,26 +95,32 @@ gdnspt1:
 
 gdnsptlines:
  - image: "/assets/images/art/image-collections/image-gdnsptlines/11.webp"
+   srcset_widths: [480]
    width: 933
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnsptlines/12.webp"
+   srcset_widths: [480]
    width: 933
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnsptlines/13.webp"
+   srcset_widths: [480]
    width: 933
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnsptlines/14.webp"
+   srcset_widths: [480]
    width: 933
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnsptlines/15.webp"
+   srcset_widths: [480, 960]
    width: 998
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
  - image: "/assets/images/art/image-collections/image-gdnsptlines/16.webp"
+   srcset_widths: [480]
    width: 955
    height: 1500
    title: From "Drivers' Contributions, 2024; A7" 
@@ -104,38 +128,46 @@ gdnsptlines:
 
 posters:
  - image: "/assets/images/art/image-collections/image-poster/godelsprogram.webp"
+   srcset_widths: [480, 960]
    width: 1396
    height: 2000
    title: Simons Semester in Poland, Gödel's Program, 2026; 65.1 cm X 93.25 cm " 
  - image: "/assets/images/art/image-collections/image-poster/Martin.webp"
+   srcset_widths: [480, 960]
    width: 1414
    height: 2000
    title: Martin Goldstern, 2023; 70 cm X 100 cm; 1/1"    
 
 logos:
  - image: "/assets/images/art/image-collections/image-logos/impanset.webp"
+   srcset_widths: [480, 960, 1440]
    width: 1682
    height: 1448
    title:  IMPAN Set Theory Group, 2026" 
 
 confddle:
  - image: "/assets/images/art/image-collections/image-confddle/ddl1.webp"
+   srcset_widths: [480, 960, 1440]
    width: 1943
    height: 1500
    title: "On The Infinite, Paris, 2020"
  - image: "/assets/images/art/image-collections/image-confddle/ddl2.webp"
+   srcset_widths: [480, 960, 1440]
    width: 1962
    height: 1500
    title: "On The Infinite, Paris, 2020"
  - image: "/assets/images/art/image-collections/image-confddle/ddl3.webp"
+   srcset_widths: [480, 960, 1440]
    width: 1452
    height: 2000
    title: "On The Infinite, Paris, 2020"
  - image: "/assets/images/art/image-collections/image-confddle/ddl4.webp"
+   srcset_widths: [480, 960, 1440]
    width: 2000
    height: 1452
    title: "On The Infinite, Paris, 2020"
  - image: "/assets/images/art/image-collections/image-confddle/ddl5.webp"
+   srcset_widths: [480, 960, 1440]
    width: 1452
    height: 2000
    title: "On The Infinite, Paris, 2020"

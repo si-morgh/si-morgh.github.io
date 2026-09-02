@@ -29,11 +29,13 @@
   --carousel-transition: 0.5s ease-in-out;
 }
 
-/* Art section */
+/* Art section. Dusty rose: light enough to sit behind warm cream scans without
+   competing with them (9.1:1 against the body text, well past WCAG AA 4.5:1). */
 [data-section="art"] {
-  --page-bg: #d18d54;
-  --muted-fg: #3a2a1c;
+  --page-bg: #d9a7ad;
+  --muted-fg: #3a2028;
   --link-fg: #14324f;
+  --rule: rgba(0, 0, 0, 0.22);
 }
 
 /* Mathematics section */

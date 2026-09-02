@@ -16,12 +16,11 @@ layout: base
       <a href="{{ '/art/' | append: gallery_id | append: '/' | relative_url }}" class="gallery-group-card">
         <span class="card-image-wrapper">
           {%- if images and images.size > 0 -%}
-            <img src="{{ images[0].image | relative_url }}"
+            {%- include gallery-image.html
+                 img=images[0]
                  class="base-image"
                  alt=""
-                 {%- if images[0].width %} width="{{ images[0].width }}" height="{{ images[0].height }}"{% endif %}
-                 loading="lazy"
-                 decoding="async">
+                 sizes="(min-width: 1180px) 340px, (min-width: 600px) 45vw, 90vw" -%}
           {%- endif -%}
           <span class="overlay-statement">
             <span class="overlay-statement__text">

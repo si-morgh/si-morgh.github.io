@@ -35,12 +35,12 @@ layout: bare
         </div>
       {%- endif -%}
       {%- for img in gallery_images -%}
+        {%- if forloop.index <= 2 %}{% assign loading = "eager" %}{% else %}{% assign loading = "lazy" %}{% endif -%}
         <div class="art-item">
-          <img src="{{ img.image | relative_url }}"
-               alt="{{ img.title | default: 'Artwork' | escape }}"
-               {%- if img.width %} width="{{ img.width }}" height="{{ img.height }}"{% endif %}
-               loading="{% if forloop.index <= 2 %}eager{% else %}lazy{% endif %}"
-               decoding="async">
+          {%- include gallery-image.html
+               img=img
+               sizes="(min-width: 900px) 1100px, 96vw"
+               loading=loading -%}
           {%- if img.title -%}<div class="art-caption">{{ img.title }}</div>{%- endif -%}
         </div>
       {%- endfor -%}

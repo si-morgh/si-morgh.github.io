@@ -32,6 +32,10 @@
 }
 
 .post-content {
+  /* minima's h1 is a flat 2.625rem = 44.6px. "Mohammadpour" at that size is
+     354px wide, so on a 320px screen it set a min-content floor wider than the
+     viewport and the page scrolled sideways. Scaled to the viewport instead. */
+  h1 { font-size: clamp(1.75rem, 1.2rem + 3vw, 2.625rem); line-height: 1.15; }
   h2 { font-size: clamp(1.3rem, 1.1rem + 1vw, 1.75rem); }
   h3 { font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem); }
 }
@@ -73,7 +77,7 @@
    text above it. */
 .bio {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--stack);
   align-items: start;
 
@@ -105,7 +109,7 @@
 
 .project-header {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--stack);
   align-items: start;
   margin-top: 1.25rem;
@@ -231,4 +235,27 @@
   text-transform: uppercase;
   color: var(--muted-fg);
   white-space: nowrap;
+}
+
+
+/* --- Touch targets -------------------------------------------------------- */
+
+/* Inline links are ~20px tall, which is below the 24px WCAG 2.5.8 minimum and
+   well below a comfortable 44px. pointer: coarse scopes this to touch input,
+   so the mouse-driven layout keeps its tighter spacing. */
+@media (pointer: coarse) {
+  .site-nav .page-link,
+  .link-list__title,
+  .contact-list a,
+  .art-footer-content a,
+  .social-media-list a,
+  .footer-colophon a {
+    display: inline-block;
+    padding-block: 0.65rem;
+  }
+
+  .contact-list li,
+  .link-list li {
+    line-height: 1.5;
+  }
 }

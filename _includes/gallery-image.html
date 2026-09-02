@@ -1,0 +1,29 @@
+{%- comment -%}
+  One responsive gallery image.
+
+  Parameters:
+    img     an entry from _data/galleries.yml (image, width, height,
+            srcset_widths, title)
+    sizes   the CSS `sizes` attribute: how wide the image will be drawn
+    class   optional class attribute
+    alt     optional alt text; defaults to the entry's title
+    loading "eager" or "lazy" (default)
+
+  srcset lets the browser pick a file matched to the slot and the screen
+  density, instead of every visitor downloading the 2000px master.
+{%- endcomment -%}
+{%- assign stem = include.img.image | split: ".webp" | first -%}
+{%- capture srcset -%}
+{%- for w in include.img.srcset_widths -%}
+{{ stem }}-{{ w }}.webp {{ w }}w,
+{%- endfor -%}
+{{ include.img.image }} {{ include.img.width }}w
+{%- endcapture -%}
+<img src="{{ include.img.image | relative_url }}"
+     {% if include.img.srcset_widths %}srcset="{{ srcset }}"
+     sizes="{{ include.sizes }}"{% endif %}
+     alt="{{ include.alt | default: include.img.title | default: 'Artwork' | escape }}"
+     {%- if include.class %} class="{{ include.class }}"{% endif %}
+     {%- if include.img.width %} width="{{ include.img.width }}" height="{{ include.img.height }}"{% endif %}
+     loading="{{ include.loading | default: 'lazy' }}"
+     decoding="async">
