@@ -1,1 +1,20 @@
-// Placeholder to allow overriding predefined variables smoothly.
+// Overrides for minima's SCSS variables.
+//
+// This file is imported *before* minima's _base and _layout partials, which is
+// the only point at which changing these values has any effect. Anything that
+// needs to override a rule rather than a variable belongs in custom-styles.
+
+// Content measure. Minima defaults to 800px; the galleries and the two-column
+// bio need more room, but an unbounded width makes body text unreadable on a
+// wide display.
+$content-width: 1080px !default;
+
+// Breakpoints. Minima derives $on-medium from $on-palm and $on-large from
+// $on-laptop, so setting these two sets all four.
+$on-palm:   600px !default;
+$on-laptop: 900px !default;
+
+$base-font-size:   17px !default;
+$base-line-height: 1.6 !default;
+
+$spacing-unit: 32px !default;

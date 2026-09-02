@@ -1,7 +1,10 @@
 ---
-# Front matter is required
+# Front matter is required so Jekyll processes this file through Sass.
 ---
+
+// `minima/initialize` pulls in custom-variables, base, layout and finally
+// custom-styles, in that order. Do not import custom-styles here as well:
+// doing so emitted the entire custom stylesheet twice.
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize",
-  "minima/custom-styles"; // This line must point to your custom-styles file[cite:
+  "minima/initialize";

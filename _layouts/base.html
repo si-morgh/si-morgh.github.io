@@ -3,11 +3,13 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body{% if page.section %} data-section="{{ page.section }}"{% endif %}>
+
+    <a class="skip-link" href="#content">Skip to content</a>
 
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
+    <main class="page-content" id="content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>

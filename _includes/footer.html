@@ -4,60 +4,32 @@
   <div class="wrapper">
     {% if page.section == "art" %}
       <div class="art-footer-content">
-        <p>
-           <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-        </p>
+        <p><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
       </div>
     {% else %}
       <div class="footer-col-wrapper">
         <div class="footer-col">
-          <hr><strong>Contact</strong>
+          <h2 class="footer-heading">Contact</h2>
           <ul class="contact-list">
-            <li class="p-name">IMPAN, Jana i Jędrzeja Śniadeckich 8, 00-656 Warszawa, Poland</li>
+            <li class="p-name">{{ site.affiliation }}</li>
+            <li>Jana i Jędrzeja Śniadeckich 8, 00-656 Warszawa, Poland</li>
             <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <p>{{ site.description | escape }}</p>
-        </div>
-        <div class="footer-col footer-col-right">
-          <ul class="useful-websites">
-            <p> </p>
-          </ul>
-        </div>
+        {% if site.description != "" %}
+          <div class="footer-col">
+            <p>{{ site.description | escape }}</p>
+          </div>
+        {% endif %}
       </div>
     {% endif %}
 
     <div class="social-links">
       {%- include social.html -%}
     </div>
-  </div>
 
-  <div style="text-align: center; margin-top: 50px; padding: 5px; font-size: 0.8em;">
-    <p>&copy; {{ "now" | date: "%Y" }} Rahman Mohammadpour. Powered by Jekyll with minima theme.</p>
+    <p class="footer-colophon">
+      &copy; {{ "now" | date: "%Y" }} {{ site.author.name }}. Built with Jekyll and the minima theme.
+    </p>
   </div>
 </footer>
-
-<footer class="site-footer h-card">
-  <!-- ... existing footer content ... -->
-</footer>
-
-<script>
-function moveSlide(collectionId, direction) {
-  const container = document.getElementById(`carousel-${collectionId}`);
-  if (!container) return;
-  
-  const slide = container.querySelector('.carousel-slide');
-  const items = slide.querySelectorAll('.art-piece');
-  
-  // Track current index using a data attribute
-  let index = parseInt(slide.getAttribute('data-index') || 0);
-  
-  // Calculate new index (with wrap-around)
-  index = (index + direction + items.length) % items.length;
-  
-  // Move the slide
-  slide.style.transform = `translateX(-${index * 100}%)`;
-  slide.setAttribute('data-index', index);
-}
-</script>

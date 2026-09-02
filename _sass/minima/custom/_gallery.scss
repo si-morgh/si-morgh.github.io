@@ -1,0 +1,270 @@
+/* ==========================================================================
+   Gallery
+   ==========================================================================
+   Two things live here: the full-viewport carousel overlay used by
+   _layouts/gallery.html, and the card grid used by _layouts/gallery_group.html.
+   ========================================================================== */
+
+/* --- Carousel overlay ----------------------------------------------------- */
+
+.carousel-overlay {
+  position: fixed;
+  inset: 0;
+  /* svh, not vh: on iOS Safari 100vh is the height *without* the address bar,
+     so a vh-sized overlay was taller than the visible viewport and pushed its
+     own controls off screen. */
+  height: 100svh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+           env(safe-area-inset-bottom) env(safe-area-inset-left);
+  z-index: 9999;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  width: min(100%, 1400px);
+  max-width: 95vw;
+  max-height: 90svh;
+  overflow: hidden;
+  background-color: #000;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+
+  @media screen and (min-width: $on-medium) {
+    max-width: 90vw;
+    max-height: 85svh;
+  }
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  transition: transform var(--carousel-transition);
+  will-change: transform;
+}
+
+.art-item {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Leaves room for the arrow buttons at every width instead of letting them
+     sit on top of the artwork. */
+  padding: clamp(1.25rem, 2vw + 2.5rem, 3.75rem) clamp(3.5rem, 8vw, 6.25rem);
+
+  img {
+    max-height: 55svh;
+    width: auto;
+    object-fit: contain;
+    border: clamp(4px, 1vw, 8px) solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+    @media screen and (min-width: $on-medium) {
+      max-height: 62svh;
+    }
+  }
+}
+
+.art-caption {
+  color: #fff;
+  margin-top: 1rem;
+  font-family: serif;
+  font-style: italic;
+  font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1.1rem);
+  text-align: center;
+}
+
+#image-counter {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 1000;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.3em 0.7em;
+  border-radius: var(--radius);
+}
+
+
+/* --- Carousel controls ---------------------------------------------------- */
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: clamp(44px, 8vw, 60px);
+  height: clamp(44px, 8vw, 60px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+
+  @media screen and (min-width: $on-medium) {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+  }
+}
+
+.carousel-prev { left: clamp(0.5rem, 2vw, 1.25rem); }
+/* This rule was previously misspelled `.carogitusel-next`, so the forward
+   button never received its offset and sat wherever the flow put it. */
+.carousel-next { right: clamp(0.5rem, 2vw, 1.25rem); }
+
+.close-gallery {
+  position: absolute;
+  z-index: 10001;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: #fff;
+  font-size: 44px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+  }
+}
+
+
+/* --- Statement card ------------------------------------------------------- */
+
+.statement-slide {
+  background-color: #000;
+  padding: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.statement-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  width: 100%;
+  max-width: 750px;
+  max-height: 70svh;
+  padding: clamp(1.5rem, 5vw, 3.125rem) clamp(1.25rem, 5vw, 3.75rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius);
+  text-align: left;
+
+  p {
+    line-height: 1.8;
+    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+    white-space: pre-line;
+    margin-bottom: 1em;
+
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+
+/* --- Gallery index grid --------------------------------------------------- */
+
+/* auto-fit rather than a fixed two-column track: one column on a phone, two
+   or three as the viewport allows, without a breakpoint per column count. */
+.gallery-group-grid {
+  list-style: none;
+  margin: 0;
+  padding: var(--stack) 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.gallery-group-card {
+  display: block;
+  text-decoration: none;
+  transition: transform var(--transition);
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.04);
+  }
+}
+
+.card-image-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 7 / 6;
+  background-color: #fff;
+  border: 8px solid #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.base-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay-statement {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity var(--transition);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: clamp(1rem, 3vw, 1.875rem);
+
+  .gallery-group-card:hover &,
+  .gallery-group-card:focus-visible & {
+    opacity: 0.65;
+  }
+}
+
+.overlay-statement__text {
+  width: 100%;
+  color: #000;
+  font-size: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
+  line-height: 1.6;
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  -webkit-box-orient: vertical;
+}

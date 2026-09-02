@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- comment -%}
+    Minimal document shell for full-viewport pages (the gallery overlay).
+    It shares `head.html` with every other layout but renders no site chrome,
+    because the overlay covers it completely.
+  {%- endcomment -%}
+  {%- include head.html -%}
+
+  <body class="body--bare"{% if page.section %} data-section="{{ page.section }}"{% endif %}>
+    {{ content }}
+  </body>
+
+</html>

@@ -1,195 +1,249 @@
+/* ==========================================================================
+   Front-page gate (index.md)
+   ==========================================================================
+   A full-viewport split image with a drag handle: pull left for mathematics,
+   right for art. Two text links below the handle do the same job without
+   JavaScript, a pointer, or sight.
+
+   This file is the single source of truth for the page. It previously shared
+   ownership of .split-wrapper, .slider-container and .gate-slider with an
+   inline <style> block in index.md that set conflicting values and won by
+   source order.
+   ========================================================================== */
+
 :root {
-    --split: 50%;
-    --split-num: 50;
-    --dynamic-opacity: 0.5;
+  --split: 50%;
+  --split-num: 50;
+  --dynamic-opacity: 0.8;
+  --art-hint-opacity: 0;
+  --math-hint-opacity: 0;
+  --line-hint-opacity: 0;
+
+  /* Set both sides to different files to make the split reveal two images. */
+  --img-math: url("../images/me.png");
+  --img-art: url("../images/me.png");
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-color: #000;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
 }
 
 .split-wrapper {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  /* svh tracks the *visible* viewport on mobile, where 100vh is the height
+     with the browser chrome retracted and so overflows the screen. */
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
 }
 
 .section {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* --- SHARED PHOTO SETTINGS --- */
-.side-a, .side-m {
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    width: 100vw;
-    height: 100vh;
-    filter: grayscale(100%); 
-    opacity: var(--dynamic-opacity);
-    transition: opacity 0.1s linear;
-    will-change: clip-path, opacity;
-}
-
-.side-a {
-    z-index: 2;
-    clip-path: inset(0 calc(100% - var(--split)) 0 0);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* Not `fixed`: iOS ignores background-attachment: fixed and Android repaints
+     the whole layer on every scroll, both of which broke the split. */
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+  opacity: var(--dynamic-opacity);
+  transition: opacity 0.1s linear;
+  will-change: clip-path, opacity;
 }
 
 .side-m {
-    z-index: 1;
+  z-index: 1;
+  background-image: var(--img-math);
 }
 
-/* --- LABELS --- */
-.label {
-    color: white;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    pointer-events: none;
-    user-select: none;
-    text-shadow: 2px 2px 15px rgba(0,0,0,1);
-    z-index: 5;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
+.side-a {
+  z-index: 2;
+  background-image: var(--img-art);
+  clip-path: inset(0 calc(100% - var(--split)) 0 0);
 }
 
-.label h2 { font-size: 3rem; margin: 0; font-weight: 200; }
-.label p { font-size: 0.8rem; opacity: 0.7; }
+/* --- Hints ---------------------------------------------------------------- */
 
-/* Fading labels based on slider position */
-.side-a .label { opacity: calc(1 - (var(--split-num) / 45)); }
-.side-m .label { opacity: calc((var(--split-num) - 55) / 45); }
-
-/* --- SLIDER CONTROL --- */
-.slider-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 20;
-    background: rgba(0,0,0,0.01); 
-}
-
-.gate-slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    appearance: none;
-    background: transparent;
-    cursor: grab;
-    z-index: 10;
-    margin: 0;
-    outline: none;
-}
-
-/* Chrome, Safari, Edge Thumb */
-.gate-slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 20px;          /* Width of the point */
-    height: 20px;         /* Height of the point */
-    background: rgba(255, 179, 254, 0.9);
-    border-radius: 0%;   /* Makes it a circle */
-    box-shadow: 0 0 16px rgba(255, 168, 254, 0.6);
-    
-    /* Smooth transition for hover effects */
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                background 0.3s ease;
-}
-
-/* Hover: Make the point glow and grow slightly */
-.gate-slider:hover::-webkit-slider-thumb {
-    transform: scale(1.5); 
-    background: hsl(300, 100%, 72%);
-    box-shadow: 0 0 10px rgba(250, 114, 248, 1);
-}
-
-/* Click/Active: Keep it scaled */
-.gate-slider:active::-webkit-slider-thumb {
-    transform: scale(1.4);
-}
-
-/* Firefox Equivalent */
-.gate-slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 91, 252, 0.9);
-    border: none;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.gate-slider:hover::-moz-range-thumb {
-    transform: scale(1.5);
-    background: hsl(302, 100%, 50%);
-}
-@media (max-width: 768px) {
-    .floating-text {
-        font-size: 1.5rem; /* Shrink text on mobile */
-        left: 15%;        /* Pull it back left slightly so it fits */
-    }
-}
-
-/* Shared Styles */
 .floating-text {
-    position: absolute;
-    transform: translateY(-50%);
-    font-family: "Futura", "Arial Narrow", sans-serif;
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    color: rgb(222, 118, 214);
-    pointer-events: none;
-    z-index: 4;
-    text-shadow: 0 0 20px rgba(0,0,0,0.5);
-    pointer-events: none;
+  position: absolute;
+  font-family: "Futura", "Avenir Next", "Arial Narrow", sans-serif;
+  font-weight: 200;
+  font-size: clamp(1.75rem, 8vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgb(222, 118, 214);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  user-select: none;
+  z-index: 4;
+  transition: opacity 0.1s ease;
 }
 
-/* Position Art on the Right side of the screen */
 .art-hint {
-    font-size: 4rem;
-    top: 30%;
-    right: 25%; /* Adjust this to move it left/right */
-    transition: opacity 0.1s ease, transform 0.1s ease;
-   opacity: var(--art-hint-opacity, 40);
+  top: 30%;
+  right: 12%;
+  transform: translateY(-50%);
+  opacity: var(--art-hint-opacity);
+}
+
+.math-hint {
+  top: 70%;
+  left: 12%;
+  transform: translateY(-50%);
+  opacity: var(--math-hint-opacity);
+}
+
+@media (min-width: 700px) {
+  .art-hint  { right: 25%; }
+  .math-hint { left: 25%; }
 }
 
 .line-hint {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 3px;
-    height: 100vh;
-    background: rgba(250, 114, 248, 1);
-    transform: translateX(-50%);
-    pointer-events: none; /* Let clicks pass through to the slider */
-    z-index: 3; /* Behind the pink grip point */
-    transition: opacity 0.2s ease;
-    opacity: var(--line-hint-opacity, 0);
-    box-shadow: 0 0 15px rgba(250, 114, 248, 0.5);
-}
-/* Position Math on the Left side of the screen */
-.math-hint {
-    transform: translate(-50%, -50%);
-    font-size: 4rem;
-    top: 70%;
-    left: 25%; /* Adjust this to move it left/right */
-    transition: opacity 0.1s ease, transform 0.1s ease;
-    opacity: var(--math-hint-opacity, 40);
+  position: absolute;
+  left: var(--split);
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: rgb(250, 114, 248);
+  box-shadow: 0 0 15px rgba(250, 114, 248, 0.5);
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 3;
+  opacity: var(--line-hint-opacity);
+  transition: opacity 0.2s ease;
 }
 
+/* --- Slider --------------------------------------------------------------- */
+
+.slider-container {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gate-slider {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: grab;
+  outline: none;
+  /* Stops the browser claiming the horizontal drag for page navigation. */
+  touch-action: none;
+}
+
+.gate-slider:active { cursor: grabbing; }
+
+.gate-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 179, 254, 0.9);
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 0 16px rgba(255, 168, 254, 0.6);
+  cursor: grab;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease;
+}
+
+.gate-slider:hover::-webkit-slider-thumb,
+.gate-slider:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.5);
+  background: hsl(300, 100%, 72%);
+  box-shadow: 0 0 10px rgb(250, 114, 248);
+}
+
+.gate-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 179, 254, 0.9);
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 0 16px rgba(255, 168, 254, 0.6);
+  cursor: grab;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gate-slider:hover::-moz-range-thumb,
+.gate-slider:focus-visible::-moz-range-thumb {
+  transform: scale(1.5);
+  background: hsl(300, 100%, 72%);
+}
+
+.gate-slider::-moz-range-track {
+  background: transparent;
+  border: none;
+}
+
+/* --- Text fallback -------------------------------------------------------- */
+
+/* The slider is a pointer gesture. These links are the same two destinations
+   for keyboard users, screen readers, and anyone with JavaScript disabled —
+   without them the site had no reachable entry point at all. */
+.gate-links {
+  position: absolute;
+  left: 50%;
+  bottom: max(2rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  gap: clamp(1.5rem, 6vw, 3rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gate-links a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #fff;
+  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.gate-links a:hover,
+.gate-links a:focus-visible {
+  background: rgba(255, 255, 255, 0.92);
+  color: #000;
+}
+
+.gate-links a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -1,7 +1,11 @@
 ---
 layout: base
 ---
-
 <div class="image-container">
-  <img src="/assets/images/logo-no-back.png" alt="Descriptive Alt Text" class="centered-image">
+  <img src="{{ '/assets/images/logo-no-back.png' | relative_url }}"
+       alt="{{ site.title | escape }}"
+       class="centered-image"
+       decoding="async">
 </div>
+
+{{ content }}

@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Design tokens
+   ==========================================================================
+   Exposed as CSS custom properties rather than SCSS variables so that the
+   per-section theming below can swap them at runtime from a single attribute
+   on <body>, instead of duplicating rules per section.
+   ========================================================================== */
+
+:root {
+  /* Section palette */
+  --page-bg: #a9a9a9;
+  --page-fg: #111111;
+  --surface: rgba(255, 255, 255, 0.72);
+  --rule: rgba(0, 0, 0, 0.18);
+  --muted-fg: #4a4a4a;
+  --link-fg: #0b4f9e;
+
+  /* Shape */
+  --radius: 4px;
+  --radius-lg: 12px;
+
+  /* Rhythm. Scales with the viewport so gutters tighten on a phone without a
+     separate media query for every component. */
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --stack: clamp(1.5rem, 4vw, 2.5rem);
+
+  /* Motion, disabled wholesale under prefers-reduced-motion (see _base). */
+  --transition: 0.3s ease;
+  --carousel-transition: 0.5s ease-in-out;
+}
+
+/* Art section */
+[data-section="art"] {
+  --page-bg: #d18d54;
+  --muted-fg: #3a2a1c;
+  --link-fg: #14324f;
+}
+
+/* Mathematics section */
+[data-section="math"] {
+  --page-bg: #dce3eb;
+  --muted-fg: #4a5568;
+}

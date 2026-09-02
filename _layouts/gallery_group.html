@@ -1,22 +1,35 @@
 ---
-layout: default
+layout: base
 ---
-<div class="wrapper">
-  <h1 class="page-heading">{{ page.title }}</h1>
-  
-  <div class="gallery-group-grid">
-    {% for gallery_id in page.collections %}
-      <a href="{{ '/art/' | append: gallery_id | append: '/' | relative_url }}" class="gallery-group-card">
-        <div class="card-image-wrapper">
-          
-          <img src="{{ site.data.galleries[gallery_id][0].image | relative_url }}" class="base-image" alt="Base image for {{ gallery_id }}">
-          
-          <div class="overlay-statement">
-            <p>{{ site.data.statements[gallery_id].text }}</p>
-          </div>
+{%- comment -%}
+  Index page for a set of galleries. `collections:` in the front matter lists
+  the gallery ids; each card shows that gallery's first image behind its
+  statement text.
+{%- endcomment -%}
+<h1 class="page-heading">{{ page.title }}</h1>
 
-        </div>
+<ul class="gallery-group-grid">
+  {%- for gallery_id in page.collections -%}
+    {%- assign images = site.data.galleries[gallery_id] -%}
+    {%- assign statement = site.data.statements[gallery_id] -%}
+    <li>
+      <a href="{{ '/art/' | append: gallery_id | append: '/' | relative_url }}" class="gallery-group-card">
+        <span class="card-image-wrapper">
+          {%- if images and images.size > 0 -%}
+            <img src="{{ images[0].image | relative_url }}"
+                 class="base-image"
+                 alt=""
+                 loading="lazy"
+                 decoding="async">
+          {%- endif -%}
+          <span class="overlay-statement">
+            <span class="overlay-statement__text">
+              {{- statement.text | default: statement.title | default: gallery_id -}}
+            </span>
+          </span>
+        </span>
+        <span class="visually-hidden">{{ statement.title | default: gallery_id }}</span>
       </a>
-    {% endfor %}
-  </div>
-</div>
+    </li>
+  {%- endfor -%}
+</ul>

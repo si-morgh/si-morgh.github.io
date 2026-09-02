@@ -1,0 +1,54 @@
+---
+layout: bare
+---
+{%- comment -%}
+  One gallery carousel.
+
+  Front matter:
+    gallery_id       key into _data/galleries.yml (required)
+    statement_slide  true to open with the _data/statements.yml card (optional)
+    close_url        where the close button goes if there is no history to
+                     return to (optional, defaults to /art/)
+{%- endcomment -%}
+{%- assign gallery_images = site.data.galleries[page.gallery_id] -%}
+{%- assign statement = site.data.statements[page.gallery_id] -%}
+{%- if page.statement_slide and statement -%}
+  {%- assign start_index = 1 -%}
+{%- else -%}
+  {%- assign start_index = 0 -%}
+{%- endif -%}
+
+<div class="carousel-overlay"
+     id="galleryOverlay"
+     data-start-index="{{ start_index }}"
+     data-close-url="{{ page.close_url | default: '/art/' | relative_url }}">
+  <div class="carousel-container" role="region" aria-roledescription="carousel" aria-label="{{ page.title | escape }}">
+
+    <button class="close-gallery" id="closeBtn" type="button" aria-label="Close gallery">&otimes;</button>
+
+    <div class="carousel-slide" id="carouselSlide">
+      {%- if page.statement_slide and statement -%}
+        <div class="art-item statement-slide">
+          <div class="statement-card">
+            <p>{{ statement.text }}</p>
+          </div>
+        </div>
+      {%- endif -%}
+      {%- for img in gallery_images -%}
+        <div class="art-item">
+          <img src="{{ img.image | relative_url }}"
+               alt="{{ img.title | default: 'Artwork' | escape }}"
+               loading="{% if forloop.index <= 2 %}eager{% else %}lazy{% endif %}"
+               decoding="async">
+          {%- if img.title -%}<div class="art-caption">{{ img.title }}</div>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div id="image-counter" aria-live="polite"></div>
+    <button class="carousel-prev" id="prevBtn" type="button" aria-label="Previous image">&larr;</button>
+    <button class="carousel-next" id="nextBtn" type="button" aria-label="Next image">&rarr;</button>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/gallery.js' | relative_url }}" defer></script>

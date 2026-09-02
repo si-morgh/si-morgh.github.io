@@ -1,5 +1,5 @@
 ---
-layout: gallery_2
+layout: gallery
 title: logos
 section: art
 gallery_id: logos

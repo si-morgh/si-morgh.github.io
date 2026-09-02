@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Base: document defaults and accessibility helpers
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--page-fg);
+  /* Keeps the coloured background over the full viewport on short pages. */
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  /* Stops iOS Safari inflating text in the rotated orientation. */
+  -webkit-text-size-adjust: 100%;
+}
+
+.page-content {
+  flex: 1 0 auto;
+  padding-block: var(--stack);
+}
+
+/* Media never overflows its column, and reserves its own height so lazy-loaded
+   gallery images do not shift the page as they arrive. */
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Long URLs and formulae must not force a horizontal scrollbar on a phone. */
+p,
+li,
+h1, h2, h3, h4 {
+  overflow-wrap: break-word;
+}
+
+/* Wide content scrolls inside itself rather than widening the page. */
+pre,
+table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+a {
+  color: var(--link-fg);
+
+  &:visited { color: var(--link-fg); }
+}
+
+/* Visible focus for keyboard users on every interactive element. Minima ships
+   none, which made the menu and the carousel controls unusable by keyboard. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+label:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Available to assistive technology, not drawn on screen. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Lets a keyboard user jump past the navigation. */
+.skip-link {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -110%);
+  z-index: 10002;
+  padding: 0.6em 1.2em;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  transition: transform var(--transition);
+
+  &:focus {
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: 0.01ms;
+    --carousel-transition: 0.01ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
