@@ -38,6 +38,22 @@ The site is then at <http://localhost:4000>.
 5. Reference the new gallery from a `gallery_group` page's `collections:` list,
    or add it to `_data/navigation.yml`.
 
+## Mathematics on a page
+
+KaTeX is not loaded site-wide. A page that contains TeX opts in with
+`math: true` in its front matter, and `_includes/head.html` loads KaTeX only
+there. `Math/notes.md` is currently the only such page, because one note title
+in `_data/notes.yml` contains `\(\Delta\)`.
+
+## Images
+
+Site images are WebP. Untouched masters live in `_originals/`, which
+`.gitignore` excludes so they are never published. When adding artwork, put
+the master there and commit a WebP beside the other images — quality 90 for
+scans, 82 for photographs, long edge capped at 2000px — then record its
+`width:` and `height:` in `_data/galleries.yml` so the browser can reserve the
+right space before the image loads.
+
 ## Section theming
 
 `_layouts/base.html` copies each page's `section:` front-matter value onto
