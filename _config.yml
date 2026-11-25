@@ -12,6 +12,7 @@ baseurl: ""
 permalink: /:categories/:title/
 
 # Build
+encoding: utf-8
 theme: minima
 plugins:
   - jekyll-feed
