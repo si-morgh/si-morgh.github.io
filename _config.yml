@@ -23,11 +23,12 @@ plugins:
 # through _layouts/bib.html.
 scholar:
   style: apa
+  use_doi: false
   locale: en
   bibliography: "bibliography.bib"
   bibliography_list_tag: ul
-  sort_by: year
-  order: ascending
+  sort_by: year, publisher_url, eprint, name
+  order: descending, ascending, descending, ascending
   bibliography_template: bib
 
 include:
